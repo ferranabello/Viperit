@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second View-->
+        <scene sceneID="htw-l1-ahc">
+            <objects>
+                <viewController storyboardIdentifier="SecondView" id="xqD-av-Raz" customClass="SecondView" customModule="Viperit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EcR-ye-kTk"/>
+                        <viewControllerLayoutGuide type="bottom" id="vb6-4r-Epx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kgt-o0-aP8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone dedicated Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kj7-be-pav">
+                                <rect key="frame" x="85.5" y="323.5" width="204" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rb-Mn-JIf">
+                                <rect key="frame" x="166.5" y="559" width="42" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeButtonPressed" destination="xqD-av-Raz" eventType="touchUpInside" id="bkd-7T-UbB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29803734729999998" green="0.62745908120000005" blue="0.81391115839999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kj7-be-pav" firstAttribute="centerX" secondItem="kgt-o0-aP8" secondAttribute="centerX" id="9JC-Sr-WMN"/>
+                            <constraint firstItem="Kj7-be-pav" firstAttribute="centerY" secondItem="kgt-o0-aP8" secondAttribute="centerY" id="BOv-JA-r5P"/>
+                            <constraint firstItem="8rb-Mn-JIf" firstAttribute="centerX" secondItem="kgt-o0-aP8" secondAttribute="centerX" id="CBD-iN-YhX"/>
+                            <constraint firstItem="vb6-4r-Epx" firstAttribute="top" secondItem="8rb-Mn-JIf" secondAttribute="bottom" constant="78" id="OzA-RE-LG6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXm-AG-NXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260" y="355.7721139430285"/>
+        </scene>
+        <!--Second View Pad-->
+        <scene sceneID="qWg-Hy-ZeF">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewPad" id="ypD-bP-MjH" customClass="SecondViewPad" customModule="Viperit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EeC-4e-jEA"/>
+                        <viewControllerLayoutGuide type="bottom" id="zNZ-Bi-fRm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kdP-sd-Pqv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPAD dedicated Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gop-yz-WG1">
+                                <rect key="frame" x="94" y="323.5" width="187" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6Q-SC-ESx">
+                                <rect key="frame" x="166.5" y="556" width="42" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="close" destination="ypD-bP-MjH" eventType="touchUpInside" id="5Se-wq-dQV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84313725490000002" green="0.25882352939999997" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="M6Q-SC-ESx" firstAttribute="centerX" secondItem="kdP-sd-Pqv" secondAttribute="centerX" id="DVJ-54-VDP"/>
+                            <constraint firstItem="Gop-yz-WG1" firstAttribute="centerX" secondItem="kdP-sd-Pqv" secondAttribute="centerX" id="IR0-O4-X2c"/>
+                            <constraint firstItem="zNZ-Bi-fRm" firstAttribute="top" secondItem="M6Q-SC-ESx" secondAttribute="bottom" constant="81" id="OEd-5U-jUf"/>
+                            <constraint firstItem="Gop-yz-WG1" firstAttribute="centerY" secondItem="kdP-sd-Pqv" secondAttribute="centerY" id="fIn-Ea-wOl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Js-g8-f5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="356"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53532C431DD50BD200088AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53532C421DD50BD200088AAC /* Assets.xcassets */; };
+		53532C461DD50BD200088AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53532C441DD50BD200088AAC /* LaunchScreen.storyboard */; };
+		53532C701DD50DDF00088AAC /* DisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5D1DD50DDF00088AAC /* DisplayData.swift */; };
+		53532C711DD50DDF00088AAC /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5E1DD50DDF00088AAC /* Interactor.swift */; };
+		53532C721DD50DDF00088AAC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5F1DD50DDF00088AAC /* Module.swift */; };
+		53532C731DD50DDF00088AAC /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C601DD50DDF00088AAC /* Presenter.swift */; };
+		53532C741DD50DDF00088AAC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C611DD50DDF00088AAC /* Router.swift */; };
+		53532C751DD50DDF00088AAC /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C621DD50DDF00088AAC /* UserInterface.swift */; };
+		53532C761DD50DDF00088AAC /* ViperComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C631DD50DDF00088AAC /* ViperComponent.swift */; };
+		53532C771DD50DDF00088AAC /* ViperitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C641DD50DDF00088AAC /* ViperitError.swift */; };
+		53532C781DD50DDF00088AAC /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C661DD50DDF00088AAC /* AppModule.swift */; };
+		53532C791DD50DDF00088AAC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53532C691DD50DDF00088AAC /* Home.storyboard */; };
+		53532C7A1DD50DDF00088AAC /* HomeDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6A1DD50DDF00088AAC /* HomeDisplayData.swift */; };
+		53532C7B1DD50DDF00088AAC /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6B1DD50DDF00088AAC /* HomeInteractor.swift */; };
+		53532C7C1DD50DDF00088AAC /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6C1DD50DDF00088AAC /* HomePresenter.swift */; };
+		53532C7D1DD50DDF00088AAC /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6D1DD50DDF00088AAC /* HomeRouter.swift */; };
+		53532C7E1DD50DDF00088AAC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6E1DD50DDF00088AAC /* HomeView.swift */; };
+		53532C931DD50F0700088AAC /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53532C8C1DD50F0700088AAC /* Second.storyboard */; };
+		53532C941DD50F0700088AAC /* SecondDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C8D1DD50F0700088AAC /* SecondDisplayData.swift */; };
+		53532C951DD50F0700088AAC /* SecondInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C8E1DD50F0700088AAC /* SecondInteractor.swift */; };
+		53532C961DD50F0700088AAC /* SecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C8F1DD50F0700088AAC /* SecondPresenter.swift */; };
+		53532C971DD50F0700088AAC /* SecondRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C901DD50F0700088AAC /* SecondRouter.swift */; };
+		53532C981DD50F0700088AAC /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C911DD50F0700088AAC /* SecondView.swift */; };
+		53532C991DD50F0700088AAC /* SecondViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C921DD50F0700088AAC /* SecondViewPad.swift */; };
+		53532C9B1DD5152100088AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C9A1DD5152100088AAC /* AppDelegate.swift */; };
+		53532CA41DD5168000088AAC /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532CA31DD5168000088AAC /* HomeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53532C4D1DD50BD200088AAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53532C301DD50BD200088AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53532C371DD50BD200088AAC;
+			remoteInfo = Viperit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		53532C381DD50BD200088AAC /* Viperit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viperit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53532C421DD50BD200088AAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53532C451DD50BD200088AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53532C471DD50BD200088AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53532C4C1DD50BD200088AAC /* ViperitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53532C521DD50BD200088AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53532C5D1DD50DDF00088AAC /* DisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayData.swift; sourceTree = "<group>"; };
+		53532C5E1DD50DDF00088AAC /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		53532C5F1DD50DDF00088AAC /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		53532C601DD50DDF00088AAC /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		53532C611DD50DDF00088AAC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		53532C621DD50DDF00088AAC /* UserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
+		53532C631DD50DDF00088AAC /* ViperComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperComponent.swift; sourceTree = "<group>"; };
+		53532C641DD50DDF00088AAC /* ViperitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperitError.swift; sourceTree = "<group>"; };
+		53532C661DD50DDF00088AAC /* AppModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		53532C691DD50DDF00088AAC /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		53532C6A1DD50DDF00088AAC /* HomeDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDisplayData.swift; sourceTree = "<group>"; };
+		53532C6B1DD50DDF00088AAC /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		53532C6C1DD50DDF00088AAC /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		53532C6D1DD50DDF00088AAC /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		53532C6E1DD50DDF00088AAC /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		53532C8C1DD50F0700088AAC /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		53532C8D1DD50F0700088AAC /* SecondDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondDisplayData.swift; sourceTree = "<group>"; };
+		53532C8E1DD50F0700088AAC /* SecondInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondInteractor.swift; sourceTree = "<group>"; };
+		53532C8F1DD50F0700088AAC /* SecondPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondPresenter.swift; sourceTree = "<group>"; };
+		53532C901DD50F0700088AAC /* SecondRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondRouter.swift; sourceTree = "<group>"; };
+		53532C911DD50F0700088AAC /* SecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		53532C921DD50F0700088AAC /* SecondViewPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewPad.swift; sourceTree = "<group>"; };
+		53532C9A1DD5152100088AAC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		53532CA31DD5168000088AAC /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53532C351DD50BD200088AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53532C491DD50BD200088AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53532C2F1DD50BD200088AAC = {
+			isa = PBXGroup;
+			children = (
+				53532C3A1DD50BD200088AAC /* Viperit */,
+				53532C4F1DD50BD200088AAC /* ViperitTests */,
+				53532C391DD50BD200088AAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53532C391DD50BD200088AAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53532C381DD50BD200088AAC /* Viperit.app */,
+				53532C4C1DD50BD200088AAC /* ViperitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53532C3A1DD50BD200088AAC /* Viperit */ = {
+			isa = PBXGroup;
+			children = (
+				53532C5C1DD50DDF00088AAC /* Core */,
+				53532C651DD50DDF00088AAC /* Example */,
+				53532C421DD50BD200088AAC /* Assets.xcassets */,
+				53532C441DD50BD200088AAC /* LaunchScreen.storyboard */,
+				53532C471DD50BD200088AAC /* Info.plist */,
+			);
+			path = Viperit;
+			sourceTree = "<group>";
+		};
+		53532C4F1DD50BD200088AAC /* ViperitTests */ = {
+			isa = PBXGroup;
+			children = (
+				53532C521DD50BD200088AAC /* Info.plist */,
+			);
+			path = ViperitTests;
+			sourceTree = "<group>";
+		};
+		53532C5C1DD50DDF00088AAC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				53532C641DD50DDF00088AAC /* ViperitError.swift */,
+				53532C631DD50DDF00088AAC /* ViperComponent.swift */,
+				53532C5F1DD50DDF00088AAC /* Module.swift */,
+				53532C621DD50DDF00088AAC /* UserInterface.swift */,
+				53532C5D1DD50DDF00088AAC /* DisplayData.swift */,
+				53532C5E1DD50DDF00088AAC /* Interactor.swift */,
+				53532C601DD50DDF00088AAC /* Presenter.swift */,
+				53532C611DD50DDF00088AAC /* Router.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		53532C651DD50DDF00088AAC /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				53532C9A1DD5152100088AAC /* AppDelegate.swift */,
+				53532C661DD50DDF00088AAC /* AppModule.swift */,
+				53532C671DD50DDF00088AAC /* modules */,
+				53532CA21DD5166D00088AAC /* tests */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		53532C671DD50DDF00088AAC /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				53532C681DD50DDF00088AAC /* home */,
+				53532C7F1DD50EC000088AAC /* second */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		53532C681DD50DDF00088AAC /* home */ = {
+			isa = PBXGroup;
+			children = (
+				53532C691DD50DDF00088AAC /* Home.storyboard */,
+				53532C6A1DD50DDF00088AAC /* HomeDisplayData.swift */,
+				53532C6B1DD50DDF00088AAC /* HomeInteractor.swift */,
+				53532C6C1DD50DDF00088AAC /* HomePresenter.swift */,
+				53532C6D1DD50DDF00088AAC /* HomeRouter.swift */,
+				53532C6E1DD50DDF00088AAC /* HomeView.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		53532C7F1DD50EC000088AAC /* second */ = {
+			isa = PBXGroup;
+			children = (
+				53532C8C1DD50F0700088AAC /* Second.storyboard */,
+				53532C8D1DD50F0700088AAC /* SecondDisplayData.swift */,
+				53532C8E1DD50F0700088AAC /* SecondInteractor.swift */,
+				53532C8F1DD50F0700088AAC /* SecondPresenter.swift */,
+				53532C901DD50F0700088AAC /* SecondRouter.swift */,
+				53532C911DD50F0700088AAC /* SecondView.swift */,
+				53532C921DD50F0700088AAC /* SecondViewPad.swift */,
+			);
+			path = second;
+			sourceTree = "<group>";
+		};
+		53532CA21DD5166D00088AAC /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				53532CA31DD5168000088AAC /* HomeTests.swift */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53532C371DD50BD200088AAC /* Viperit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53532C551DD50BD200088AAC /* Build configuration list for PBXNativeTarget "Viperit" */;
+			buildPhases = (
+				53532C341DD50BD200088AAC /* Sources */,
+				53532C351DD50BD200088AAC /* Frameworks */,
+				53532C361DD50BD200088AAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Viperit;
+			productName = Viperit;
+			productReference = 53532C381DD50BD200088AAC /* Viperit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53532C4B1DD50BD200088AAC /* ViperitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53532C581DD50BD200088AAC /* Build configuration list for PBXNativeTarget "ViperitTests" */;
+			buildPhases = (
+				53532C481DD50BD200088AAC /* Sources */,
+				53532C491DD50BD200088AAC /* Frameworks */,
+				53532C4A1DD50BD200088AAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53532C4E1DD50BD200088AAC /* PBXTargetDependency */,
+			);
+			name = ViperitTests;
+			productName = ViperitTests;
+			productReference = 53532C4C1DD50BD200088AAC /* ViperitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53532C301DD50BD200088AAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Ferran Abelló";
+				TargetAttributes = {
+					53532C371DD50BD200088AAC = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = P4KYD82MF4;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+					53532C4B1DD50BD200088AAC = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = P4KYD82MF4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 53532C371DD50BD200088AAC;
+					};
+				};
+			};
+			buildConfigurationList = 53532C331DD50BD200088AAC /* Build configuration list for PBXProject "Viperit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53532C2F1DD50BD200088AAC;
+			productRefGroup = 53532C391DD50BD200088AAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53532C371DD50BD200088AAC /* Viperit */,
+				53532C4B1DD50BD200088AAC /* ViperitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53532C361DD50BD200088AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53532C931DD50F0700088AAC /* Second.storyboard in Resources */,
+				53532C791DD50DDF00088AAC /* Home.storyboard in Resources */,
+				53532C461DD50BD200088AAC /* LaunchScreen.storyboard in Resources */,
+				53532C431DD50BD200088AAC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53532C4A1DD50BD200088AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53532C341DD50BD200088AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53532C761DD50DDF00088AAC /* ViperComponent.swift in Sources */,
+				53532C781DD50DDF00088AAC /* AppModule.swift in Sources */,
+				53532C711DD50DDF00088AAC /* Interactor.swift in Sources */,
+				53532C7E1DD50DDF00088AAC /* HomeView.swift in Sources */,
+				53532C7B1DD50DDF00088AAC /* HomeInteractor.swift in Sources */,
+				53532C7A1DD50DDF00088AAC /* HomeDisplayData.swift in Sources */,
+				53532C981DD50F0700088AAC /* SecondView.swift in Sources */,
+				53532C951DD50F0700088AAC /* SecondInteractor.swift in Sources */,
+				53532C771DD50DDF00088AAC /* ViperitError.swift in Sources */,
+				53532C961DD50F0700088AAC /* SecondPresenter.swift in Sources */,
+				53532C721DD50DDF00088AAC /* Module.swift in Sources */,
+				53532C701DD50DDF00088AAC /* DisplayData.swift in Sources */,
+				53532C971DD50F0700088AAC /* SecondRouter.swift in Sources */,
+				53532C7D1DD50DDF00088AAC /* HomeRouter.swift in Sources */,
+				53532C7C1DD50DDF00088AAC /* HomePresenter.swift in Sources */,
+				53532C741DD50DDF00088AAC /* Router.swift in Sources */,
+				53532C991DD50F0700088AAC /* SecondViewPad.swift in Sources */,
+				53532C751DD50DDF00088AAC /* UserInterface.swift in Sources */,
+				53532C9B1DD5152100088AAC /* AppDelegate.swift in Sources */,
+				53532C941DD50F0700088AAC /* SecondDisplayData.swift in Sources */,
+				53532C731DD50DDF00088AAC /* Presenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53532C481DD50BD200088AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53532CA41DD5168000088AAC /* HomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53532C4E1DD50BD200088AAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53532C371DD50BD200088AAC /* Viperit */;
+			targetProxy = 53532C4D1DD50BD200088AAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		53532C441DD50BD200088AAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53532C451DD50BD200088AAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53532C531DD50BD200088AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		53532C541DD50BD200088AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53532C561DD50BD200088AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = P4KYD82MF4;
+				INFOPLIST_FILE = Viperit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Viperit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		53532C571DD50BD200088AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = P4KYD82MF4;
+				INFOPLIST_FILE = Viperit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Viperit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		53532C591DD50BD200088AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P4KYD82MF4;
+				INFOPLIST_FILE = ViperitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viperit.app/Viperit";
+			};
+			name = Debug;
+		};
+		53532C5A1DD50BD200088AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P4KYD82MF4;
+				INFOPLIST_FILE = ViperitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viperit.app/Viperit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53532C331DD50BD200088AAC /* Build configuration list for PBXProject "Viperit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53532C531DD50BD200088AAC /* Debug */,
+				53532C541DD50BD200088AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53532C551DD50BD200088AAC /* Build configuration list for PBXNativeTarget "Viperit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53532C561DD50BD200088AAC /* Debug */,
+				53532C571DD50BD200088AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53532C581DD50BD200088AAC /* Build configuration list for PBXNativeTarget "ViperitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53532C591DD50BD200088AAC /* Debug */,
+				53532C5A1DD50BD200088AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53532C301DD50BD200088AAC /* Project object */;
+}

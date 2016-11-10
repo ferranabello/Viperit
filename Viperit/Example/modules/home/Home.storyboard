@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View-->
+        <scene sceneID="UDX-aY-DIC">
+            <objects>
+                <viewController storyboardIdentifier="HomeView" id="RXK-9e-ODs" customClass="HomeView" customModule="Viperit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dAh-RU-jyI"/>
+                        <viewControllerLayoutGuide type="bottom" id="o5e-c0-di2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PYd-tp-Pao">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWp-Wz-EmV">
+                                <rect key="frame" x="163.5" y="323.5" width="48.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by3-wL-c9s">
+                                <rect key="frame" x="102" y="561" width="172" height="30"/>
+                                <state key="normal" title="LOAD SECOND MODULE"/>
+                                <connections>
+                                    <action selector="goToSecondModuleButtonPressed" destination="RXK-9e-ODs" eventType="touchUpInside" id="W0y-6s-eCS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aez-98-4K8">
+                                <rect key="frame" x="179.5" y="498" width="17" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="by3-wL-c9s" firstAttribute="top" secondItem="aez-98-4K8" secondAttribute="bottom" constant="42.5" id="14P-vr-duT"/>
+                            <constraint firstItem="by3-wL-c9s" firstAttribute="centerX" secondItem="PYd-tp-Pao" secondAttribute="centerX" id="L0P-MZ-CdU"/>
+                            <constraint firstItem="aez-98-4K8" firstAttribute="centerX" secondItem="PYd-tp-Pao" secondAttribute="centerX" id="SjO-Mk-2YC"/>
+                            <constraint firstItem="aWp-Wz-EmV" firstAttribute="centerY" secondItem="PYd-tp-Pao" secondAttribute="centerY" id="Zdb-Se-GRr"/>
+                            <constraint firstItem="aWp-Wz-EmV" firstAttribute="centerX" secondItem="PYd-tp-Pao" secondAttribute="centerX" id="p70-er-wxW"/>
+                            <constraint firstItem="o5e-c0-di2" firstAttribute="top" secondItem="by3-wL-c9s" secondAttribute="bottom" constant="76" id="rm5-rC-oXG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="aez-98-4K8" id="rWw-1i-g6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hiq-lE-o6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159.19999999999999" y="-0.44977511244377816"/>
+        </scene>
+    </scenes>
+</document>
