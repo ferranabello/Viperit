@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>DefaultCompletionName</key>
+	<string>SwiftViperitModule</string>
+	<key>Description</key>
+	<string>Basic Swift Viperit module template.</string>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>MainTemplateFile</key>
+	<string>___FILEBASENAME___</string>
+	<key>SortOrder</key>
+	<integer>1</integer>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Description</key>
+			<string>Empty</string>
+			<key>Identifier</key>
+			<string>ViperitModuleName</string>
+			<key>Name</key>
+			<string>Name</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>fileType</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Type</string>
+			<key>Description</key>
+			<string>module type</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Default</key>
+			<string>Universal</string>
+			<key>Values</key>
+			<array>
+				<string>Universal</string>
+				<string>With Dedicated Tablet View</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>Storyboard</string>
+			<key>Name</key>
+			<string>Also create a Storyboard file for module</string>
+			<key>Description</key>
+			<string>Whether to create a Storyboard file with the same name</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>Default</key>
+			<string>true</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_ViperitModuleName___</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+	</array>
+</dict>
+</plist>
