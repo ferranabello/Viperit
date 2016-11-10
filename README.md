@@ -1,6 +1,7 @@
 Viperit
 ===================
-
+[![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
+[![License](http://img.shields.io/badge/license-MIT-orange.svg)](http://mit-license.org)
 
 Write an iOS app following VIPER architecture. But in an **easy way**.
 
