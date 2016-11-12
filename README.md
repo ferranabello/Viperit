@@ -3,6 +3,8 @@ Viperit
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
 [![License](http://img.shields.io/badge/license-MIT-orange.svg)](http://mit-license.org)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Viperit.svg)](http://github.com/ferranabello/Viperit)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Twitter](https://img.shields.io/badge/twitter-@acferran-blue.svg?style=flat)](http://twitter.com/acferran)
 
 Write an iOS app following VIPER architecture. But in an **easy way**.
 
