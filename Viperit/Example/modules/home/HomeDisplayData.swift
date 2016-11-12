@@ -6,6 +6,8 @@
 //  Copyright © 2016 Ferran Abelló. All rights reserved.
 //
 
+import Viperit
+
 class HomeDisplayData: DisplayData {
 
     let loadingText = "..."

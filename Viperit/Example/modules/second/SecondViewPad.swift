@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Viperit
 
 //MARK: Second View for Tablet
 final class SecondViewPad: UserInterface {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Viperit
 
 
 //MARK: - Public Interface Protocol

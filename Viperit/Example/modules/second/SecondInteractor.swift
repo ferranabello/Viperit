@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Viperit
 
 final class SecondInteractor: Interactor {
 }

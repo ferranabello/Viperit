@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Viperit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

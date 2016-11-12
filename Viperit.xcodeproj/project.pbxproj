@@ -9,14 +9,6 @@
 /* Begin PBXBuildFile section */
 		53532C431DD50BD200088AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53532C421DD50BD200088AAC /* Assets.xcassets */; };
 		53532C461DD50BD200088AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53532C441DD50BD200088AAC /* LaunchScreen.storyboard */; };
-		53532C701DD50DDF00088AAC /* DisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5D1DD50DDF00088AAC /* DisplayData.swift */; };
-		53532C711DD50DDF00088AAC /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5E1DD50DDF00088AAC /* Interactor.swift */; };
-		53532C721DD50DDF00088AAC /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5F1DD50DDF00088AAC /* Module.swift */; };
-		53532C731DD50DDF00088AAC /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C601DD50DDF00088AAC /* Presenter.swift */; };
-		53532C741DD50DDF00088AAC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C611DD50DDF00088AAC /* Router.swift */; };
-		53532C751DD50DDF00088AAC /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C621DD50DDF00088AAC /* UserInterface.swift */; };
-		53532C761DD50DDF00088AAC /* ViperComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C631DD50DDF00088AAC /* ViperComponent.swift */; };
-		53532C771DD50DDF00088AAC /* ViperitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C641DD50DDF00088AAC /* ViperitError.swift */; };
 		53532C781DD50DDF00088AAC /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C661DD50DDF00088AAC /* AppModule.swift */; };
 		53532C791DD50DDF00088AAC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53532C691DD50DDF00088AAC /* Home.storyboard */; };
 		53532C7A1DD50DDF00088AAC /* HomeDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6A1DD50DDF00088AAC /* HomeDisplayData.swift */; };
@@ -33,6 +25,17 @@
 		53532C991DD50F0700088AAC /* SecondViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C921DD50F0700088AAC /* SecondViewPad.swift */; };
 		53532C9B1DD5152100088AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C9A1DD5152100088AAC /* AppDelegate.swift */; };
 		53532CA41DD5168000088AAC /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532CA31DD5168000088AAC /* HomeTests.swift */; };
+		5367C0D31DD7C68D005B6676 /* Viperit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5367C0D11DD7C68D005B6676 /* Viperit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5367C0D61DD7C68D005B6676 /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; };
+		5367C0D81DD7C68D005B6676 /* Viperit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5367C0DC1DD7C69E005B6676 /* ViperitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C641DD50DDF00088AAC /* ViperitError.swift */; };
+		5367C0DD1DD7C69E005B6676 /* ViperComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C631DD50DDF00088AAC /* ViperComponent.swift */; };
+		5367C0DE1DD7C69E005B6676 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5F1DD50DDF00088AAC /* Module.swift */; };
+		5367C0DF1DD7C69E005B6676 /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C621DD50DDF00088AAC /* UserInterface.swift */; };
+		5367C0E01DD7C69E005B6676 /* DisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5D1DD50DDF00088AAC /* DisplayData.swift */; };
+		5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5E1DD50DDF00088AAC /* Interactor.swift */; };
+		5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C601DD50DDF00088AAC /* Presenter.swift */; };
+		5367C0E31DD7C69E005B6676 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C611DD50DDF00088AAC /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +46,31 @@
 			remoteGlobalIDString = 53532C371DD50BD200088AAC;
 			remoteInfo = Viperit;
 		};
+		5367C0D41DD7C68D005B6676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53532C301DD50BD200088AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5367C0CE1DD7C68D005B6676;
+			remoteInfo = Viperit;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5367C0D71DD7C68D005B6676 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5367C0D81DD7C68D005B6676 /* Viperit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		53532C381DD50BD200088AAC /* Viperit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viperit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53532C381DD50BD200088AAC /* ViperitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53532C421DD50BD200088AAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53532C451DD50BD200088AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53532C471DD50BD200088AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +100,9 @@
 		53532C921DD50F0700088AAC /* SecondViewPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewPad.swift; sourceTree = "<group>"; };
 		53532C9A1DD5152100088AAC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53532CA31DD5168000088AAC /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		5367C0CF1DD7C68D005B6676 /* Viperit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Viperit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5367C0D11DD7C68D005B6676 /* Viperit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Viperit.h; sourceTree = "<group>"; };
+		5367C0D21DD7C68D005B6676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +110,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5367C0D61DD7C68D005B6676 /* Viperit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		53532C491DD50BD200088AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5367C0CB1DD7C68D005B6676 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -101,6 +136,7 @@
 			children = (
 				53532C3A1DD50BD200088AAC /* Viperit */,
 				53532C4F1DD50BD200088AAC /* ViperitTests */,
+				5367C0D01DD7C68D005B6676 /* Viperit */,
 				53532C391DD50BD200088AAC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,8 +144,9 @@
 		53532C391DD50BD200088AAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				53532C381DD50BD200088AAC /* Viperit.app */,
+				53532C381DD50BD200088AAC /* ViperitExample.app */,
 				53532C4C1DD50BD200088AAC /* ViperitTests.xctest */,
+				5367C0CF1DD7C68D005B6676 /* Viperit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,24 +241,46 @@
 			path = tests;
 			sourceTree = "<group>";
 		};
+		5367C0D01DD7C68D005B6676 /* Viperit */ = {
+			isa = PBXGroup;
+			children = (
+				5367C0D11DD7C68D005B6676 /* Viperit.h */,
+				5367C0D21DD7C68D005B6676 /* Info.plist */,
+			);
+			path = Viperit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		5367C0CC1DD7C68D005B6676 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5367C0D31DD7C68D005B6676 /* Viperit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		53532C371DD50BD200088AAC /* Viperit */ = {
+		53532C371DD50BD200088AAC /* ViperitExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53532C551DD50BD200088AAC /* Build configuration list for PBXNativeTarget "Viperit" */;
+			buildConfigurationList = 53532C551DD50BD200088AAC /* Build configuration list for PBXNativeTarget "ViperitExample" */;
 			buildPhases = (
 				53532C341DD50BD200088AAC /* Sources */,
 				53532C351DD50BD200088AAC /* Frameworks */,
 				53532C361DD50BD200088AAC /* Resources */,
+				5367C0D71DD7C68D005B6676 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5367C0D51DD7C68D005B6676 /* PBXTargetDependency */,
 			);
-			name = Viperit;
+			name = ViperitExample;
 			productName = Viperit;
-			productReference = 53532C381DD50BD200088AAC /* Viperit.app */;
+			productReference = 53532C381DD50BD200088AAC /* ViperitExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		53532C4B1DD50BD200088AAC /* ViperitTests */ = {
@@ -241,6 +300,24 @@
 			productName = ViperitTests;
 			productReference = 53532C4C1DD50BD200088AAC /* ViperitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5367C0CE1DD7C68D005B6676 /* Viperit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5367C0D91DD7C68D005B6676 /* Build configuration list for PBXNativeTarget "Viperit" */;
+			buildPhases = (
+				5367C0CA1DD7C68D005B6676 /* Sources */,
+				5367C0CB1DD7C68D005B6676 /* Frameworks */,
+				5367C0CC1DD7C68D005B6676 /* Headers */,
+				5367C0CD1DD7C68D005B6676 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Viperit;
+			productName = Viperit;
+			productReference = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -264,6 +341,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 53532C371DD50BD200088AAC;
 					};
+					5367C0CE1DD7C68D005B6676 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = P4KYD82MF4;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 53532C331DD50BD200088AAC /* Build configuration list for PBXProject "Viperit" */;
@@ -279,8 +361,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53532C371DD50BD200088AAC /* Viperit */,
+				53532C371DD50BD200088AAC /* ViperitExample */,
 				53532C4B1DD50BD200088AAC /* ViperitTests */,
+				5367C0CE1DD7C68D005B6676 /* Viperit */,
 			);
 		};
 /* End PBXProject section */
@@ -304,6 +387,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5367C0CD1DD7C68D005B6676 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -311,27 +401,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53532C761DD50DDF00088AAC /* ViperComponent.swift in Sources */,
 				53532C781DD50DDF00088AAC /* AppModule.swift in Sources */,
-				53532C711DD50DDF00088AAC /* Interactor.swift in Sources */,
 				53532C7E1DD50DDF00088AAC /* HomeView.swift in Sources */,
 				53532C7B1DD50DDF00088AAC /* HomeInteractor.swift in Sources */,
 				53532C7A1DD50DDF00088AAC /* HomeDisplayData.swift in Sources */,
 				53532C981DD50F0700088AAC /* SecondView.swift in Sources */,
 				53532C951DD50F0700088AAC /* SecondInteractor.swift in Sources */,
-				53532C771DD50DDF00088AAC /* ViperitError.swift in Sources */,
 				53532C961DD50F0700088AAC /* SecondPresenter.swift in Sources */,
-				53532C721DD50DDF00088AAC /* Module.swift in Sources */,
-				53532C701DD50DDF00088AAC /* DisplayData.swift in Sources */,
 				53532C971DD50F0700088AAC /* SecondRouter.swift in Sources */,
 				53532C7D1DD50DDF00088AAC /* HomeRouter.swift in Sources */,
 				53532C7C1DD50DDF00088AAC /* HomePresenter.swift in Sources */,
-				53532C741DD50DDF00088AAC /* Router.swift in Sources */,
 				53532C991DD50F0700088AAC /* SecondViewPad.swift in Sources */,
-				53532C751DD50DDF00088AAC /* UserInterface.swift in Sources */,
 				53532C9B1DD5152100088AAC /* AppDelegate.swift in Sources */,
 				53532C941DD50F0700088AAC /* SecondDisplayData.swift in Sources */,
-				53532C731DD50DDF00088AAC /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,13 +425,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5367C0CA1DD7C68D005B6676 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5367C0DC1DD7C69E005B6676 /* ViperitError.swift in Sources */,
+				5367C0DD1DD7C69E005B6676 /* ViperComponent.swift in Sources */,
+				5367C0DE1DD7C69E005B6676 /* Module.swift in Sources */,
+				5367C0DF1DD7C69E005B6676 /* UserInterface.swift in Sources */,
+				5367C0E01DD7C69E005B6676 /* DisplayData.swift in Sources */,
+				5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */,
+				5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */,
+				5367C0E31DD7C69E005B6676 /* Router.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		53532C4E1DD50BD200088AAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 53532C371DD50BD200088AAC /* Viperit */;
+			target = 53532C371DD50BD200088AAC /* ViperitExample */;
 			targetProxy = 53532C4D1DD50BD200088AAC /* PBXContainerItemProxy */;
+		};
+		5367C0D51DD7C68D005B6676 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5367C0CE1DD7C68D005B6676 /* Viperit */;
+			targetProxy = 5367C0D41DD7C68D005B6676 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -461,12 +563,13 @@
 		53532C561DD50BD200088AAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P4KYD82MF4;
 				INFOPLIST_FILE = Viperit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Viperit;
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0.1;
@@ -476,12 +579,13 @@
 		53532C571DD50BD200088AAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P4KYD82MF4;
 				INFOPLIST_FILE = Viperit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Viperit;
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0.1;
 			};
@@ -517,6 +621,50 @@
 			};
 			name = Release;
 		};
+		5367C0DA1DD7C68D005B6676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P4KYD82MF4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Viperit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Viperit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5367C0DB1DD7C68D005B6676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P4KYD82MF4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Viperit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Viperit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -529,7 +677,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53532C551DD50BD200088AAC /* Build configuration list for PBXNativeTarget "Viperit" */ = {
+		53532C551DD50BD200088AAC /* Build configuration list for PBXNativeTarget "ViperitExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53532C561DD50BD200088AAC /* Debug */,
@@ -546,6 +694,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5367C0D91DD7C68D005B6676 /* Build configuration list for PBXNativeTarget "Viperit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5367C0DA1DD7C68D005B6676 /* Debug */,
+				5367C0DB1DD7C68D005B6676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

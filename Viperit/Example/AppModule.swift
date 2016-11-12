@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Viperit
 
 //MARK: - Application modules
 enum AppModules: String, ViperitModule {
