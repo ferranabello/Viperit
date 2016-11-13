@@ -1,5 +1,6 @@
 Viperit
 ===================
+[![Build Status](https://travis-ci.org/ferranabello/Viperit.svg?branch=master)](https://travis-ci.org/ferranabello/Viperit)
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
 [![License](http://img.shields.io/badge/license-MIT-orange.svg)](http://mit-license.org)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Viperit.svg)](http://github.com/ferranabello/Viperit)
