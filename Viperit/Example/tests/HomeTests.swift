@@ -6,7 +6,8 @@
 //  Copyright © 2016 Ferran Abelló. All rights reserved.
 //
 
-@testable import Viperit
+@testable import ViperitExample
+import Viperit
 import XCTest
 
 class HomeMockView: UserInterface, HomeViewInterface {
