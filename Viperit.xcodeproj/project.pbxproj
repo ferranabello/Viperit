@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53388C291DD9FFDF00EA4CEC /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; };
+		53388C2A1DD9FFDF00EA4CEC /* Viperit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53532C431DD50BD200088AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53532C421DD50BD200088AAC /* Assets.xcassets */; };
 		53532C461DD50BD200088AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53532C441DD50BD200088AAC /* LaunchScreen.storyboard */; };
 		53532C781DD50DDF00088AAC /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C661DD50DDF00088AAC /* AppModule.swift */; };
@@ -26,8 +28,6 @@
 		53532C9B1DD5152100088AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C9A1DD5152100088AAC /* AppDelegate.swift */; };
 		53532CA41DD5168000088AAC /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532CA31DD5168000088AAC /* HomeTests.swift */; };
 		5367C0D31DD7C68D005B6676 /* Viperit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5367C0D11DD7C68D005B6676 /* Viperit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5367C0D61DD7C68D005B6676 /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; };
-		5367C0D81DD7C68D005B6676 /* Viperit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5367C0DC1DD7C69E005B6676 /* ViperitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C641DD50DDF00088AAC /* ViperitError.swift */; };
 		5367C0DD1DD7C69E005B6676 /* ViperComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C631DD50DDF00088AAC /* ViperComponent.swift */; };
 		5367C0DE1DD7C69E005B6676 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5F1DD50DDF00088AAC /* Module.swift */; };
@@ -39,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		53388C2B1DD9FFDF00EA4CEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53532C301DD50BD200088AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5367C0CE1DD7C68D005B6676;
+			remoteInfo = Viperit;
+		};
 		53532C4D1DD50BD200088AAC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 53532C301DD50BD200088AAC /* Project object */;
@@ -46,23 +53,16 @@
 			remoteGlobalIDString = 53532C371DD50BD200088AAC;
 			remoteInfo = Viperit;
 		};
-		5367C0D41DD7C68D005B6676 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53532C301DD50BD200088AAC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5367C0CE1DD7C68D005B6676;
-			remoteInfo = Viperit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5367C0D71DD7C68D005B6676 /* Embed Frameworks */ = {
+		53388C2D1DD9FFDF00EA4CEC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5367C0D81DD7C68D005B6676 /* Viperit.framework in Embed Frameworks */,
+				53388C2A1DD9FFDF00EA4CEC /* Viperit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5367C0D61DD7C68D005B6676 /* Viperit.framework in Frameworks */,
+				53388C291DD9FFDF00EA4CEC /* Viperit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,12 +271,12 @@
 				53532C341DD50BD200088AAC /* Sources */,
 				53532C351DD50BD200088AAC /* Frameworks */,
 				53532C361DD50BD200088AAC /* Resources */,
-				5367C0D71DD7C68D005B6676 /* Embed Frameworks */,
+				53388C2D1DD9FFDF00EA4CEC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5367C0D51DD7C68D005B6676 /* PBXTargetDependency */,
+				53388C2C1DD9FFDF00EA4CEC /* PBXTargetDependency */,
 			);
 			name = ViperitExample;
 			productName = Viperit;
@@ -443,15 +443,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		53388C2C1DD9FFDF00EA4CEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5367C0CE1DD7C68D005B6676 /* Viperit */;
+			targetProxy = 53388C2B1DD9FFDF00EA4CEC /* PBXContainerItemProxy */;
+		};
 		53532C4E1DD50BD200088AAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 53532C371DD50BD200088AAC /* ViperitExample */;
 			targetProxy = 53532C4D1DD50BD200088AAC /* PBXContainerItemProxy */;
-		};
-		5367C0D51DD7C68D005B6676 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5367C0CE1DD7C68D005B6676 /* Viperit */;
-			targetProxy = 5367C0D41DD7C68D005B6676 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -602,7 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viperit.app/Viperit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViperitExample.app/ViperitExample";
 			};
 			name = Debug;
 		};
@@ -617,7 +617,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Viperit.app/Viperit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViperitExample.app/ViperitExample";
 			};
 			name = Release;
 		};
@@ -702,6 +702,7 @@
 				5367C0DB1DD7C68D005B6676 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
