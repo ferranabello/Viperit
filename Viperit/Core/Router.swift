@@ -14,18 +14,37 @@ open class Router {
         return _presenter._view
     }
     
-    open func show(inWindow window: UIWindow?) {
-        window?.rootViewController = _view
+    open func show(inWindow window: UIWindow?, embedInNavController: Bool = false) {
+        let view = embedInNavController ? embedInNavigationController() : _view
+        window?.rootViewController = view
         window?.makeKeyAndVisible()
     }
     
-    open func show(from: UIViewController) {
-        from.show(_view, sender: nil)
+    open func show(from: UIViewController, embedInNavController: Bool = false) {
+        let view = embedInNavController ? embedInNavigationController() : _view
+        from.show(view!, sender: nil)
     }
     
-    open func show(from: UIViewController, setupData: Any) {
+    open func show(from: UIViewController, setupData: Any, embedInNavController: Bool = false) {
         print(ViperitError.methodNotImplemented.description)
     }
     
     required public init() { }
+}
+
+public extension Router {
+    private func getNavigationController() -> UINavigationController? {
+        if let nav = _view.navigationController {
+            return nav
+        } else if let parent = _view.parent {
+            if let parentNav = parent.navigationController {
+                return parentNav
+            }
+        }
+        return nil
+    }
+    
+    func embedInNavigationController() -> UINavigationController {
+        return getNavigationController() ?? UINavigationController(rootViewController: _view)
+    }
 }
