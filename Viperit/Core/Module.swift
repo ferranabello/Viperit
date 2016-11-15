@@ -64,7 +64,7 @@ fileprivate extension Module {
     
     fileprivate static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle) -> UserInterface where T.RawValue == String {
         let viewClass = module.classForViperComponent(.view, bundle: bundle) as! UIViewController.Type
-        let sb = UIStoryboard(name: module.storyboardName.capitalized, bundle: bundle)
+        let sb = UIStoryboard(name: module.storyboardName.uppercasedFirst, bundle: bundle)
         let viewIdentifier = NSStringFromClass(viewClass).components(separatedBy: ".").last! as String
         let viewObject = sb.instantiateViewController(withIdentifier: viewIdentifier) as! UserInterface
         return viewObject
@@ -93,15 +93,9 @@ fileprivate extension Module {
 
 //MARK: - Private Extension for Application Module generic enum
 fileprivate extension RawRepresentable where RawValue == String {
-    
-    private func classStringForComponent(_ component: ViperComponent) -> String {
-        let classString = component.rawValue
-        let uppercasedClassString = String(classString.characters.prefix(1)).uppercased() + String(classString.characters.dropFirst())
-        return rawValue.capitalized + uppercasedClassString
-    }
-    
+
     fileprivate func classForViperComponent(_ component: ViperComponent, bundle: Bundle) -> Swift.AnyClass? {
-        let className = classStringForComponent(component)
+        let className = rawValue.uppercasedFirst + component.rawValue.uppercasedFirst
         let bundleName = bundle.infoDictionary!["CFBundleName"] as! String
         let classInBundle = (bundleName + "." + className).replacingOccurrences(of: " ", with: "_")
         
