@@ -36,6 +36,7 @@
 		5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5E1DD50DDF00088AAC /* Interactor.swift */; };
 		5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C601DD50DDF00088AAC /* Presenter.swift */; };
 		5367C0E31DD7C69E005B6676 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C611DD50DDF00088AAC /* Router.swift */; };
+		538BFFE21DDBCB6C00AA250E /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538BFFE11DDBCB6C00AA250E /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		5367C0CF1DD7C68D005B6676 /* Viperit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Viperit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5367C0D11DD7C68D005B6676 /* Viperit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Viperit.h; sourceTree = "<group>"; };
 		5367C0D21DD7C68D005B6676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		538BFFE11DDBCB6C00AA250E /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		53532C5C1DD50DDF00088AAC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				538BFFE01DDBCB6000AA250E /* Extensions */,
 				53532C641DD50DDF00088AAC /* ViperitError.swift */,
 				53532C631DD50DDF00088AAC /* ViperComponent.swift */,
 				53532C5F1DD50DDF00088AAC /* Module.swift */,
@@ -248,6 +251,14 @@
 				5367C0D21DD7C68D005B6676 /* Info.plist */,
 			);
 			path = Viperit;
+			sourceTree = "<group>";
+		};
+		538BFFE01DDBCB6000AA250E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				538BFFE11DDBCB6C00AA250E /* String+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5367C0DC1DD7C69E005B6676 /* ViperitError.swift in Sources */,
+				538BFFE21DDBCB6C00AA250E /* String+.swift in Sources */,
 				5367C0DD1DD7C69E005B6676 /* ViperComponent.swift in Sources */,
 				5367C0DE1DD7C69E005B6676 /* Module.swift in Sources */,
 				5367C0DF1DD7C69E005B6676 /* UserInterface.swift in Sources */,
