@@ -1,4 +1,4 @@
-![Viperit](https://raw.githubusercontent.com/ferranabello/viperit/master/Assets/logo_light.jpg)
+![Viperit](https://raw.githubusercontent.com/ferranabello/Viperit/master/Assets/logo_light.jpg)
 
 [![Build Status](https://travis-ci.org/ferranabello/Viperit.svg?branch=master)](https://travis-ci.org/ferranabello/Viperit)
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
@@ -17,7 +17,7 @@ We all know Viper is cool. But we also know that it's hard to setup. This librar
 
 With the provided Xcode template you just have to click <i class="icon-file"></i> **New file** in the document panel and select Viperit Module creation template.
 
-![Module Creation](https://raw.githubusercontent.com/ferranabello/viperit/master/Assets/Instructions/module_creation_step1.gif)
+![Module Creation](https://raw.githubusercontent.com/ferranabello/Viperit/master/Assets/Instructions/module_creation_step1.gif)
 
 ## Installation
 
