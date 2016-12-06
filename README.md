@@ -1,4 +1,4 @@
-![Viperit](https://github.com/ferranabello/Viperit/raw/feature/docs/Assets/logo.png)
+![Viperit](https://raw.githubusercontent.com/ferranabello/Viperit/feature/docs/Assets/logo.png)
 ===================
 [![Build Status](https://travis-ci.org/ferranabello/Viperit.svg?branch=master)](https://travis-ci.org/ferranabello/Viperit)
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
