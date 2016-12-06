@@ -18,6 +18,8 @@ We all know Viper is cool. But we also know that it's hard to setup. This librar
 
 With the provided Xcode template you just have to click <i class="icon-file"></i> **New file** in the document panel and select Viperit Module creation template.
 
+![Module Creation](https://raw.githubusercontent.com/ferranabello/Viperit/feature/docs/Assets/Instructions/module_creation_step1.gif)
+
 ## Installation
 
 ### CocoaPods
