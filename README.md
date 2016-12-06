@@ -29,12 +29,20 @@ With the provided Xcode template you just have to click <i class="icon-file"></i
 Specify Viperit into your project's Podfile:
 
 ```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
-use_frameworks!
-
 pod 'Viperit'
 ```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+To integrate Viperit into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "ferranabello/Viperit"
+```
+
+Run `carthage update` to build the framework and drag the built `Viperit.framework` into your Xcode project.
 
 TODO
 -------------
