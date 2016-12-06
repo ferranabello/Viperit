@@ -1,5 +1,5 @@
-Viperit
-===================
+![Viperit](https://raw.githubusercontent.com/ferranabello/viperit/master/Assets/logo_light.jpg)
+
 [![Build Status](https://travis-ci.org/ferranabello/Viperit.svg?branch=master)](https://travis-ci.org/ferranabello/Viperit)
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
 [![License](http://img.shields.io/badge/license-MIT-orange.svg)](http://mit-license.org)
@@ -9,7 +9,6 @@ Viperit
 
 Write an iOS app following VIPER architecture. But in an **easy way**.
 
-----------
 
 ## Viper the easy way
 We all know Viper is cool. But we also know that it's hard to setup. This library intends to simplify all that boilerplate process.
@@ -17,6 +16,8 @@ We all know Viper is cool. But we also know that it's hard to setup. This librar
 ## Create Viper Modules Right From Xcode
 
 With the provided Xcode template you just have to click <i class="icon-file"></i> **New file** in the document panel and select Viperit Module creation template.
+
+![Module Creation](https://raw.githubusercontent.com/ferranabello/viperit/master/Assets/Instructions/module_creation_step1.gif)
 
 ## Installation
 
@@ -33,6 +34,18 @@ use_frameworks!
 
 pod 'Viperit'
 ```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+To integrate Viperit into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "ferranabello/Viperit"
+```
+
+Run `carthage update` to build the framework and drag the built `Viperit.framework` into your Xcode project.
 
 TODO
 -------------
