@@ -9,7 +9,6 @@
 
 Write an iOS app following VIPER architecture. But in an **easy way**.
 
-----------
 
 ## Viper the easy way
 We all know Viper is cool. But we also know that it's hard to setup. This library intends to simplify all that boilerplate process.
@@ -29,6 +28,10 @@ With the provided Xcode template you just have to click <i class="icon-file"></i
 Specify Viperit into your project's Podfile:
 
 ```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
 pod 'Viperit'
 ```
 
