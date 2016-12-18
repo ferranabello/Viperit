@@ -22,7 +22,7 @@ open class Router {
     
     open func show(from: UIViewController, embedInNavController: Bool = false) {
         let view = embedInNavController ? embedInNavigationController() : _view
-        from.show(view!, sender: nil)
+        from.show(view, sender: nil)
     }
     
     open func show(from: UIViewController, setupData: Any, embedInNavController: Bool = false) {
