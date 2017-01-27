@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ferran Abelló. All rights reserved.
 //
 
-@testable import ViperitExample
+@testable import Example
 import Viperit
 import XCTest
 

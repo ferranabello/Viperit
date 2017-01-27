@@ -9,25 +9,6 @@
 /* Begin PBXBuildFile section */
 		53388C291DD9FFDF00EA4CEC /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; };
 		53388C2A1DD9FFDF00EA4CEC /* Viperit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		53532C431DD50BD200088AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53532C421DD50BD200088AAC /* Assets.xcassets */; };
-		53532C461DD50BD200088AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53532C441DD50BD200088AAC /* LaunchScreen.storyboard */; };
-		53532C781DD50DDF00088AAC /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C661DD50DDF00088AAC /* AppModule.swift */; };
-		53532C791DD50DDF00088AAC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53532C691DD50DDF00088AAC /* Home.storyboard */; };
-		53532C7A1DD50DDF00088AAC /* HomeDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6A1DD50DDF00088AAC /* HomeDisplayData.swift */; };
-		53532C7B1DD50DDF00088AAC /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6B1DD50DDF00088AAC /* HomeInteractor.swift */; };
-		53532C7C1DD50DDF00088AAC /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6C1DD50DDF00088AAC /* HomePresenter.swift */; };
-		53532C7D1DD50DDF00088AAC /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6D1DD50DDF00088AAC /* HomeRouter.swift */; };
-		53532C7E1DD50DDF00088AAC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C6E1DD50DDF00088AAC /* HomeView.swift */; };
-		53532C931DD50F0700088AAC /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53532C8C1DD50F0700088AAC /* Second.storyboard */; };
-		53532C941DD50F0700088AAC /* SecondDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C8D1DD50F0700088AAC /* SecondDisplayData.swift */; };
-		53532C951DD50F0700088AAC /* SecondInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C8E1DD50F0700088AAC /* SecondInteractor.swift */; };
-		53532C961DD50F0700088AAC /* SecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C8F1DD50F0700088AAC /* SecondPresenter.swift */; };
-		53532C971DD50F0700088AAC /* SecondRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C901DD50F0700088AAC /* SecondRouter.swift */; };
-		53532C981DD50F0700088AAC /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C911DD50F0700088AAC /* SecondView.swift */; };
-		53532C991DD50F0700088AAC /* SecondViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C921DD50F0700088AAC /* SecondViewPad.swift */; };
-		53532C9B1DD5152100088AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C9A1DD5152100088AAC /* AppDelegate.swift */; };
-		53532CA41DD5168000088AAC /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532CA31DD5168000088AAC /* HomeTests.swift */; };
-		5367C0D31DD7C68D005B6676 /* Viperit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5367C0D11DD7C68D005B6676 /* Viperit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5367C0DC1DD7C69E005B6676 /* ViperitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C641DD50DDF00088AAC /* ViperitError.swift */; };
 		5367C0DD1DD7C69E005B6676 /* ViperComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C631DD50DDF00088AAC /* ViperComponent.swift */; };
 		5367C0DE1DD7C69E005B6676 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5F1DD50DDF00088AAC /* Module.swift */; };
@@ -36,7 +17,25 @@
 		5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5E1DD50DDF00088AAC /* Interactor.swift */; };
 		5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C601DD50DDF00088AAC /* Presenter.swift */; };
 		5367C0E31DD7C69E005B6676 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C611DD50DDF00088AAC /* Router.swift */; };
-		538BFFE21DDBCB6C00AA250E /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538BFFE11DDBCB6C00AA250E /* String+.swift */; };
+		53D3AEF61E0709A80099A464 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEF51E0709A80099A464 /* String+.swift */; };
+		53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEFC1E07109D0099A464 /* AppDelegate.swift */; };
+		53D3AF121E07109D0099A464 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEFD1E07109D0099A464 /* AppModule.swift */; };
+		53D3AF131E07109D0099A464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D3AEFE1E07109D0099A464 /* LaunchScreen.storyboard */; };
+		53D3AF141E07109D0099A464 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53D3AF001E07109D0099A464 /* Info.plist */; };
+		53D3AF151E07109D0099A464 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D3AF031E07109D0099A464 /* Home.storyboard */; };
+		53D3AF161E07109D0099A464 /* HomeDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF041E07109D0099A464 /* HomeDisplayData.swift */; };
+		53D3AF171E07109D0099A464 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF051E07109D0099A464 /* HomeInteractor.swift */; };
+		53D3AF181E07109D0099A464 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF061E07109D0099A464 /* HomePresenter.swift */; };
+		53D3AF191E07109D0099A464 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF071E07109D0099A464 /* HomeRouter.swift */; };
+		53D3AF1A1E07109D0099A464 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF081E07109D0099A464 /* HomeView.swift */; };
+		53D3AF1B1E07109D0099A464 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D3AF0A1E07109D0099A464 /* Second.storyboard */; };
+		53D3AF1C1E07109D0099A464 /* SecondDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF0B1E07109D0099A464 /* SecondDisplayData.swift */; };
+		53D3AF1D1E07109D0099A464 /* SecondInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF0C1E07109D0099A464 /* SecondInteractor.swift */; };
+		53D3AF1E1E07109D0099A464 /* SecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF0D1E07109D0099A464 /* SecondPresenter.swift */; };
+		53D3AF1F1E07109D0099A464 /* SecondRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF0E1E07109D0099A464 /* SecondRouter.swift */; };
+		53D3AF201E07109D0099A464 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF0F1E07109D0099A464 /* SecondView.swift */; };
+		53D3AF211E07109D0099A464 /* SecondViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF101E07109D0099A464 /* SecondViewPad.swift */; };
+		53D3AF321E0711000099A464 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF311E0711000099A464 /* HomeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +52,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 53532C371DD50BD200088AAC;
 			remoteInfo = Viperit;
+		};
+		53D3AF2B1E0710E90099A464 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53532C301DD50BD200088AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53532C371DD50BD200088AAC;
+			remoteInfo = Example;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -71,10 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		53532C381DD50BD200088AAC /* ViperitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		53532C421DD50BD200088AAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		53532C451DD50BD200088AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		53532C471DD50BD200088AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53532C381DD50BD200088AAC /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53532C4C1DD50BD200088AAC /* ViperitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53532C521DD50BD200088AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53532C5D1DD50DDF00088AAC /* DisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayData.swift; sourceTree = "<group>"; };
@@ -85,26 +88,29 @@
 		53532C621DD50DDF00088AAC /* UserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
 		53532C631DD50DDF00088AAC /* ViperComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperComponent.swift; sourceTree = "<group>"; };
 		53532C641DD50DDF00088AAC /* ViperitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperitError.swift; sourceTree = "<group>"; };
-		53532C661DD50DDF00088AAC /* AppModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
-		53532C691DD50DDF00088AAC /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		53532C6A1DD50DDF00088AAC /* HomeDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDisplayData.swift; sourceTree = "<group>"; };
-		53532C6B1DD50DDF00088AAC /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
-		53532C6C1DD50DDF00088AAC /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		53532C6D1DD50DDF00088AAC /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		53532C6E1DD50DDF00088AAC /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		53532C8C1DD50F0700088AAC /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
-		53532C8D1DD50F0700088AAC /* SecondDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondDisplayData.swift; sourceTree = "<group>"; };
-		53532C8E1DD50F0700088AAC /* SecondInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondInteractor.swift; sourceTree = "<group>"; };
-		53532C8F1DD50F0700088AAC /* SecondPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondPresenter.swift; sourceTree = "<group>"; };
-		53532C901DD50F0700088AAC /* SecondRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondRouter.swift; sourceTree = "<group>"; };
-		53532C911DD50F0700088AAC /* SecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
-		53532C921DD50F0700088AAC /* SecondViewPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewPad.swift; sourceTree = "<group>"; };
-		53532C9A1DD5152100088AAC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53532CA31DD5168000088AAC /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		5367C0CF1DD7C68D005B6676 /* Viperit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Viperit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5367C0D11DD7C68D005B6676 /* Viperit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Viperit.h; sourceTree = "<group>"; };
-		5367C0D21DD7C68D005B6676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		538BFFE11DDBCB6C00AA250E /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		53D3AEF51E0709A80099A464 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		53D3AEFA1E070AC60099A464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53D3AEFC1E07109D0099A464 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		53D3AEFD1E07109D0099A464 /* AppModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
+		53D3AEFF1E07109D0099A464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53D3AF001E07109D0099A464 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53D3AF031E07109D0099A464 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		53D3AF041E07109D0099A464 /* HomeDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDisplayData.swift; sourceTree = "<group>"; };
+		53D3AF051E07109D0099A464 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		53D3AF061E07109D0099A464 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		53D3AF071E07109D0099A464 /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		53D3AF081E07109D0099A464 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		53D3AF0A1E07109D0099A464 /* Second.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		53D3AF0B1E07109D0099A464 /* SecondDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondDisplayData.swift; sourceTree = "<group>"; };
+		53D3AF0C1E07109D0099A464 /* SecondInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondInteractor.swift; sourceTree = "<group>"; };
+		53D3AF0D1E07109D0099A464 /* SecondPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondPresenter.swift; sourceTree = "<group>"; };
+		53D3AF0E1E07109D0099A464 /* SecondRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondRouter.swift; sourceTree = "<group>"; };
+		53D3AF0F1E07109D0099A464 /* SecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		53D3AF101E07109D0099A464 /* SecondViewPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewPad.swift; sourceTree = "<group>"; };
+		53D3AF261E0710E90099A464 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53D3AF311E0711000099A464 /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		53D3AF331E0711AE0099A464 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53D3AF231E0710E90099A464 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -138,7 +151,8 @@
 			children = (
 				53532C3A1DD50BD200088AAC /* Viperit */,
 				53532C4F1DD50BD200088AAC /* ViperitTests */,
-				5367C0D01DD7C68D005B6676 /* Viperit */,
+				53D3AEFB1E07109D0099A464 /* Example */,
+				53D3AF301E0711000099A464 /* ExampleTests */,
 				53532C391DD50BD200088AAC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,9 +160,10 @@
 		53532C391DD50BD200088AAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				53532C381DD50BD200088AAC /* ViperitExample.app */,
+				53532C381DD50BD200088AAC /* Example.app */,
 				53532C4C1DD50BD200088AAC /* ViperitTests.xctest */,
 				5367C0CF1DD7C68D005B6676 /* Viperit.framework */,
+				53D3AF261E0710E90099A464 /* ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,11 +171,9 @@
 		53532C3A1DD50BD200088AAC /* Viperit */ = {
 			isa = PBXGroup;
 			children = (
+				53D3AEFA1E070AC60099A464 /* Info.plist */,
 				53532C5C1DD50DDF00088AAC /* Core */,
-				53532C651DD50DDF00088AAC /* Example */,
-				53532C421DD50BD200088AAC /* Assets.xcassets */,
-				53532C441DD50BD200088AAC /* LaunchScreen.storyboard */,
-				53532C471DD50BD200088AAC /* Info.plist */,
+				53D3AEF41E0709A80099A464 /* Extensions */,
 			);
 			path = Viperit;
 			sourceTree = "<group>";
@@ -176,7 +189,6 @@
 		53532C5C1DD50DDF00088AAC /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				538BFFE01DDBCB6000AA250E /* Extensions */,
 				53532C641DD50DDF00088AAC /* ViperitError.swift */,
 				53532C631DD50DDF00088AAC /* ViperComponent.swift */,
 				53532C5F1DD50DDF00088AAC /* Module.swift */,
@@ -189,76 +201,69 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		53532C651DD50DDF00088AAC /* Example */ = {
+		53D3AEF41E0709A80099A464 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				53532C9A1DD5152100088AAC /* AppDelegate.swift */,
-				53532C661DD50DDF00088AAC /* AppModule.swift */,
-				53532C671DD50DDF00088AAC /* modules */,
-				53532CA21DD5166D00088AAC /* tests */,
+				53D3AEF51E0709A80099A464 /* String+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		53D3AEFB1E07109D0099A464 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				53D3AEFC1E07109D0099A464 /* AppDelegate.swift */,
+				53D3AEFD1E07109D0099A464 /* AppModule.swift */,
+				53D3AEFE1E07109D0099A464 /* LaunchScreen.storyboard */,
+				53D3AF001E07109D0099A464 /* Info.plist */,
+				53D3AF011E07109D0099A464 /* modules */,
 			);
 			path = Example;
 			sourceTree = "<group>";
 		};
-		53532C671DD50DDF00088AAC /* modules */ = {
+		53D3AF011E07109D0099A464 /* modules */ = {
 			isa = PBXGroup;
 			children = (
-				53532C681DD50DDF00088AAC /* home */,
-				53532C7F1DD50EC000088AAC /* second */,
+				53D3AF021E07109D0099A464 /* home */,
+				53D3AF091E07109D0099A464 /* second */,
 			);
 			path = modules;
 			sourceTree = "<group>";
 		};
-		53532C681DD50DDF00088AAC /* home */ = {
+		53D3AF021E07109D0099A464 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				53532C691DD50DDF00088AAC /* Home.storyboard */,
-				53532C6A1DD50DDF00088AAC /* HomeDisplayData.swift */,
-				53532C6B1DD50DDF00088AAC /* HomeInteractor.swift */,
-				53532C6C1DD50DDF00088AAC /* HomePresenter.swift */,
-				53532C6D1DD50DDF00088AAC /* HomeRouter.swift */,
-				53532C6E1DD50DDF00088AAC /* HomeView.swift */,
+				53D3AF031E07109D0099A464 /* Home.storyboard */,
+				53D3AF041E07109D0099A464 /* HomeDisplayData.swift */,
+				53D3AF051E07109D0099A464 /* HomeInteractor.swift */,
+				53D3AF061E07109D0099A464 /* HomePresenter.swift */,
+				53D3AF071E07109D0099A464 /* HomeRouter.swift */,
+				53D3AF081E07109D0099A464 /* HomeView.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
 		};
-		53532C7F1DD50EC000088AAC /* second */ = {
+		53D3AF091E07109D0099A464 /* second */ = {
 			isa = PBXGroup;
 			children = (
-				53532C8C1DD50F0700088AAC /* Second.storyboard */,
-				53532C8D1DD50F0700088AAC /* SecondDisplayData.swift */,
-				53532C8E1DD50F0700088AAC /* SecondInteractor.swift */,
-				53532C8F1DD50F0700088AAC /* SecondPresenter.swift */,
-				53532C901DD50F0700088AAC /* SecondRouter.swift */,
-				53532C911DD50F0700088AAC /* SecondView.swift */,
-				53532C921DD50F0700088AAC /* SecondViewPad.swift */,
+				53D3AF0A1E07109D0099A464 /* Second.storyboard */,
+				53D3AF0B1E07109D0099A464 /* SecondDisplayData.swift */,
+				53D3AF0C1E07109D0099A464 /* SecondInteractor.swift */,
+				53D3AF0D1E07109D0099A464 /* SecondPresenter.swift */,
+				53D3AF0E1E07109D0099A464 /* SecondRouter.swift */,
+				53D3AF0F1E07109D0099A464 /* SecondView.swift */,
+				53D3AF101E07109D0099A464 /* SecondViewPad.swift */,
 			);
 			path = second;
 			sourceTree = "<group>";
 		};
-		53532CA21DD5166D00088AAC /* tests */ = {
+		53D3AF301E0711000099A464 /* ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				53532CA31DD5168000088AAC /* HomeTests.swift */,
+				53D3AF311E0711000099A464 /* HomeTests.swift */,
+				53D3AF331E0711AE0099A464 /* Info.plist */,
 			);
-			path = tests;
-			sourceTree = "<group>";
-		};
-		5367C0D01DD7C68D005B6676 /* Viperit */ = {
-			isa = PBXGroup;
-			children = (
-				5367C0D11DD7C68D005B6676 /* Viperit.h */,
-				5367C0D21DD7C68D005B6676 /* Info.plist */,
-			);
-			path = Viperit;
-			sourceTree = "<group>";
-		};
-		538BFFE01DDBCB6000AA250E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				538BFFE11DDBCB6C00AA250E /* String+.swift */,
-			);
-			path = Extensions;
+			path = ExampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,16 +273,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5367C0D31DD7C68D005B6676 /* Viperit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		53532C371DD50BD200088AAC /* ViperitExample */ = {
+		53532C371DD50BD200088AAC /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53532C551DD50BD200088AAC /* Build configuration list for PBXNativeTarget "ViperitExample" */;
+			buildConfigurationList = 53532C551DD50BD200088AAC /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				53532C341DD50BD200088AAC /* Sources */,
 				53532C351DD50BD200088AAC /* Frameworks */,
@@ -289,9 +293,9 @@
 			dependencies = (
 				53388C2C1DD9FFDF00EA4CEC /* PBXTargetDependency */,
 			);
-			name = ViperitExample;
+			name = Example;
 			productName = Viperit;
-			productReference = 53532C381DD50BD200088AAC /* ViperitExample.app */;
+			productReference = 53532C381DD50BD200088AAC /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		53532C4B1DD50BD200088AAC /* ViperitTests */ = {
@@ -330,14 +334,32 @@
 			productReference = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		53D3AF251E0710E90099A464 /* ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53D3AF2D1E0710E90099A464 /* Build configuration list for PBXNativeTarget "ExampleTests" */;
+			buildPhases = (
+				53D3AF221E0710E90099A464 /* Sources */,
+				53D3AF231E0710E90099A464 /* Frameworks */,
+				53D3AF241E0710E90099A464 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53D3AF2C1E0710E90099A464 /* PBXTargetDependency */,
+			);
+			name = ExampleTests;
+			productName = ExampleTests;
+			productReference = 53D3AF261E0710E90099A464 /* ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		53532C301DD50BD200088AAC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ferran Abelló";
 				TargetAttributes = {
 					53532C371DD50BD200088AAC = {
@@ -355,7 +377,14 @@
 					5367C0CE1DD7C68D005B6676 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = P4KYD82MF4;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+					};
+					53D3AF251E0710E90099A464 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = P4KYD82MF4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 53532C371DD50BD200088AAC;
 					};
 				};
 			};
@@ -372,9 +401,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53532C371DD50BD200088AAC /* ViperitExample */,
-				53532C4B1DD50BD200088AAC /* ViperitTests */,
 				5367C0CE1DD7C68D005B6676 /* Viperit */,
+				53532C4B1DD50BD200088AAC /* ViperitTests */,
+				53532C371DD50BD200088AAC /* Example */,
+				53D3AF251E0710E90099A464 /* ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -384,10 +414,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53532C931DD50F0700088AAC /* Second.storyboard in Resources */,
-				53532C791DD50DDF00088AAC /* Home.storyboard in Resources */,
-				53532C461DD50BD200088AAC /* LaunchScreen.storyboard in Resources */,
-				53532C431DD50BD200088AAC /* Assets.xcassets in Resources */,
+				53D3AF1B1E07109D0099A464 /* Second.storyboard in Resources */,
+				53D3AF151E07109D0099A464 /* Home.storyboard in Resources */,
+				53D3AF141E07109D0099A464 /* Info.plist in Resources */,
+				53D3AF131E07109D0099A464 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +435,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53D3AF241E0710E90099A464 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -412,19 +449,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53532C781DD50DDF00088AAC /* AppModule.swift in Sources */,
-				53532C7E1DD50DDF00088AAC /* HomeView.swift in Sources */,
-				53532C7B1DD50DDF00088AAC /* HomeInteractor.swift in Sources */,
-				53532C7A1DD50DDF00088AAC /* HomeDisplayData.swift in Sources */,
-				53532C981DD50F0700088AAC /* SecondView.swift in Sources */,
-				53532C951DD50F0700088AAC /* SecondInteractor.swift in Sources */,
-				53532C961DD50F0700088AAC /* SecondPresenter.swift in Sources */,
-				53532C971DD50F0700088AAC /* SecondRouter.swift in Sources */,
-				53532C7D1DD50DDF00088AAC /* HomeRouter.swift in Sources */,
-				53532C7C1DD50DDF00088AAC /* HomePresenter.swift in Sources */,
-				53532C991DD50F0700088AAC /* SecondViewPad.swift in Sources */,
-				53532C9B1DD5152100088AAC /* AppDelegate.swift in Sources */,
-				53532C941DD50F0700088AAC /* SecondDisplayData.swift in Sources */,
+				53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */,
+				53D3AF211E07109D0099A464 /* SecondViewPad.swift in Sources */,
+				53D3AF1A1E07109D0099A464 /* HomeView.swift in Sources */,
+				53D3AF1F1E07109D0099A464 /* SecondRouter.swift in Sources */,
+				53D3AF191E07109D0099A464 /* HomeRouter.swift in Sources */,
+				53D3AF121E07109D0099A464 /* AppModule.swift in Sources */,
+				53D3AF161E07109D0099A464 /* HomeDisplayData.swift in Sources */,
+				53D3AF201E07109D0099A464 /* SecondView.swift in Sources */,
+				53D3AF181E07109D0099A464 /* HomePresenter.swift in Sources */,
+				53D3AF1C1E07109D0099A464 /* SecondDisplayData.swift in Sources */,
+				53D3AF171E07109D0099A464 /* HomeInteractor.swift in Sources */,
+				53D3AF1E1E07109D0099A464 /* SecondPresenter.swift in Sources */,
+				53D3AF1D1E07109D0099A464 /* SecondInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +469,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53532CA41DD5168000088AAC /* HomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5367C0DC1DD7C69E005B6676 /* ViperitError.swift in Sources */,
-				538BFFE21DDBCB6C00AA250E /* String+.swift in Sources */,
+				53D3AEF61E0709A80099A464 /* String+.swift in Sources */,
 				5367C0DD1DD7C69E005B6676 /* ViperComponent.swift in Sources */,
 				5367C0DE1DD7C69E005B6676 /* Module.swift in Sources */,
 				5367C0DF1DD7C69E005B6676 /* UserInterface.swift in Sources */,
@@ -449,6 +485,14 @@
 				5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */,
 				5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */,
 				5367C0E31DD7C69E005B6676 /* Router.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53D3AF221E0710E90099A464 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53D3AF321E0711000099A464 /* HomeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,16 +506,21 @@
 		};
 		53532C4E1DD50BD200088AAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 53532C371DD50BD200088AAC /* ViperitExample */;
+			target = 53532C371DD50BD200088AAC /* Example */;
 			targetProxy = 53532C4D1DD50BD200088AAC /* PBXContainerItemProxy */;
+		};
+		53D3AF2C1E0710E90099A464 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53532C371DD50BD200088AAC /* Example */;
+			targetProxy = 53D3AF2B1E0710E90099A464 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		53532C441DD50BD200088AAC /* LaunchScreen.storyboard */ = {
+		53D3AEFE1E07109D0099A464 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				53532C451DD50BD200088AAC /* Base */,
+				53D3AEFF1E07109D0099A464 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -497,6 +546,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -547,6 +597,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -579,12 +630,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P4KYD82MF4;
-				INFOPLIST_FILE = Viperit/Info.plist;
+				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitExample;
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -595,11 +646,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P4KYD82MF4;
-				INFOPLIST_FILE = Viperit/Info.plist;
+				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitExample;
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0.1;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -677,6 +728,36 @@
 			};
 			name = Release;
 		};
+		53D3AF2E1E0710E90099A464 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P4KYD82MF4;
+				INFOPLIST_FILE = ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+			};
+			name = Debug;
+		};
+		53D3AF2F1E0710E90099A464 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P4KYD82MF4;
+				INFOPLIST_FILE = ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -689,7 +770,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53532C551DD50BD200088AAC /* Build configuration list for PBXNativeTarget "ViperitExample" */ = {
+		53532C551DD50BD200088AAC /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53532C561DD50BD200088AAC /* Debug */,
@@ -715,6 +796,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		53D3AF2D1E0710E90099A464 /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53D3AF2E1E0710E90099A464 /* Debug */,
+				53D3AF2F1E0710E90099A464 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
