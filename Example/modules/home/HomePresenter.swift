@@ -11,18 +11,24 @@ import Viperit
 
 final class HomePresenter: Presenter {
     
+    override func viewIsAboutToAppear() {
+        loadContent()
+    }
+    
     func reactToSomeInteractorOperation() {
         print("Home Presenter Reacted to Some Interactor Operation")
         self.view.showInfo(message: "CONTENT_LOADED")
     }
     
+    func showSecondModule() {
+        router.showSecondModule()
+    }
+}
+
+private extension HomePresenter {
     func loadContent() {
         view.showLoading()
         interactor.someInteractorOperation()
-    }
-    
-    func showSecondModule() {
-        router.showSecondModule()
     }
 }
 

@@ -20,10 +20,6 @@ protocol HomeViewInterface {
 final class HomeView: UserInterface {
     @IBOutlet weak var messageLabel: UILabel!
     
-    override func viewWillAppear(_ animated: Bool) {
-        presenter.loadContent()
-    }
-    
     @IBAction func goToSecondModuleButtonPressed() {
         presenter.showSecondModule()
     }

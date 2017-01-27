@@ -14,4 +14,10 @@ open class Presenter {
     required public init() { }
     
     open func setupView(data: Any) {}
+    
+    open func viewHasLoaded() {}
+    open func viewIsAboutToAppear() {}
+    open func viewHasAppeared() {}
+    open func viewIsAboutToDisappear() {}
+    open func viewHasDisappeared() {}
 }
