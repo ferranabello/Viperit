@@ -13,12 +13,6 @@ Write an iOS app following VIPER architecture. But in an **easy way**.
 ## Viper the easy way
 We all know Viper is cool. But we also know that it's hard to setup. This library intends to simplify all that boilerplate process.
 
-## Create Viper Modules Right From Xcode
-
-With the provided Xcode template you just have to click <i class="icon-file"></i> **New file** in the document panel and select Viperit Module creation template.
-
-![Module Creation](https://raw.githubusercontent.com/ferranabello/Viperit/master/Assets/Instructions/module_creation_step1.gif)
-
 ## Installation
 
 ### CocoaPods
@@ -47,10 +41,63 @@ github "ferranabello/Viperit"
 
 Run `carthage update` to build the framework and drag the built `Viperit.framework` into your Xcode project.
 
+## Usage
+Here I'll explain to you how to create a Viperit module called "myFirstModule" and use it step by step
+
+### 1. Create a modules enum
+You need at least one (you can use as many as you like, maybe to group modules by functionality) enum that implements the ViperitModule protocol to enumerate your application modules.
+```swift
+import Viperit
+
+//MARK: - Application modules
+enum AppModules: String, ViperitModule {
+    case myFirstModule
+}
+```
+
+### 2. Create the module
+Let's use the provided Xcode template to easily create all the needed classes for the module. Just click <i class="icon-file"></i> **New file** in the document panel and select "Viperit Module" template under "Viperit" section.
+
+![Module Creation](https://raw.githubusercontent.com/ferranabello/Viperit/master/Assets/Instructions/module_creation_step1.gif)
+
+You can check "Also create a Storyboard file for module" if you want the storyboard file to be automatically created for you.
+Choose between "Universal" to use just one view for phones and tablets, and "Dedicated Tablet View" if you want to have a separated view for tablet devices.
+
+### 3. Build the module and perform navigation
+Imagine this is a new app and we want to load our "myFirstModule" module as the app's startup module
+```swift
+import Viperit
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let module = Module.build(AppModules.myFirstModule)
+        module.router.show(inWindow: window)
+        return true
+    }
+}
+```
+This is just an example, you could of course use your own router functions instead of the provided show(inWindow:):
+```swift
+    window = UIWindow(frame: UIScreen.main.bounds)
+    let module = Module.build(AppModules.test)
+    let router = module.router as! MyFirstRouter
+    router.mySuperCoolShowFunction(inWindow: window)
+```
+
+### 4. Follow the Viper flow
+Everything is ready for you to make things the Viper way!
+Clone the repo and run the 'Example' target to see it in action! Or jus try it with Cocoapods:
+```ruby
+pod try Viperit
+```
+
 TODO
 -------------
-
-Documentation will be added **soon** (Clone the repo and run the Xcode project to see it in action)
+Extended documentation will be added **soon**
 
 ## Author
 
