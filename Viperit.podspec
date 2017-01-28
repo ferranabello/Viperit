@@ -17,5 +17,5 @@ Viper Framework for iOS to implement VIPER architecture in an easy way
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Viperit/Core/**/*'
+  s.source_files = 'Viperit/**/*.swift'
 end
