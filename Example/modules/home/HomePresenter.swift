@@ -25,7 +25,7 @@ final class HomePresenter: Presenter {
     }
 }
 
-private extension HomePresenter {
+extension HomePresenter {
     func loadContent() {
         view.showLoading()
         interactor.someInteractorOperation()
