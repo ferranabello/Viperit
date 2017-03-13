@@ -26,4 +26,7 @@ private extension ___FILEBASENAMEASIDENTIFIER___View {
     var presenter: ___FILEBASENAMEASIDENTIFIER___Presenter {
         return _presenter as! ___FILEBASENAMEASIDENTIFIER___Presenter
     }
+    var displayData: ___FILEBASENAMEASIDENTIFIER___DisplayData {
+        return _displayData as! ___FILEBASENAMEASIDENTIFIER___DisplayData
+    }
 }
