@@ -22,4 +22,7 @@ private extension ___FILEBASENAMEASIDENTIFIER___ViewPad {
     var presenter: ___FILEBASENAMEASIDENTIFIER___Presenter {
         return _presenter as! ___FILEBASENAMEASIDENTIFIER___Presenter
     }
+    var displayData: ___FILEBASENAMEASIDENTIFIER___DisplayData {
+        return _displayData as! ___FILEBASENAMEASIDENTIFIER___DisplayData
+    }
 }
