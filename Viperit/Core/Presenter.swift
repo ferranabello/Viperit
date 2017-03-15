@@ -8,7 +8,7 @@
 
 open class Presenter {
     public var _interactor: Interactor!
-    public var _view: UserInterface!
+    public weak var _view: UserInterface!
     public var _router: Router!
     
     required public init() { }

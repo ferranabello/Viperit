@@ -7,7 +7,7 @@
 //
 
 open class Interactor {
-    public var _presenter: Presenter!
+    public weak var _presenter: Presenter!
     
     required public init() { }
 }

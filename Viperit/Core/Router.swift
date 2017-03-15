@@ -9,7 +9,7 @@
 import UIKit
 
 open class Router {
-    public var _presenter: Presenter!
+    public weak var _presenter: Presenter!
     public var _view: UserInterface! {
         return _presenter._view
     }
