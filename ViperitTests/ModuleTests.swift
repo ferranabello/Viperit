@@ -14,24 +14,23 @@ private enum TestModules: String, ViperitModule {
 }
 
 class ModuleTests: XCTestCase {
-    
-    func testModuleBuildCorrectComponents() {
-        let module = Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self))
-        
-        if  let _ = module.view as? SampleView,
-            let _ = module.interactor as? SampleInteractor,
-            let _ = module.presenter as? SamplePresenter,
-            let _ = module.router as? SampleRouter,
-            let _ = module.displayData as? SampleDisplayData {
-            XCTAssert(true)
-        } else {
-            XCTAssert(false)
-        }
-    }
-
     func testModuleBuilderPerformance() {
         self.measure {
             _ = Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self))
+        }
+    }
+    
+    func testModuleBuildCorrectComponents() {
+        let module = Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self))
+    
+        if  module.view is SampleView,
+            module.interactor is SampleInteractor,
+            module.presenter is SamplePresenter,
+            module.router is SampleRouter,
+            module.displayData is SampleDisplayData {
+            XCTAssert(true)
+        } else {
+            XCTAssert(false)
         }
     }
 }
