@@ -13,4 +13,4 @@ before_install:
 script:
   - set -o pipefail
   - xcodebuild -scheme Viperit -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
-  - xcodebuild test -scheme ViperitTests -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1' | xcpretty -c
+  - xcodebuild test -scheme ViperitTests -destination 'platform=iOS Simulator,id:AD8E8C76-910E-437D-88C2-4D6F6EBE3355,name=iPhone 6,OS=10.2' | xcpretty -c
