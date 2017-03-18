@@ -1,8 +1,10 @@
 ![Viperit](https://raw.githubusercontent.com/ferranabello/Viperit/master/Assets/logo_light.jpg)
 
+[![Language](https://img.shields.io/badge/swift-3.0-green.svg)](https://swift.org)
 [![Build Status](https://travis-ci.org/ferranabello/Viperit.svg?branch=master)](https://travis-ci.org/ferranabello/Viperit)
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
 [![License](http://img.shields.io/badge/license-MIT-orange.svg)](http://mit-license.org)
+[![Codecov](https://img.shields.io/codecov/c/github/ferranabello/Viperit.svg)](https://codecov.io/gh/ferranabello/Viperit)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Viperit.svg)](http://github.com/ferranabello/Viperit)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Twitter](https://img.shields.io/badge/twitter-@acferran-blue.svg?style=flat)](http://twitter.com/acferran)
