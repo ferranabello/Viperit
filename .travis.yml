@@ -14,3 +14,5 @@ script:
   - set -o pipefail
   - xcodebuild -scheme Viperit -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
   - xcodebuild test -scheme ViperitTests -destination 'platform=iOS Simulator,id=8F22171A-FD13-45C9-A45B-68529E1385BD,OS=10.1' | xcpretty -c
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
