@@ -15,15 +15,11 @@ private enum TestModules: String, ViperitModule {
 
 class ModuleTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
+    func testModuleBuildCorrectComponents() {
+    
     }
 
     func testModuleBuilderPerformance() {
-        moduleBuilderPerformance()
-    }
-    
-    private func moduleBuilderPerformance() {
         self.measure {
             _ = Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self))
         }
