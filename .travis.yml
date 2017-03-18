@@ -1,2 +1,16 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8.2
+
+branches:
+  only:
+    - develop
+    - master
+env:
+  - LC_CTYPE=en_US.UTF-8 LANG=en_US.UTF-8
+before_install:
+  - rvm install ruby-2.4.0
+  - gem install xcpretty -N
+script:
+  - set -o pipefail
+  - xcodebuild -scheme Viperit -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
+  - xcodebuild test -scheme ViperitTests -destination 'platform=iOS Simulator,id=8F22171A-FD13-45C9-A45B-68529E1385BD,OS=10.1' | xcpretty -c

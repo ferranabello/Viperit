@@ -17,11 +17,17 @@
 		5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5E1DD50DDF00088AAC /* Interactor.swift */; };
 		5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C601DD50DDF00088AAC /* Presenter.swift */; };
 		5367C0E31DD7C69E005B6676 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C611DD50DDF00088AAC /* Router.swift */; };
+		537C42E01E7BEF7B00822E4A /* Sample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537C42DA1E7BEF7B00822E4A /* Sample.storyboard */; };
+		537C42E11E7BEF7B00822E4A /* SampleDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DB1E7BEF7B00822E4A /* SampleDisplayData.swift */; };
+		537C42E21E7BEF7B00822E4A /* SampleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DC1E7BEF7B00822E4A /* SampleInteractor.swift */; };
+		537C42E31E7BEF7B00822E4A /* SamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DD1E7BEF7B00822E4A /* SamplePresenter.swift */; };
+		537C42E41E7BEF7B00822E4A /* SampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DE1E7BEF7B00822E4A /* SampleRouter.swift */; };
+		537C42E51E7BEF7B00822E4A /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DF1E7BEF7B00822E4A /* SampleView.swift */; };
+		537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D19E31E7BE9B100A758FF /* ModuleTests.swift */; };
 		53D3AEF61E0709A80099A464 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEF51E0709A80099A464 /* String+.swift */; };
 		53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEFC1E07109D0099A464 /* AppDelegate.swift */; };
 		53D3AF121E07109D0099A464 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEFD1E07109D0099A464 /* AppModule.swift */; };
 		53D3AF131E07109D0099A464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D3AEFE1E07109D0099A464 /* LaunchScreen.storyboard */; };
-		53D3AF141E07109D0099A464 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 53D3AF001E07109D0099A464 /* Info.plist */; };
 		53D3AF151E07109D0099A464 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D3AF031E07109D0099A464 /* Home.storyboard */; };
 		53D3AF161E07109D0099A464 /* HomeDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF041E07109D0099A464 /* HomeDisplayData.swift */; };
 		53D3AF171E07109D0099A464 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF051E07109D0099A464 /* HomeInteractor.swift */; };
@@ -36,6 +42,7 @@
 		53D3AF201E07109D0099A464 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF0F1E07109D0099A464 /* SecondView.swift */; };
 		53D3AF211E07109D0099A464 /* SecondViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF101E07109D0099A464 /* SecondViewPad.swift */; };
 		53D3AF321E0711000099A464 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF311E0711000099A464 /* HomeTests.swift */; };
+		53F14AA41E7BF3D400E61452 /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +51,6 @@
 			containerPortal = 53532C301DD50BD200088AAC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5367C0CE1DD7C68D005B6676;
-			remoteInfo = Viperit;
-		};
-		53532C4D1DD50BD200088AAC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53532C301DD50BD200088AAC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53532C371DD50BD200088AAC;
 			remoteInfo = Viperit;
 		};
 		53D3AF2B1E0710E90099A464 /* PBXContainerItemProxy */ = {
@@ -89,6 +89,13 @@
 		53532C631DD50DDF00088AAC /* ViperComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperComponent.swift; sourceTree = "<group>"; };
 		53532C641DD50DDF00088AAC /* ViperitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperitError.swift; sourceTree = "<group>"; };
 		5367C0CF1DD7C68D005B6676 /* Viperit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Viperit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		537C42DA1E7BEF7B00822E4A /* Sample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sample.storyboard; sourceTree = "<group>"; };
+		537C42DB1E7BEF7B00822E4A /* SampleDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDisplayData.swift; sourceTree = "<group>"; };
+		537C42DC1E7BEF7B00822E4A /* SampleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleInteractor.swift; sourceTree = "<group>"; };
+		537C42DD1E7BEF7B00822E4A /* SamplePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePresenter.swift; sourceTree = "<group>"; };
+		537C42DE1E7BEF7B00822E4A /* SampleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleRouter.swift; sourceTree = "<group>"; };
+		537C42DF1E7BEF7B00822E4A /* SampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		537D19E31E7BE9B100A758FF /* ModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		53D3AEF51E0709A80099A464 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		53D3AEFA1E070AC60099A464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53D3AEFC1E07109D0099A464 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F14AA41E7BF3D400E61452 /* Viperit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +154,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		534AF1EF1E7BED06009D2D61 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				537C42DA1E7BEF7B00822E4A /* Sample.storyboard */,
+				537C42DB1E7BEF7B00822E4A /* SampleDisplayData.swift */,
+				537C42DC1E7BEF7B00822E4A /* SampleInteractor.swift */,
+				537C42DD1E7BEF7B00822E4A /* SamplePresenter.swift */,
+				537C42DE1E7BEF7B00822E4A /* SampleRouter.swift */,
+				537C42DF1E7BEF7B00822E4A /* SampleView.swift */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
 		53532C2F1DD50BD200088AAC = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +202,8 @@
 		53532C4F1DD50BD200088AAC /* ViperitTests */ = {
 			isa = PBXGroup;
 			children = (
+				534AF1EF1E7BED06009D2D61 /* Sample */,
+				537D19E31E7BE9B100A758FF /* ModuleTests.swift */,
 				53532C521DD50BD200088AAC /* Info.plist */,
 			);
 			path = ViperitTests;
@@ -309,7 +332,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				53532C4E1DD50BD200088AAC /* PBXTargetDependency */,
 			);
 			name = ViperitTests;
 			productName = ViperitTests;
@@ -371,8 +393,8 @@
 					53532C4B1DD50BD200088AAC = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = P4KYD82MF4;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 53532C371DD50BD200088AAC;
 					};
 					5367C0CE1DD7C68D005B6676 = {
 						CreatedOnToolsVersion = 8.1;
@@ -416,7 +438,6 @@
 			files = (
 				53D3AF1B1E07109D0099A464 /* Second.storyboard in Resources */,
 				53D3AF151E07109D0099A464 /* Home.storyboard in Resources */,
-				53D3AF141E07109D0099A464 /* Info.plist in Resources */,
 				53D3AF131E07109D0099A464 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537C42E01E7BEF7B00822E4A /* Sample.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +491,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537C42E41E7BEF7B00822E4A /* SampleRouter.swift in Sources */,
+				537C42E11E7BEF7B00822E4A /* SampleDisplayData.swift in Sources */,
+				537C42E21E7BEF7B00822E4A /* SampleInteractor.swift in Sources */,
+				537C42E31E7BEF7B00822E4A /* SamplePresenter.swift in Sources */,
+				537C42E51E7BEF7B00822E4A /* SampleView.swift in Sources */,
+				537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,11 +531,6 @@
 			isa = PBXTargetDependency;
 			target = 5367C0CE1DD7C68D005B6676 /* Viperit */;
 			targetProxy = 53388C2B1DD9FFDF00EA4CEC /* PBXContainerItemProxy */;
-		};
-		53532C4E1DD50BD200088AAC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 53532C371DD50BD200088AAC /* Example */;
-			targetProxy = 53532C4D1DD50BD200088AAC /* PBXContainerItemProxy */;
 		};
 		53D3AF2C1E0710E90099A464 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -658,14 +681,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P4KYD82MF4;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = ViperitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViperitExample.app/ViperitExample";
 			};
 			name = Debug;
 		};
@@ -673,14 +697,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = P4KYD82MF4;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = ViperitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViperitExample.app/ViperitExample";
 			};
 			name = Release;
 		};
@@ -696,6 +720,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Viperit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Viperit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -718,6 +743,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Viperit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Viperit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -804,6 +830,7 @@
 				53D3AF2F1E0710E90099A464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
