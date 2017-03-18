@@ -54,6 +54,7 @@ public extension Module {
     public mutating func injectMock(view mockView: UserInterface) {
         view = mockView
         view._presenter = presenter
+        view._displayData = displayData
         presenter._view = view
     }
 }
