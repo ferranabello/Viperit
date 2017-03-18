@@ -18,11 +18,11 @@ class ModuleTests: XCTestCase {
     func testModuleBuildCorrectComponents() {
         let module = Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self))
         
-        if  let v = module.view as? SampleView,
-            let i = module.interactor as? SampleInteractor,
-            let p = module.presenter as? SamplePresenter,
-            let r = module.router as? SampleRouter,
-            let d = module.displayData as? SampleDisplayData {
+        if  let _ = module.view as? SampleView,
+            let _ = module.interactor as? SampleInteractor,
+            let _ = module.presenter as? SamplePresenter,
+            let _ = module.router as? SampleRouter,
+            let _ = module.displayData as? SampleDisplayData {
             XCTAssert(true)
         } else {
             XCTAssert(false)
