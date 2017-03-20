@@ -9,10 +9,6 @@
 import XCTest
 import Viperit
 
-private enum TestModules: String, ViperitModule {
-    case sample
-}
-
 private class SampleMockView: UserInterface {}
 
 class ModuleTests: XCTestCase {
@@ -28,15 +24,12 @@ class ModuleTests: XCTestCase {
     
     func testModuleBuildCorrectComponents() {
         let module = createTestModule()
-        if  module.view is SampleView,
-            module.interactor is SampleInteractor,
-            module.presenter is SamplePresenter,
-            module.router is SampleRouter,
-            module.displayData is SampleDisplayData {
-            XCTAssert(true)
-        } else {
-            XCTAssert(false)
-        }
+        
+        XCTAssert(module.view is SampleView)
+        XCTAssert(module.interactor is SampleInteractor)
+        XCTAssert(module.presenter is SamplePresenter)
+        XCTAssert(module.router is SampleRouter)
+        XCTAssert(module.displayData is SampleDisplayData)
     }
     
     func testModuleDepencies() {

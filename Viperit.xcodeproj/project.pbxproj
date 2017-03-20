@@ -17,6 +17,8 @@
 		5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C5E1DD50DDF00088AAC /* Interactor.swift */; };
 		5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C601DD50DDF00088AAC /* Presenter.swift */; };
 		5367C0E31DD7C69E005B6676 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C611DD50DDF00088AAC /* Router.swift */; };
+		5368EDC71E7FF91F0028D8CA /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDC61E7FF91F0028D8CA /* RouterTests.swift */; };
+		5368EDC91E7FF9A40028D8CA /* TestModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDC81E7FF9A40028D8CA /* TestModules.swift */; };
 		537C42E01E7BEF7B00822E4A /* Sample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537C42DA1E7BEF7B00822E4A /* Sample.storyboard */; };
 		537C42E11E7BEF7B00822E4A /* SampleDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DB1E7BEF7B00822E4A /* SampleDisplayData.swift */; };
 		537C42E21E7BEF7B00822E4A /* SampleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DC1E7BEF7B00822E4A /* SampleInteractor.swift */; };
@@ -89,6 +91,8 @@
 		53532C631DD50DDF00088AAC /* ViperComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperComponent.swift; sourceTree = "<group>"; };
 		53532C641DD50DDF00088AAC /* ViperitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperitError.swift; sourceTree = "<group>"; };
 		5367C0CF1DD7C68D005B6676 /* Viperit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Viperit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5368EDC61E7FF91F0028D8CA /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
+		5368EDC81E7FF9A40028D8CA /* TestModules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModules.swift; sourceTree = "<group>"; };
 		537C42DA1E7BEF7B00822E4A /* Sample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sample.storyboard; sourceTree = "<group>"; };
 		537C42DB1E7BEF7B00822E4A /* SampleDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDisplayData.swift; sourceTree = "<group>"; };
 		537C42DC1E7BEF7B00822E4A /* SampleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleInteractor.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				537C42DD1E7BEF7B00822E4A /* SamplePresenter.swift */,
 				537C42DE1E7BEF7B00822E4A /* SampleRouter.swift */,
 				537C42DF1E7BEF7B00822E4A /* SampleView.swift */,
+				5368EDC81E7FF9A40028D8CA /* TestModules.swift */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			children = (
 				534AF1EF1E7BED06009D2D61 /* Sample */,
 				537D19E31E7BE9B100A758FF /* ModuleTests.swift */,
+				5368EDC61E7FF91F0028D8CA /* RouterTests.swift */,
 				53532C521DD50BD200088AAC /* Info.plist */,
 			);
 			path = ViperitTests;
@@ -496,6 +502,8 @@
 				537C42E21E7BEF7B00822E4A /* SampleInteractor.swift in Sources */,
 				537C42E31E7BEF7B00822E4A /* SamplePresenter.swift in Sources */,
 				537C42E51E7BEF7B00822E4A /* SampleView.swift in Sources */,
+				5368EDC91E7FF9A40028D8CA /* TestModules.swift in Sources */,
+				5368EDC71E7FF91F0028D8CA /* RouterTests.swift in Sources */,
 				537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
