@@ -19,12 +19,13 @@
 		5367C0E31DD7C69E005B6676 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C611DD50DDF00088AAC /* Router.swift */; };
 		5368EDC71E7FF91F0028D8CA /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDC61E7FF91F0028D8CA /* RouterTests.swift */; };
 		5368EDC91E7FF9A40028D8CA /* TestModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDC81E7FF9A40028D8CA /* TestModules.swift */; };
-		537C42E01E7BEF7B00822E4A /* Sample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 537C42DA1E7BEF7B00822E4A /* Sample.storyboard */; };
-		537C42E11E7BEF7B00822E4A /* SampleDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DB1E7BEF7B00822E4A /* SampleDisplayData.swift */; };
-		537C42E21E7BEF7B00822E4A /* SampleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DC1E7BEF7B00822E4A /* SampleInteractor.swift */; };
-		537C42E31E7BEF7B00822E4A /* SamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DD1E7BEF7B00822E4A /* SamplePresenter.swift */; };
-		537C42E41E7BEF7B00822E4A /* SampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DE1E7BEF7B00822E4A /* SampleRouter.swift */; };
-		537C42E51E7BEF7B00822E4A /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C42DF1E7BEF7B00822E4A /* SampleView.swift */; };
+		5368EDD11E801EDB0028D8CA /* Sample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5368EDCA1E801EDB0028D8CA /* Sample.storyboard */; };
+		5368EDD21E801EDB0028D8CA /* SampleDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDCB1E801EDB0028D8CA /* SampleDisplayData.swift */; };
+		5368EDD31E801EDB0028D8CA /* SampleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDCC1E801EDB0028D8CA /* SampleInteractor.swift */; };
+		5368EDD41E801EDB0028D8CA /* SamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDCD1E801EDB0028D8CA /* SamplePresenter.swift */; };
+		5368EDD51E801EDB0028D8CA /* SampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDCE1E801EDB0028D8CA /* SampleRouter.swift */; };
+		5368EDD61E801EDB0028D8CA /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDCF1E801EDB0028D8CA /* SampleView.swift */; };
+		5368EDD71E801EDB0028D8CA /* SampleViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDD01E801EDB0028D8CA /* SampleViewPad.swift */; };
 		537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D19E31E7BE9B100A758FF /* ModuleTests.swift */; };
 		53D3AEF61E0709A80099A464 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEF51E0709A80099A464 /* String+.swift */; };
 		53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEFC1E07109D0099A464 /* AppDelegate.swift */; };
@@ -93,12 +94,13 @@
 		5367C0CF1DD7C68D005B6676 /* Viperit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Viperit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5368EDC61E7FF91F0028D8CA /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		5368EDC81E7FF9A40028D8CA /* TestModules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModules.swift; sourceTree = "<group>"; };
-		537C42DA1E7BEF7B00822E4A /* Sample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sample.storyboard; sourceTree = "<group>"; };
-		537C42DB1E7BEF7B00822E4A /* SampleDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDisplayData.swift; sourceTree = "<group>"; };
-		537C42DC1E7BEF7B00822E4A /* SampleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleInteractor.swift; sourceTree = "<group>"; };
-		537C42DD1E7BEF7B00822E4A /* SamplePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePresenter.swift; sourceTree = "<group>"; };
-		537C42DE1E7BEF7B00822E4A /* SampleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleRouter.swift; sourceTree = "<group>"; };
-		537C42DF1E7BEF7B00822E4A /* SampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		5368EDCA1E801EDB0028D8CA /* Sample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sample.storyboard; sourceTree = "<group>"; };
+		5368EDCB1E801EDB0028D8CA /* SampleDisplayData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDisplayData.swift; sourceTree = "<group>"; };
+		5368EDCC1E801EDB0028D8CA /* SampleInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleInteractor.swift; sourceTree = "<group>"; };
+		5368EDCD1E801EDB0028D8CA /* SamplePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplePresenter.swift; sourceTree = "<group>"; };
+		5368EDCE1E801EDB0028D8CA /* SampleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleRouter.swift; sourceTree = "<group>"; };
+		5368EDCF1E801EDB0028D8CA /* SampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		5368EDD01E801EDB0028D8CA /* SampleViewPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewPad.swift; sourceTree = "<group>"; };
 		537D19E31E7BE9B100A758FF /* ModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		53D3AEF51E0709A80099A464 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		53D3AEFA1E070AC60099A464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,13 +163,14 @@
 		534AF1EF1E7BED06009D2D61 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				537C42DA1E7BEF7B00822E4A /* Sample.storyboard */,
-				537C42DB1E7BEF7B00822E4A /* SampleDisplayData.swift */,
-				537C42DC1E7BEF7B00822E4A /* SampleInteractor.swift */,
-				537C42DD1E7BEF7B00822E4A /* SamplePresenter.swift */,
-				537C42DE1E7BEF7B00822E4A /* SampleRouter.swift */,
-				537C42DF1E7BEF7B00822E4A /* SampleView.swift */,
 				5368EDC81E7FF9A40028D8CA /* TestModules.swift */,
+				5368EDCA1E801EDB0028D8CA /* Sample.storyboard */,
+				5368EDCB1E801EDB0028D8CA /* SampleDisplayData.swift */,
+				5368EDCC1E801EDB0028D8CA /* SampleInteractor.swift */,
+				5368EDCD1E801EDB0028D8CA /* SamplePresenter.swift */,
+				5368EDCE1E801EDB0028D8CA /* SampleRouter.swift */,
+				5368EDCF1E801EDB0028D8CA /* SampleView.swift */,
+				5368EDD01E801EDB0028D8CA /* SampleViewPad.swift */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -452,7 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				537C42E01E7BEF7B00822E4A /* Sample.storyboard in Resources */,
+				5368EDD11E801EDB0028D8CA /* Sample.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,12 +500,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				537C42E41E7BEF7B00822E4A /* SampleRouter.swift in Sources */,
-				537C42E11E7BEF7B00822E4A /* SampleDisplayData.swift in Sources */,
-				537C42E21E7BEF7B00822E4A /* SampleInteractor.swift in Sources */,
-				537C42E31E7BEF7B00822E4A /* SamplePresenter.swift in Sources */,
-				537C42E51E7BEF7B00822E4A /* SampleView.swift in Sources */,
+				5368EDD61E801EDB0028D8CA /* SampleView.swift in Sources */,
+				5368EDD21E801EDB0028D8CA /* SampleDisplayData.swift in Sources */,
 				5368EDC91E7FF9A40028D8CA /* TestModules.swift in Sources */,
+				5368EDD41E801EDB0028D8CA /* SamplePresenter.swift in Sources */,
+				5368EDD71E801EDB0028D8CA /* SampleViewPad.swift in Sources */,
+				5368EDD51E801EDB0028D8CA /* SampleRouter.swift in Sources */,
+				5368EDD31E801EDB0028D8CA /* SampleInteractor.swift in Sources */,
 				5368EDC71E7FF91F0028D8CA /* RouterTests.swift in Sources */,
 				537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */,
 			);

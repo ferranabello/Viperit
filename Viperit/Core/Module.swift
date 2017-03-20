@@ -30,7 +30,7 @@ public struct Module {
     public fileprivate(set) var router: Router!
     public fileprivate(set) var displayData: DisplayData!
     
-    public static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main) -> Module where T.RawValue == String {
+    public static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil) -> Module where T.RawValue == String {
         //Get class types
         let interactorClass = module.classForViperComponent(.interactor, bundle: bundle) as! Interactor.Type
         let presenterClass = module.classForViperComponent(.presenter, bundle: bundle) as! Presenter.Type
@@ -38,7 +38,7 @@ public struct Module {
         let displayDataClass = module.classForViperComponent(.displayData, bundle: bundle) as! DisplayData.Type
 
         //Allocate VIPER components
-        let V = loadView(forModule: module, bundle: bundle)
+        let V = loadView(forModule: module, bundle: bundle, deviceType: deviceType)
         let I = interactorClass.init()
         let P = presenterClass.init()
         let R = routerClass.init()
@@ -63,8 +63,8 @@ public extension Module {
 //MARK: - Helper Methods
 fileprivate extension Module {
     
-    fileprivate static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle) -> UserInterface where T.RawValue == String {
-        let viewClass = module.classForViperComponent(.view, bundle: bundle) as! UIViewController.Type
+    fileprivate static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> UserInterface where T.RawValue == String {
+        let viewClass = module.classForViperComponent(.view, bundle: bundle, deviceType: deviceType) as! UIViewController.Type
         let sb = UIStoryboard(name: module.storyboardName.uppercasedFirst, bundle: bundle)
         let viewIdentifier = NSStringFromClass(viewClass).components(separatedBy: ".").last! as String
         let viewObject = sb.instantiateViewController(withIdentifier: viewIdentifier) as! UserInterface
@@ -95,13 +95,14 @@ fileprivate extension Module {
 //MARK: - Private Extension for Application Module generic enum
 fileprivate extension RawRepresentable where RawValue == String {
 
-    fileprivate func classForViperComponent(_ component: ViperComponent, bundle: Bundle) -> Swift.AnyClass? {
+    fileprivate func classForViperComponent(_ component: ViperComponent, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> Swift.AnyClass? {
         let className = rawValue.uppercasedFirst + component.rawValue.uppercasedFirst
         let bundleName = bundle.infoDictionary!["CFBundleName"] as! String
         let classInBundle = (bundleName + "." + className).replacingOccurrences(of: " ", with: "_")
         
         if component == .view {
-            let isPad = UIScreen.main.traitCollection.userInterfaceIdiom == .pad
+            let deviceType = deviceType ?? UIScreen.main.traitCollection.userInterfaceIdiom
+            let isPad = deviceType == .pad
             if isPad {
                 if let tabletView = NSClassFromString(classInBundle + kTabletSuffix) {
                     return tabletView

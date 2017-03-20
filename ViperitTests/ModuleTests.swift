@@ -12,8 +12,9 @@ import Viperit
 private class SampleMockView: UserInterface {}
 
 class ModuleTests: XCTestCase {
-    private func createTestModule() -> Module {
-        return Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self))
+    private func createTestModule(forTablet: Bool = false) -> Module {
+        let deviceType: UIUserInterfaceIdiom = forTablet ? .pad : .phone
+        return Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self), deviceType: deviceType)
     }
     
     func testModuleBuilderPerformance() {
@@ -26,6 +27,16 @@ class ModuleTests: XCTestCase {
         let module = createTestModule()
         
         XCTAssert(module.view is SampleView)
+        XCTAssert(module.interactor is SampleInteractor)
+        XCTAssert(module.presenter is SamplePresenter)
+        XCTAssert(module.router is SampleRouter)
+        XCTAssert(module.displayData is SampleDisplayData)
+    }
+    
+    func testModuleBuildForTabletComponents() {
+        let module = createTestModule(forTablet: true)
+        
+        XCTAssert(module.view is SampleViewPad)
         XCTAssert(module.interactor is SampleInteractor)
         XCTAssert(module.presenter is SamplePresenter)
         XCTAssert(module.router is SampleRouter)

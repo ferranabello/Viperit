@@ -4,9 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
     </dependencies>
     <scenes>
+        <!--Vtest View Controller-->
         <scene sceneID="htw-l1-ahc">
             <objects>
-                <viewController storyboardIdentifier="SampleView" id="xqD-av-Raz" customClass="SampleView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SampleView" id="xqD-av-Raz" customClass="SampleView" customModule="" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EcR-ye-kTk"/>
                         <viewControllerLayoutGuide type="bottom" id="vb6-4r-Epx"/>
@@ -21,6 +22,24 @@
             </objects>
             <point key="canvasLocation" x="295" y="356"/>
         </scene>
+            <!--Vtest View Controller-->
+            <scene sceneID="qWg-Hy-ZeF">
+            <objects>
+            <viewController storyboardIdentifier="SampleViewPad" id="ypD-bP-MjH" customClass="SampleViewPad" customModule="" customModuleProvider="target" sceneMemberID="viewController">
+            <layoutGuides>
+            <viewControllerLayoutGuide type="top" id="EeC-4e-jEA"/>
+            <viewControllerLayoutGuide type="bottom" id="zNZ-Bi-fRm"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="kdP-sd-Pqv">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            </view>
+            </viewController>
+            <placeholder placeholderIdentifier="IBFirstResponder" id="4Js-g8-f5v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="356"/>
+            </scene>
     </scenes>
     <scenes/>
 </document>
