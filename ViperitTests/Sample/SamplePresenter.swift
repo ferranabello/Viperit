@@ -9,7 +9,15 @@
 import Foundation
 import Viperit
 
+//Public API for Presenter (these methods will be visible from the View)
+protocol SamplePresenterInterface {
+}
+
 final class SamplePresenter: Presenter {
+}
+
+extension SamplePresenter: SamplePresenterInterface {
+
 }
 
 

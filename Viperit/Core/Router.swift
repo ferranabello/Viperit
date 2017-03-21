@@ -26,7 +26,9 @@ open class Router {
     }
     
     open func show(from: UIViewController, setupData: Any, embedInNavController: Bool = false) {
-        print(ViperitError.methodNotImplemented.description)
+        let view = embedInNavController ? embedInNavigationController() : _view
+        _presenter.setupView(data: setupData)
+        from.show(view, sender: nil)
     }
     
     required public init() { }
