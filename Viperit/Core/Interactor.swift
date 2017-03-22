@@ -6,7 +6,11 @@
 //  Copyright © 2016 Ferran Abelló. All rights reserved.
 //
 
-open class Interactor {
+public protocol InteractorProtocol {
+    weak var _presenter: Presenter! { get set }
+}
+
+open class Interactor: InteractorProtocol {
     public weak var _presenter: Presenter!
     
     required public init() { }
