@@ -9,7 +9,10 @@
 import XCTest
 import Viperit
 
-private class SampleMockView: UserInterface {}
+private class MockView: UserInterface {}
+private class MockPresenter: Presenter {}
+private class MockInteractor: Interactor {}
+private class MockRouter: Router {}
 
 class ModuleTests: XCTestCase {
     private func createTestModule(forTablet: Bool = false) -> Module {
@@ -63,7 +66,7 @@ class ModuleTests: XCTestCase {
     
     func testMockViewInjection() {
         var module = createTestModule()
-        let mockView = SampleMockView()
+        let mockView = MockView()
         module.injectMock(view: mockView)
         
         //Assert new injected dependencies
@@ -71,10 +74,58 @@ class ModuleTests: XCTestCase {
         let p = module.presenter
         let r = module.router
         
-        XCTAssert(v is SampleMockView)
+        XCTAssert(v is MockView)
         XCTAssert(v?._presenter is SamplePresenter)
         XCTAssert(v?._displayData is SampleDisplayData)
-        XCTAssert(p?._view is SampleMockView)
-        XCTAssert(r?._view is SampleMockView)
+        XCTAssert(p?._view is MockView)
+        XCTAssert(r?._view is MockView)
+    }
+    
+    func testMockPresenterInjection() {
+        var module = createTestModule()
+        let mockPresenter = MockPresenter()
+        module.injectMock(presenter: mockPresenter)
+        
+        //Assert new injected dependencies
+        let v = module.view
+        let i = module.interactor
+        let p = module.presenter
+        let r = module.router
+        
+        XCTAssert(p is MockPresenter)
+        XCTAssert(p?._view is SampleView)
+        XCTAssert(p?._interactor is SampleInteractor)
+        XCTAssert(p?._router is SampleRouter)
+        XCTAssert(r?._presenter is MockPresenter)
+        XCTAssert(v?._presenter is MockPresenter)
+        XCTAssert(i?._presenter is MockPresenter)
+    }
+    
+    func testMockInteractorInjection() {
+        var module = createTestModule()
+        let mockInteractor = MockInteractor()
+        module.injectMock(interactor: mockInteractor)
+        
+        //Assert new injected dependencies
+        let i = module.interactor
+        let p = module.presenter
+        
+        XCTAssert(i is MockInteractor)
+        XCTAssert(i?._presenter is SamplePresenter)
+        XCTAssert(p?._interactor is MockInteractor)
+    }
+    
+    func testMockRouterInjection() {
+        var module = createTestModule()
+        let mockRouter = MockRouter()
+        module.injectMock(router: mockRouter)
+        
+        //Assert new injected dependencies
+        let p = module.presenter
+        let r = module.router
+        
+        XCTAssert(r is MockRouter)
+        XCTAssert(r?._presenter is SamplePresenter)
+        XCTAssert(p?._router is MockRouter)
     }
 }
