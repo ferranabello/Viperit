@@ -43,4 +43,22 @@ class RouterTests: XCTestCase {
         }
         XCTAssert(true)
     }
+    
+    func testShowInsideView() {
+        let mockView = UIViewController()
+        let targetView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        mockView.view.addSubview(targetView)
+        
+        let module = createTestModule()
+        module.view.view.tag = 150
+        module.router.show(from: mockView, insideView: targetView)
+        
+        guard targetView.subviews.count == 1 else {
+            XCTAssert(false)
+            return
+        }
+        
+        let extractedView = targetView.subviews[0]
+        XCTAssert(extractedView.tag == 150)
+    }
 }
