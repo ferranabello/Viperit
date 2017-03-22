@@ -8,7 +8,16 @@
 
 import UIKit
 
-open class Router {
+public protocol RouterProtocol {
+    weak var _presenter: Presenter! { get set }
+    var _view: UserInterface! { get }
+    
+    func show(inWindow window: UIWindow?, embedInNavController: Bool)
+    func show(from: UIViewController, embedInNavController: Bool)
+    func show(from: UIViewController, setupData: Any, embedInNavController: Bool)
+}
+
+open class Router: RouterProtocol {
     public weak var _presenter: Presenter!
     public var _view: UserInterface! {
         return _presenter._view
