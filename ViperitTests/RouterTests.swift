@@ -23,4 +23,24 @@ class RouterTests: XCTestCase {
         assert(navigationController.viewControllers.count == 1)
         assert(navigationController.viewControllers[0] is SampleView)
     }
+    
+    func testShowInWindow() {
+        let window = UIWindow()
+        let module = createTestModule()
+        module.router.show(inWindow: window, embedInNavController: false, setupData: nil, makeKeyAndVisible: false)
+        XCTAssert(window.rootViewController is SampleView)
+    }
+    
+    func testShowInWindowEmbeddedInNavigationController() {
+        let window = UIWindow()
+        let module = createTestModule()
+        module.router.show(inWindow: window, embedInNavController: true, setupData: nil, makeKeyAndVisible: false)
+        
+        guard let rootNav = window.rootViewController as? UINavigationController,
+            let _ = rootNav.viewControllers[0] as? SampleView else {
+                XCTAssert(false)
+                return
+        }
+        XCTAssert(true)
+    }
 }

@@ -12,9 +12,8 @@ public protocol RouterProtocol {
     weak var _presenter: Presenter! { get set }
     var _view: UserInterface! { get }
     
-    func show(inWindow window: UIWindow?, embedInNavController: Bool)
-    func show(from: UIViewController, embedInNavController: Bool)
-    func show(from: UIViewController, setupData: Any, embedInNavController: Bool)
+    func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool)
+    func show(from: UIViewController, embedInNavController: Bool, setupData: Any?)
 }
 
 open class Router: RouterProtocol {
@@ -23,20 +22,24 @@ open class Router: RouterProtocol {
         return _presenter._view
     }
     
-    open func show(inWindow window: UIWindow?, embedInNavController: Bool = false) {
+    open func show(inWindow window: UIWindow?, embedInNavController: Bool = false, setupData: Any? = nil, makeKeyAndVisible: Bool = true) {
+        if let data = setupData {
+            _presenter.setupView(data: data)
+        }
+        
         let view = embedInNavController ? embedInNavigationController() : _view
         window?.rootViewController = view
-        window?.makeKeyAndVisible()
+        if makeKeyAndVisible {
+            window?.makeKeyAndVisible()
+        }
     }
     
-    open func show(from: UIViewController, embedInNavController: Bool = false) {
+    open func show(from: UIViewController, embedInNavController: Bool = false, setupData: Any? = nil) {
+        if let data = setupData {
+            _presenter.setupView(data: data)
+        }
+        
         let view = embedInNavController ? embedInNavigationController() : _view
-        from.show(view, sender: nil)
-    }
-    
-    open func show(from: UIViewController, setupData: Any, embedInNavController: Bool = false) {
-        let view = embedInNavController ? embedInNavigationController() : _view
-        _presenter.setupView(data: setupData)
         from.show(view, sender: nil)
     }
     
