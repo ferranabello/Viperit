@@ -35,26 +35,32 @@ private class MockPresenter: Presenter, SamplePresenterInterface {
     }
     
     override func viewHasLoaded() {
+        super.viewHasLoaded()
         assert(method: kViewHasLoaded)
     }
     
     override func viewIsAboutToAppear() {
+        super.viewIsAboutToAppear()
         assert(method: kViewIsAboutToAppear)
     }
     
     override func viewHasAppeared() {
+        super.viewHasAppeared()
         assert(method: kViewHasAppeared)
     }
     
     override func viewIsAboutToDisappear() {
+        super.viewIsAboutToDisappear()
         assert(method: kViewIsAboutToDisappear)
     }
     
     override func viewHasDisappeared() {
+        super.viewHasDisappeared()
         assert(method: kViewHasDisappeared)
     }
     
     override func setupView(data: Any) {
+        super.setupView(data: data)
         assert(method: kSetupView)
     }
 }
