@@ -53,7 +53,7 @@ Run `carthage update` to build the framework and drag the built `Viperit.framewo
 
 ### 0. Install the templates
 
-Viperit Xcode templates can be found in the repository's `/Xcode Templates/Viperit` folder. To install them, open your terminal and run:
+Viperit Xcode templates can be found in the repository's `/Templates/Viperit` folder. To install them, open your terminal and run:
 
 ```bash
 cd PATH/TO/REPO
