@@ -13,9 +13,15 @@ Write an iOS app following VIPER architecture. But in an **easy way**.
 
 
 ## Viper the easy way
-We all know Viper is cool. But we also know that it's hard to setup. This library intends to simplify all that boilerplate process.
+We all know Viper is cool. But we also know that it's hard to setup. This library intends to simplify all that boilerplate process. If you don't know yet what Viper is, check this out: [Architecting iOS Apps with VIPER (objc.io)](https://www.objc.io/issues/13-architecture/viper/)
 
 ## Installation
+
+## Requirements
+
+- iOS 8.0+
+- Swift 3
+- Xcode 8
 
 ### CocoaPods
 
@@ -44,7 +50,18 @@ github "ferranabello/Viperit"
 Run `carthage update` to build the framework and drag the built `Viperit.framework` into your Xcode project.
 
 ## Usage
-Here I'll explain to you how to create a Viperit module called "myFirstModule" and use it step by step
+
+### 0. Install the templates
+
+Viperit Xcode templates can be found in the repository's `/Xcode Templates/Viperit` folder. To install them, open your terminal and run:
+
+```bash
+cd PATH/TO/REPO
+mkdir -p ~/Library/Developer/Xcode/Templates/
+cp -R Templates/Viperit ~/Library/Developer/Xcode/Templates/
+```
+
+Now, let's create our first Viperit module called "myFirstModule"!
 
 ### 1. Create a modules enum
 You need at least one (you can use as many as you like, maybe to group modules by functionality) enum that implements the ViperitModule protocol to enumerate your application modules.
@@ -91,7 +108,7 @@ This is just an example, you could of course use your own router functions inste
 ```
 
 ### 4. Follow the Viper flow
-Everything is ready for you to make things the Viper way!
+Everything is ready for you to make great things the Viper way!
 Clone the repo and run the 'Example' target to see it in action! Or jus try it with Cocoapods:
 ```ruby
 pod try Viperit
