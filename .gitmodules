@@ -1,0 +1,3 @@
+[submodule "Templates/Viperit"]
+	path = Templates/Viperit
+	url = https://github.com/ferranabello/ViperitTemplates.git
