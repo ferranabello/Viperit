@@ -109,7 +109,7 @@ This is just an example, you could of course use your own router functions inste
 
 ### 4. Follow the Viper flow
 Everything is ready for you to make great things the Viper way!
-Clone the repo and run the 'Example' target to see it in action! Or jus try it with Cocoapods:
+Clone the repo and run the 'Example' target to see it in action! Or just try it with Cocoapods:
 ```ruby
 pod try Viperit
 ```
