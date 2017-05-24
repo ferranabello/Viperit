@@ -16,7 +16,7 @@ public protocol ViperitModule {
     var storyboardName: String { get }
 }
 
-public extension RawRepresentable where Self: ViperitModule, RawValue == String {
+public extension ViperitModule where Self: RawRepresentable, Self.RawValue == String {
     var storyboardName: String {
         return rawValue
     }
@@ -24,11 +24,11 @@ public extension RawRepresentable where Self: ViperitModule, RawValue == String 
 
 //MARK: - Module
 public struct Module {
-    public fileprivate(set) var view: UserInterface!
-    public fileprivate(set) var interactor: Interactor!
-    public fileprivate(set) var presenter: Presenter!
-    public fileprivate(set) var router: Router!
-    public fileprivate(set) var displayData: DisplayData!
+    public fileprivate(set) var view: UserInterface
+    public fileprivate(set) var interactor: Interactor
+    public fileprivate(set) var presenter: Presenter
+    public fileprivate(set) var router: Router
+    public fileprivate(set) var displayData: DisplayData
     
     public static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil) -> Module where T.RawValue == String {
         //Get class types

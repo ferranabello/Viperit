@@ -55,13 +55,13 @@ class ModuleTests: XCTestCase {
         let p = module.presenter
         let r = module.router
         
-        XCTAssert(v?._presenter is SamplePresenter)
-        XCTAssert(v?._displayData is SampleDisplayData)
-        XCTAssert(i?._presenter is SamplePresenter)
-        XCTAssert(p?._view is SampleView)
-        XCTAssert(p?._router is SampleRouter)
-        XCTAssert(r?._presenter is SamplePresenter)
-        XCTAssert(r?._view is SampleView)        
+        XCTAssert(v._presenter is SamplePresenter)
+        XCTAssert(v._displayData is SampleDisplayData)
+        XCTAssert(i._presenter is SamplePresenter)
+        XCTAssert(p._view is SampleView)
+        XCTAssert(p._router is SampleRouter)
+        XCTAssert(r._presenter is SamplePresenter)
+        XCTAssert(r._view is SampleView)
     }
     
     func testMockViewInjection() {
@@ -75,10 +75,10 @@ class ModuleTests: XCTestCase {
         let r = module.router
         
         XCTAssert(v is MockView)
-        XCTAssert(v?._presenter is SamplePresenter)
-        XCTAssert(v?._displayData is SampleDisplayData)
-        XCTAssert(p?._view is MockView)
-        XCTAssert(r?._view is MockView)
+        XCTAssert(v._presenter is SamplePresenter)
+        XCTAssert(v._displayData is SampleDisplayData)
+        XCTAssert(p._view is MockView)
+        XCTAssert(r._view is MockView)
     }
     
     func testMockPresenterInjection() {
@@ -93,12 +93,12 @@ class ModuleTests: XCTestCase {
         let r = module.router
         
         XCTAssert(p is MockPresenter)
-        XCTAssert(p?._view is SampleView)
-        XCTAssert(p?._interactor is SampleInteractor)
-        XCTAssert(p?._router is SampleRouter)
-        XCTAssert(r?._presenter is MockPresenter)
-        XCTAssert(v?._presenter is MockPresenter)
-        XCTAssert(i?._presenter is MockPresenter)
+        XCTAssert(p._view is SampleView)
+        XCTAssert(p._interactor is SampleInteractor)
+        XCTAssert(p._router is SampleRouter)
+        XCTAssert(r._presenter is MockPresenter)
+        XCTAssert(v._presenter is MockPresenter)
+        XCTAssert(i._presenter is MockPresenter)
     }
     
     func testMockInteractorInjection() {
@@ -111,8 +111,8 @@ class ModuleTests: XCTestCase {
         let p = module.presenter
         
         XCTAssert(i is MockInteractor)
-        XCTAssert(i?._presenter is SamplePresenter)
-        XCTAssert(p?._interactor is MockInteractor)
+        XCTAssert(i._presenter is SamplePresenter)
+        XCTAssert(p._interactor is MockInteractor)
     }
     
     func testMockRouterInjection() {
@@ -125,7 +125,7 @@ class ModuleTests: XCTestCase {
         let r = module.router
         
         XCTAssert(r is MockRouter)
-        XCTAssert(r?._presenter is SamplePresenter)
-        XCTAssert(p?._router is MockRouter)
+        XCTAssert(r._presenter is SamplePresenter)
+        XCTAssert(p._router is MockRouter)
     }
 }
