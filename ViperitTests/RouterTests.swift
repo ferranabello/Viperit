@@ -24,6 +24,18 @@ class RouterTests: XCTestCase {
         assert(navigationController.viewControllers[0] is SampleView)
     }
     
+    func testEmbedInNavigationControllerWhenAlreadyExists() {
+        let module = createTestModule()
+        let router = module.router as! SampleRouter
+        let navController = UINavigationController(rootViewController: UIViewController())
+        navController.pushViewController(module.view, animated: false)
+        let navigationController = router.embedInNavigationController()
+        
+        //Check that there is two views in the stack and that the second one is a SampleView
+        assert(navigationController.viewControllers.count == 2)
+        assert(navigationController.viewControllers[1] is SampleView)
+    }
+    
     func testShowInWindow() {
         let window = UIWindow()
         let module = createTestModule()
@@ -42,6 +54,19 @@ class RouterTests: XCTestCase {
                 return
         }
         XCTAssert(true)
+    }
+    
+    func testShowEmbeddedInNavigationController() {
+        let mockView = UIViewController()
+        let module = createTestModule()
+        
+        module.router.show(from: mockView, embedInNavController: true)
+        let navigationController = module.view.navigationController
+        
+        //Check that there is one view in the stack and that is a SampleView
+        assert(navigationController != nil)
+        assert(navigationController?.viewControllers.count == 1)
+        assert(navigationController?.viewControllers[0] is SampleView)
     }
     
     func testShowInsideView() {
