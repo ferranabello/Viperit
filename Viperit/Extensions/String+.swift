@@ -16,3 +16,8 @@ extension String {
         return first.uppercased() + String(characters.dropFirst())
     }
 }
+
+func safeString(_ value: Any?) -> String {
+    guard let text = value else { return "" }
+    return String(describing: text)
+}

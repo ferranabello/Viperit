@@ -83,9 +83,9 @@ public extension Module {
 
 
 //MARK: - Helper Methods
-fileprivate extension Module {
+private extension Module {
     
-    fileprivate static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> UserInterface where T.RawValue == String {
+    static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> UserInterface where T.RawValue == String {
         let viewClass = module.classForViperComponent(.view, bundle: bundle, deviceType: deviceType) as! UIViewController.Type
         let sb = UIStoryboard(name: module.storyboardName.uppercasedFirst, bundle: bundle)
         let viewIdentifier = NSStringFromClass(viewClass).components(separatedBy: ".").last! as String
@@ -93,7 +93,7 @@ fileprivate extension Module {
         return viewObject
     }
     
-    fileprivate static func build(view: UserInterface, interactor: Interactor, presenter: Presenter, router: Router, displayData: DisplayData) -> Module {
+    static func build(view: UserInterface, interactor: Interactor, presenter: Presenter, router: Router, displayData: DisplayData) -> Module {
         //View connections
         view._presenter = presenter
         view._displayData = displayData
@@ -115,20 +115,18 @@ fileprivate extension Module {
 
 
 //MARK: - Private Extension for Application Module generic enum
-fileprivate extension RawRepresentable where RawValue == String {
+private extension RawRepresentable where RawValue == String {
 
-    fileprivate func classForViperComponent(_ component: ViperComponent, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> Swift.AnyClass? {
+    func classForViperComponent(_ component: ViperComponent, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> Swift.AnyClass? {
         let className = rawValue.uppercasedFirst + component.rawValue.uppercasedFirst
-        let bundleName = bundle.infoDictionary!["CFBundleName"] as! String
+        let bundleName = safeString(bundle.infoDictionary?["CFBundleName"])
         let classInBundle = (bundleName + "." + className).replacingOccurrences(of: " ", with: "_")
         
         if component == .view {
             let deviceType = deviceType ?? UIScreen.main.traitCollection.userInterfaceIdiom
             let isPad = deviceType == .pad
-            if isPad {
-                if let tabletView = NSClassFromString(classInBundle + kTabletSuffix) {
-                    return tabletView
-                }
+            if isPad, let tabletView = NSClassFromString(classInBundle + kTabletSuffix) {
+                return tabletView
             }
         }
         

@@ -10,8 +10,9 @@ import XCTest
 import Viperit
 
 class RouterTests: XCTestCase {
-    private func createTestModule() -> Module {
-        return Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self))
+    private func createTestModule(forTablet: Bool = false) -> Module {
+        let deviceType: UIUserInterfaceIdiom = forTablet ? .pad : .phone
+        return Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self), deviceType: deviceType)
     }
     
     func testEmbedInNavigationController() {
