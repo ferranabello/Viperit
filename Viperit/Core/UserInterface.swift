@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol UserInterfaceProtocol {
+public protocol UserInterfaceProtocol {
     var _presenter: Presenter! { get set }
     var _displayData: DisplayData! { get set }
 }
