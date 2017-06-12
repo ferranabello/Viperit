@@ -5,6 +5,7 @@
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
 [![License](http://img.shields.io/badge/license-MIT-orange.svg)](http://mit-license.org)
 [![Codecov](https://img.shields.io/codecov/c/github/ferranabello/Viperit.svg)](https://codecov.io/gh/ferranabello/Viperit)
+[![codebeat badge](https://codebeat.co/badges/17d36823-4e6c-4b45-bad3-746611689636)](https://codebeat.co/projects/github-com-ferranabello-viperit-master)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Viperit.svg)](http://github.com/ferranabello/Viperit)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Twitter](https://img.shields.io/badge/twitter-@acferran-blue.svg?style=flat)](http://twitter.com/acferran)
