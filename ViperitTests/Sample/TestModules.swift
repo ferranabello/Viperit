@@ -10,4 +10,14 @@ import Viperit
 
 enum TestModules: String, ViperitModule {
     case sample
+    case codeModule
+    case xibModule
+    
+    var viewType: ViperitViewType {
+        switch self {
+        case .codeModule: return .code
+        case .xibModule: return .nib
+        default: return .storyboard
+        }
+    }
 }
