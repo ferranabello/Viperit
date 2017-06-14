@@ -19,7 +19,7 @@ public enum ViperitViewType {
 public protocol ViperitModule {
     var viewType: ViperitViewType { get }
     var viewName: String { get }
-    func build(bundle: Bundle?, deviceType: UIUserInterfaceIdiom?) -> Module
+    func build(bundle: Bundle, deviceType: UIUserInterfaceIdiom?) -> Module
 }
 
 public extension ViperitModule where Self: RawRepresentable, Self.RawValue == String {
@@ -31,7 +31,7 @@ public extension ViperitModule where Self: RawRepresentable, Self.RawValue == St
         return rawValue
     }
     
-    func build(bundle: Bundle? = nil, deviceType: UIUserInterfaceIdiom? = nil) -> Module {
-        return Module.build(self, bundle: bundle ?? Bundle.main, deviceType: deviceType)
+    func build(bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil) -> Module {
+        return Module.build(self, bundle: bundle, deviceType: deviceType)
     }
 }
