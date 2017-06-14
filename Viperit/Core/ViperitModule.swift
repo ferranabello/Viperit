@@ -6,6 +6,8 @@
 //  Copyright © 2017 Ferran Abelló. All rights reserved.
 //
 
+import UIKit
+
 //MARK: - Module View Types
 public enum ViperitViewType {
     case storyboard
@@ -17,6 +19,7 @@ public enum ViperitViewType {
 public protocol ViperitModule {
     var viewType: ViperitViewType { get }
     var viewName: String { get }
+    func build(bundle: Bundle?, deviceType: UIUserInterfaceIdiom?) -> Module
 }
 
 public extension ViperitModule where Self: RawRepresentable, Self.RawValue == String {
@@ -26,5 +29,9 @@ public extension ViperitModule where Self: RawRepresentable, Self.RawValue == St
     
     var viewName: String {
         return rawValue
+    }
+    
+    func build(bundle: Bundle? = nil, deviceType: UIUserInterfaceIdiom? = nil) -> Module {
+        return Module.build(self, bundle: bundle ?? Bundle.main, deviceType: deviceType)
     }
 }

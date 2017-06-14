@@ -17,7 +17,7 @@ private class MockRouter: Router {}
 class ModuleTests: XCTestCase {
     private func createTestModule(module: TestModules = .sample, forTablet: Bool = false) -> Module {
         let deviceType: UIUserInterfaceIdiom = forTablet ? .pad : .phone
-        return Module.build(module, bundle: Bundle(for: SampleRouter.self), deviceType: deviceType)
+        return module.build(bundle: Bundle(for: SampleRouter.self), deviceType: deviceType)
     }
     
     func testModuleBuilderPerformance() {

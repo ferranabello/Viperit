@@ -34,7 +34,7 @@ class HomeTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        var mod = Module.build(AppModules.home)
+        var mod = AppModules.home.build()
         view = HomeMockView()
         view.expectation = expectation(description: "Test expectation description")
         presenter = mod.presenter as! HomePresenter
