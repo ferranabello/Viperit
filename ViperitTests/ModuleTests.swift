@@ -15,9 +15,9 @@ private class MockInteractor: Interactor {}
 private class MockRouter: Router {}
 
 class ModuleTests: XCTestCase {
-    private func createTestModule(forTablet: Bool = false) -> Module {
+    private func createTestModule(module: TestModules = .sample, forTablet: Bool = false) -> Module {
         let deviceType: UIUserInterfaceIdiom = forTablet ? .pad : .phone
-        return Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self), deviceType: deviceType)
+        return Module.build(module, bundle: Bundle(for: SampleRouter.self), deviceType: deviceType)
     }
     
     func testModuleBuilderPerformance() {
@@ -127,5 +127,15 @@ class ModuleTests: XCTestCase {
         XCTAssert(r is MockRouter)
         XCTAssert(r._presenter is SamplePresenter)
         XCTAssert(p._router is MockRouter)
+    }
+    
+    func testModuleFromNib() {
+        let module = createTestModule(module: .xibModule)
+        XCTAssert(module.view is XibModuleView)
+    }
+    
+    func testModuleByCode() {
+        let module = createTestModule(module: .codeModule)
+        XCTAssert(module.view is CodeModuleView)
     }
 }

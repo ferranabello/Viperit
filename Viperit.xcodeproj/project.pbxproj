@@ -28,6 +28,19 @@
 		5368EDD61E801EDB0028D8CA /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDCF1E801EDB0028D8CA /* SampleView.swift */; };
 		5368EDD71E801EDB0028D8CA /* SampleViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDD01E801EDB0028D8CA /* SampleViewPad.swift */; };
 		5372505E1EF13500007F3A10 /* ViperitModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372505D1EF13500007F3A10 /* ViperitModule.swift */; };
+		537250691EF13835007F3A10 /* CodeModuleDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250631EF13835007F3A10 /* CodeModuleDisplayData.swift */; };
+		5372506A1EF13835007F3A10 /* CodeModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250641EF13835007F3A10 /* CodeModuleInteractor.swift */; };
+		5372506B1EF13835007F3A10 /* CodeModuleModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250651EF13835007F3A10 /* CodeModuleModuleApi.swift */; };
+		5372506C1EF13835007F3A10 /* CodeModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250661EF13835007F3A10 /* CodeModulePresenter.swift */; };
+		5372506D1EF13835007F3A10 /* CodeModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250671EF13835007F3A10 /* CodeModuleRouter.swift */; };
+		5372506E1EF13835007F3A10 /* CodeModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250681EF13835007F3A10 /* CodeModuleView.swift */; };
+		537250751EF13988007F3A10 /* XibModuleDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372506F1EF13988007F3A10 /* XibModuleDisplayData.swift */; };
+		537250761EF13988007F3A10 /* XibModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250701EF13988007F3A10 /* XibModuleInteractor.swift */; };
+		537250771EF13988007F3A10 /* XibModuleModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250711EF13988007F3A10 /* XibModuleModuleApi.swift */; };
+		537250781EF13988007F3A10 /* XibModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250721EF13988007F3A10 /* XibModulePresenter.swift */; };
+		537250791EF13988007F3A10 /* XibModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250731EF13988007F3A10 /* XibModuleRouter.swift */; };
+		5372507A1EF13988007F3A10 /* XibModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250741EF13988007F3A10 /* XibModuleView.swift */; };
+		5372507C1EF1399E007F3A10 /* XibModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5372507B1EF1399E007F3A10 /* XibModule.xib */; };
 		537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D19E31E7BE9B100A758FF /* ModuleTests.swift */; };
 		53D3AEF61E0709A80099A464 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEF51E0709A80099A464 /* String+.swift */; };
 		53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEFC1E07109D0099A464 /* AppDelegate.swift */; };
@@ -105,6 +118,19 @@
 		5368EDCF1E801EDB0028D8CA /* SampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		5368EDD01E801EDB0028D8CA /* SampleViewPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewPad.swift; sourceTree = "<group>"; };
 		5372505D1EF13500007F3A10 /* ViperitModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperitModule.swift; sourceTree = "<group>"; };
+		537250631EF13835007F3A10 /* CodeModuleDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModuleDisplayData.swift; sourceTree = "<group>"; };
+		537250641EF13835007F3A10 /* CodeModuleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModuleInteractor.swift; sourceTree = "<group>"; };
+		537250651EF13835007F3A10 /* CodeModuleModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModuleModuleApi.swift; sourceTree = "<group>"; };
+		537250661EF13835007F3A10 /* CodeModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModulePresenter.swift; sourceTree = "<group>"; };
+		537250671EF13835007F3A10 /* CodeModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModuleRouter.swift; sourceTree = "<group>"; };
+		537250681EF13835007F3A10 /* CodeModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModuleView.swift; sourceTree = "<group>"; };
+		5372506F1EF13988007F3A10 /* XibModuleDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleDisplayData.swift; sourceTree = "<group>"; };
+		537250701EF13988007F3A10 /* XibModuleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleInteractor.swift; sourceTree = "<group>"; };
+		537250711EF13988007F3A10 /* XibModuleModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleModuleApi.swift; sourceTree = "<group>"; };
+		537250721EF13988007F3A10 /* XibModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModulePresenter.swift; sourceTree = "<group>"; };
+		537250731EF13988007F3A10 /* XibModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleRouter.swift; sourceTree = "<group>"; };
+		537250741EF13988007F3A10 /* XibModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleView.swift; sourceTree = "<group>"; };
+		5372507B1EF1399E007F3A10 /* XibModule.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibModule.xib; sourceTree = "<group>"; };
 		537D19E31E7BE9B100A758FF /* ModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		53D3AEF51E0709A80099A464 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		53D3AEFA1E070AC60099A464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,13 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				5368EDC81E7FF9A40028D8CA /* TestModules.swift */,
-				5368EDCA1E801EDB0028D8CA /* Sample.storyboard */,
-				5368EDCB1E801EDB0028D8CA /* SampleDisplayData.swift */,
-				5368EDCC1E801EDB0028D8CA /* SampleInteractor.swift */,
-				5368EDCD1E801EDB0028D8CA /* SamplePresenter.swift */,
-				5368EDCE1E801EDB0028D8CA /* SampleRouter.swift */,
-				5368EDCF1E801EDB0028D8CA /* SampleView.swift */,
-				5368EDD01E801EDB0028D8CA /* SampleViewPad.swift */,
+				5372505F1EF137A1007F3A10 /* Modules */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -237,6 +257,57 @@
 				53532C611DD50DDF00088AAC /* Router.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		5372505F1EF137A1007F3A10 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				537250601EF137B4007F3A10 /* Sample */,
+				537250611EF137BD007F3A10 /* XibModule */,
+				537250621EF137C7007F3A10 /* CodeModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		537250601EF137B4007F3A10 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				5368EDCA1E801EDB0028D8CA /* Sample.storyboard */,
+				5368EDCB1E801EDB0028D8CA /* SampleDisplayData.swift */,
+				5368EDCC1E801EDB0028D8CA /* SampleInteractor.swift */,
+				5368EDCD1E801EDB0028D8CA /* SamplePresenter.swift */,
+				5368EDCE1E801EDB0028D8CA /* SampleRouter.swift */,
+				5368EDCF1E801EDB0028D8CA /* SampleView.swift */,
+				5368EDD01E801EDB0028D8CA /* SampleViewPad.swift */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		537250611EF137BD007F3A10 /* XibModule */ = {
+			isa = PBXGroup;
+			children = (
+				5372507B1EF1399E007F3A10 /* XibModule.xib */,
+				5372506F1EF13988007F3A10 /* XibModuleDisplayData.swift */,
+				537250701EF13988007F3A10 /* XibModuleInteractor.swift */,
+				537250711EF13988007F3A10 /* XibModuleModuleApi.swift */,
+				537250721EF13988007F3A10 /* XibModulePresenter.swift */,
+				537250731EF13988007F3A10 /* XibModuleRouter.swift */,
+				537250741EF13988007F3A10 /* XibModuleView.swift */,
+			);
+			path = XibModule;
+			sourceTree = "<group>";
+		};
+		537250621EF137C7007F3A10 /* CodeModule */ = {
+			isa = PBXGroup;
+			children = (
+				537250631EF13835007F3A10 /* CodeModuleDisplayData.swift */,
+				537250641EF13835007F3A10 /* CodeModuleInteractor.swift */,
+				537250651EF13835007F3A10 /* CodeModuleModuleApi.swift */,
+				537250661EF13835007F3A10 /* CodeModulePresenter.swift */,
+				537250671EF13835007F3A10 /* CodeModuleRouter.swift */,
+				537250681EF13835007F3A10 /* CodeModuleView.swift */,
+			);
+			path = CodeModule;
 			sourceTree = "<group>";
 		};
 		53D3AEF41E0709A80099A464 /* Extensions */ = {
@@ -462,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5368EDD11E801EDB0028D8CA /* Sample.storyboard in Resources */,
+				5372507C1EF1399E007F3A10 /* XibModule.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,16 +578,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5372507A1EF13988007F3A10 /* XibModuleView.swift in Sources */,
 				5360ADF31E81280100C1AACB /* PresenterTests.swift in Sources */,
+				537250771EF13988007F3A10 /* XibModuleModuleApi.swift in Sources */,
+				5372506A1EF13835007F3A10 /* CodeModuleInteractor.swift in Sources */,
 				5368EDD61E801EDB0028D8CA /* SampleView.swift in Sources */,
 				5368EDD21E801EDB0028D8CA /* SampleDisplayData.swift in Sources */,
 				5368EDC91E7FF9A40028D8CA /* TestModules.swift in Sources */,
 				5368EDD41E801EDB0028D8CA /* SamplePresenter.swift in Sources */,
 				5368EDD71E801EDB0028D8CA /* SampleViewPad.swift in Sources */,
+				537250691EF13835007F3A10 /* CodeModuleDisplayData.swift in Sources */,
 				5368EDD51E801EDB0028D8CA /* SampleRouter.swift in Sources */,
+				537250791EF13988007F3A10 /* XibModuleRouter.swift in Sources */,
+				5372506B1EF13835007F3A10 /* CodeModuleModuleApi.swift in Sources */,
+				537250751EF13988007F3A10 /* XibModuleDisplayData.swift in Sources */,
+				537250781EF13988007F3A10 /* XibModulePresenter.swift in Sources */,
 				5368EDD31E801EDB0028D8CA /* SampleInteractor.swift in Sources */,
+				537250761EF13988007F3A10 /* XibModuleInteractor.swift in Sources */,
+				5372506E1EF13835007F3A10 /* CodeModuleView.swift in Sources */,
 				5368EDC71E7FF91F0028D8CA /* RouterTests.swift in Sources */,
 				537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */,
+				5372506D1EF13835007F3A10 /* CodeModuleRouter.swift in Sources */,
+				5372506C1EF13835007F3A10 /* CodeModulePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
