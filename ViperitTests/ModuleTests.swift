@@ -15,9 +15,11 @@ private class MockInteractor: Interactor {}
 private class MockRouter: Router {}
 
 class ModuleTests: XCTestCase {
+    private lazy var testBundle = Bundle(for: SampleRouter.self)
+    
     private func createTestModule(module: TestModules = .sample, forTablet: Bool = false) -> Module {
         let deviceType: UIUserInterfaceIdiom = forTablet ? .pad : .phone
-        return Module.build(module, bundle: Bundle(for: SampleRouter.self), deviceType: deviceType)
+        return module.build(bundle: testBundle, deviceType: deviceType)
     }
     
     func testModuleBuilderPerformance() {
@@ -140,7 +142,7 @@ class ModuleTests: XCTestCase {
     }
     
     func testModuleWithoutOverridingProperties() {
-        let module = Module.build(TestCleanModules.sample, bundle: Bundle(for: SampleRouter.self), deviceType: .phone)
+        let module = TestCleanModules.sample.build(bundle: testBundle, deviceType: .phone)
         XCTAssert(module.view is SampleView)
     }
 }

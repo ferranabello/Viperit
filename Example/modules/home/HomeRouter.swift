@@ -11,7 +11,7 @@ import Viperit
 
 final class HomeRouter: Router {
     func showSecondModule() {
-        let module = Module.build(AppModules.second)
+        let module = AppModules.second.build()
         module.router.show(from: _view)
     }
 }
