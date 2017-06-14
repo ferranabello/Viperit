@@ -138,4 +138,9 @@ class ModuleTests: XCTestCase {
         let module = createTestModule(module: .codeModule)
         XCTAssert(module.view is CodeModuleView)
     }
+    
+    func testModuleWithoutOverridingProperties() {
+        let module = Module.build(TestCleanModules.sample, bundle: Bundle(for: SampleRouter.self), deviceType: .phone)
+        XCTAssert(module.view is SampleView)
+    }
 }

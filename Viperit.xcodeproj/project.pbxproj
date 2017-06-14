@@ -41,6 +41,7 @@
 		537250791EF13988007F3A10 /* XibModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250731EF13988007F3A10 /* XibModuleRouter.swift */; };
 		5372507A1EF13988007F3A10 /* XibModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250741EF13988007F3A10 /* XibModuleView.swift */; };
 		5372507C1EF1399E007F3A10 /* XibModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5372507B1EF1399E007F3A10 /* XibModule.xib */; };
+		5372507E1EF1503A007F3A10 /* TestCleanModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372507D1EF1503A007F3A10 /* TestCleanModules.swift */; };
 		537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D19E31E7BE9B100A758FF /* ModuleTests.swift */; };
 		53D3AEF61E0709A80099A464 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEF51E0709A80099A464 /* String+.swift */; };
 		53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEFC1E07109D0099A464 /* AppDelegate.swift */; };
@@ -131,6 +132,7 @@
 		537250731EF13988007F3A10 /* XibModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleRouter.swift; sourceTree = "<group>"; };
 		537250741EF13988007F3A10 /* XibModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleView.swift; sourceTree = "<group>"; };
 		5372507B1EF1399E007F3A10 /* XibModule.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibModule.xib; sourceTree = "<group>"; };
+		5372507D1EF1503A007F3A10 /* TestCleanModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCleanModules.swift; sourceTree = "<group>"; };
 		537D19E31E7BE9B100A758FF /* ModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		53D3AEF51E0709A80099A464 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		53D3AEFA1E070AC60099A464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				5368EDC81E7FF9A40028D8CA /* TestModules.swift */,
+				5372507D1EF1503A007F3A10 /* TestCleanModules.swift */,
 				5372505F1EF137A1007F3A10 /* Modules */,
 			);
 			path = Sample;
@@ -595,6 +598,7 @@
 				537250781EF13988007F3A10 /* XibModulePresenter.swift in Sources */,
 				5368EDD31E801EDB0028D8CA /* SampleInteractor.swift in Sources */,
 				537250761EF13988007F3A10 /* XibModuleInteractor.swift in Sources */,
+				5372507E1EF1503A007F3A10 /* TestCleanModules.swift in Sources */,
 				5372506E1EF13835007F3A10 /* CodeModuleView.swift in Sources */,
 				5368EDC71E7FF91F0028D8CA /* RouterTests.swift in Sources */,
 				537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */,
