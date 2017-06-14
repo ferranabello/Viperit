@@ -27,6 +27,7 @@
 		5368EDD51E801EDB0028D8CA /* SampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDCE1E801EDB0028D8CA /* SampleRouter.swift */; };
 		5368EDD61E801EDB0028D8CA /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDCF1E801EDB0028D8CA /* SampleView.swift */; };
 		5368EDD71E801EDB0028D8CA /* SampleViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5368EDD01E801EDB0028D8CA /* SampleViewPad.swift */; };
+		5372505E1EF13500007F3A10 /* ViperitModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372505D1EF13500007F3A10 /* ViperitModule.swift */; };
 		537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D19E31E7BE9B100A758FF /* ModuleTests.swift */; };
 		53D3AEF61E0709A80099A464 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEF51E0709A80099A464 /* String+.swift */; };
 		53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEFC1E07109D0099A464 /* AppDelegate.swift */; };
@@ -103,6 +104,7 @@
 		5368EDCE1E801EDB0028D8CA /* SampleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleRouter.swift; sourceTree = "<group>"; };
 		5368EDCF1E801EDB0028D8CA /* SampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		5368EDD01E801EDB0028D8CA /* SampleViewPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewPad.swift; sourceTree = "<group>"; };
+		5372505D1EF13500007F3A10 /* ViperitModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperitModule.swift; sourceTree = "<group>"; };
 		537D19E31E7BE9B100A758FF /* ModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		53D3AEF51E0709A80099A464 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		53D3AEFA1E070AC60099A464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				53532C641DD50DDF00088AAC /* ViperitError.swift */,
 				53532C631DD50DDF00088AAC /* ViperComponent.swift */,
+				5372505D1EF13500007F3A10 /* ViperitModule.swift */,
 				53532C5F1DD50DDF00088AAC /* Module.swift */,
 				53532C621DD50DDF00088AAC /* UserInterface.swift */,
 				53532C5D1DD50DDF00088AAC /* DisplayData.swift */,
@@ -529,6 +532,7 @@
 				5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */,
 				5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */,
 				5367C0E31DD7C69E005B6676 /* Router.swift in Sources */,
+				5372505E1EF13500007F3A10 /* ViperitModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

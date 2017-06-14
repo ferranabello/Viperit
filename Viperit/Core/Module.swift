@@ -11,17 +11,6 @@ import UIKit
 
 private let kTabletSuffix = "Pad"
 
-//MARK: - Viperit Module Protocol
-public protocol ViperitModule {
-    var storyboardName: String { get }
-}
-
-public extension ViperitModule where Self: RawRepresentable, Self.RawValue == String {
-    var storyboardName: String {
-        return rawValue
-    }
-}
-
 //MARK: - Module
 public struct Module {
     public fileprivate(set) var view: UserInterface
@@ -87,10 +76,18 @@ private extension Module {
     
     static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> UserInterface where T.RawValue == String {
         let viewClass = module.classForViperComponent(.view, bundle: bundle, deviceType: deviceType) as! UIViewController.Type
-        let sb = UIStoryboard(name: module.storyboardName.uppercasedFirst, bundle: bundle)
-        let viewIdentifier = NSStringFromClass(viewClass).components(separatedBy: ".").last! as String
-        let viewObject = sb.instantiateViewController(withIdentifier: viewIdentifier) as! UserInterface
-        return viewObject
+        let viewIdentifier = safeString(NSStringFromClass(viewClass).components(separatedBy: ".").last)
+        let viewName = module.viewName.uppercasedFirst
+        
+        switch module.viewType {
+        case .storyboard:
+            let sb = UIStoryboard(name: viewName, bundle: bundle)
+            return sb.instantiateViewController(withIdentifier: viewIdentifier) as! UserInterface
+        case .nib:
+            return viewClass.init(nibName: viewName, bundle: bundle) as! UserInterface
+        case .code:
+            return viewClass.init() as! UserInterface
+        }
     }
     
     static func build(view: UserInterface, interactor: Interactor, presenter: Presenter, router: Router, displayData: DisplayData) -> Module {
