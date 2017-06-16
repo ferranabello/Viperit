@@ -78,7 +78,7 @@ enum AppModules: String, ViperitModule {
 ### 2. Create the module
 Let's use the provided Xcode template to easily create all the needed classes for the module. Just click <i class="icon-file"></i> **New file** in the document panel and select "Viperit Module" template under "Viperit" section.
 
-![Module Creation](https://raw.githubusercontent.com/ferranabello/Viperit/master/Assets/Instructions/module_creation_step1.gif)
+![Module Creation](/Assets/Instructions/module_creation.gif)
 
 You can check "Also create a Storyboard file for module" if you want the storyboard file to be automatically created for you.
 Choose between "Universal" to use just one view for phones and tablets, and "Dedicated Tablet View" if you want to have a separated view for tablet devices.
@@ -94,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let module = Module.build(AppModules.myFirstModule)
+        let module = AppModules.myFirstModule.build()
         module.router.show(inWindow: window)
         return true
     }
