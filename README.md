@@ -103,8 +103,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 This is just an example, you could of course use your own router functions instead of the provided show(inWindow:):
 ```swift
     window = UIWindow(frame: UIScreen.main.bounds)
-    let module = Module.build(AppModules.test)
-    let router = module.router as! MyFirstRouter
+    let module = AppModules.myFirstModule.build()
+    let router = module.router as! MyFirstModuleRouter
     router.mySuperCoolShowFunction(inWindow: window)
 ```
 
