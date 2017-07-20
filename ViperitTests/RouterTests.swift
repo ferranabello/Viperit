@@ -12,7 +12,7 @@ import Viperit
 class RouterTests: XCTestCase {
     private func createTestModule(forTablet: Bool = false) -> Module {
         let deviceType: UIUserInterfaceIdiom = forTablet ? .pad : .phone
-        return Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self), deviceType: deviceType)
+        return TestModules.sample.build(bundle: Bundle(for: SampleRouter.self), deviceType: deviceType)
     }
     
     func testEmbedInNavigationController() {

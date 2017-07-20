@@ -68,7 +68,7 @@ private class MockPresenter: Presenter, SamplePresenterInterface {
 //MARK: - Presenter Tests
 class PresenterTests: XCTestCase {
     private func createTestModuleWithMockPresenter(methodToTest: String) -> Module {
-        var module = Module.build(TestModules.sample, bundle: Bundle(for: SampleRouter.self))
+        var module = TestModules.sample.build(bundle: Bundle(for: SampleRouter.self))
         let mockPresenter = MockPresenter()
         mockPresenter.expectation = expectation(description: "Expecting method: \(methodToTest)")
         mockPresenter.methodExpected = methodToTest
