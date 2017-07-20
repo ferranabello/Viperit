@@ -76,7 +76,7 @@ enum AppModules: String, ViperitModule {
 ```
 
 ### 2. Create the module
-Let's use the provided Xcode template to easily create all the needed classes for the module. Just click <i class="icon-file"></i> **New file** in the document panel and select "Viperit Module" template under "Viperit" section.
+Let's use the provided Xcode template to easily create all the needed classes for the module. Just click <i class="icon-file"></i> **New file** in the document panel and select **Protocol-oriented module** or **Object-oriented module** under the "Viperit" section.
 
 ![Module Creation](/Assets/Instructions/module_creation.gif)
 
