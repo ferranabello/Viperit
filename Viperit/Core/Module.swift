@@ -19,8 +19,7 @@ public struct Module {
     public fileprivate(set) var router: Router
     public fileprivate(set) var displayData: DisplayData
     
-    @available(*, deprecated, message: "Module.build() is now deprecated. Use your own module.build() instead. For example: AppModules.myModule.build()")
-    public static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil) -> Module where T.RawValue == String {
+    static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil) -> Module where T.RawValue == String {
         //Get class types
         let interactorClass = module.classForViperComponent(.interactor, bundle: bundle) as! Interactor.Type
         let presenterClass = module.classForViperComponent(.presenter, bundle: bundle) as! Presenter.Type
