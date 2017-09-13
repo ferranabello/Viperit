@@ -2,8 +2,8 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'Viperit'
-  s.version          = '0.8.0'
-  s.summary          = 'Viper Framework for iOS written in Swift 3'
+  s.version          = '1.0.0'
+  s.summary          = 'Viper Framework for iOS written in Swift 4'
 
   s.description      = <<-DESC
 Viper Framework for iOS to implement VIPER architecture in an easy way
