@@ -83,7 +83,26 @@ Let's use the provided Xcode template to easily create all the needed classes fo
 You can check "Also create a Storyboard file for module" if you want the storyboard file to be automatically created for you.
 Choose between "Universal" to use just one view for phones and tablets, and "Dedicated Tablet View" if you want to have a separated view for tablet devices.
 
-### 3. Build the module and perform navigation
+### 3. Use storyboard, xib or programmatic views
+Any Viperit module will assume its view is loaded from a Storyboard by default. But you can easily change this by overriding the variable *viewType* in your modules enum:
+
+```swift
+enum MySuperCoolModules: String, ViperitModule {
+    case theStoryboardThing  
+    case oldSchool
+    case xibModule
+    
+    var viewType: ViperitViewType {
+        switch self {
+        case .theStoryboardThing: return .storyboard
+        case .oldSchool: return .code
+        case .xibModule: return .nib
+        }
+    }
+}
+```
+
+### 4. Build the module and perform navigation
 Imagine this is a new app and we want to load our "myFirstModule" module as the app's startup module
 ```swift
 import Viperit
@@ -108,7 +127,7 @@ This is just an example, you could of course use your own router functions inste
     router.mySuperCoolShowFunction(inWindow: window)
 ```
 
-### 4. Follow the Viper flow
+### 5. Follow the Viper flow
 Everything is ready for you to make great things the Viper way!
 Clone the repo and run the 'Example' target to see it in action! Or just try it with Cocoapods:
 ```ruby
