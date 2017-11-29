@@ -10,10 +10,10 @@ import Foundation
 
 extension String {
     var first: String {
-        return String(characters.prefix(1))
+        return String(prefix(1))
     }
     var uppercasedFirst: String {
-        return first.uppercased() + String(characters.dropFirst())
+        return first.uppercased() + String(dropFirst())
     }
 }
 
