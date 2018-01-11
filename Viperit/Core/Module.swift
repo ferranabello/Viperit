@@ -82,14 +82,14 @@ public extension Module {
         -> UserInterface where T.RawValue == String {
             
         let viewIdentifier = safeString(NSStringFromClass(viewClass).components(separatedBy: ".").last)
-        let viewName = module.viewName.uppercaseFirst
+        let viewName = module.viewName.uppercasedFirst
         
         switch module.viewType {
         case .storyboard:
-            let sb = UIStoryboard(name: viewName(), bundle: bundle)
+            let sb = UIStoryboard(name: viewName, bundle: bundle)
             return sb.instantiateViewController(withIdentifier: viewIdentifier) as! UserInterface
         case .nib:
-            return viewClass.init(nibName: viewName(), bundle: bundle) as! UserInterface
+            return viewClass.init(nibName: viewName, bundle: bundle) as! UserInterface
         case .code:
             return viewClass.init() as! UserInterface
         }
@@ -160,7 +160,7 @@ private extension RawRepresentable where RawValue == String {
     func classForViperComponent(_ component: ViperComponent, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil)
         -> Swift.AnyClass? {
             
-        let className = "\(rawValue.uppercaseFirst())\(component.rawValue.uppercaseFirst())"
+        let className = "\(rawValue.uppercasedFirst)\(component.rawValue.uppercasedFirst)"
         let bundleName = safeString(bundle.infoDictionary?["CFBundleName"])
         let classInBundle = ("\(bundleName).\(className)").replacingOccurrences(of: " ", with: "_")
         
