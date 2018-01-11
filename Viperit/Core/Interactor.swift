@@ -7,11 +7,12 @@
 //
 
 public protocol InteractorProtocol {
+    
     weak var _presenter: Presenter! { get set }
 }
 
 open class Interactor: InteractorProtocol {
-    public weak var _presenter: Presenter!
     
+    public weak var _presenter: Presenter!
     required public init() { }
 }

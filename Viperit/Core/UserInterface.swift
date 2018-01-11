@@ -9,12 +9,13 @@
 import UIKit
 
 public protocol UserInterfaceProtocol {
+    
     var _presenter: Presenter! { get set }
     var _displayData: DisplayData! { get set }
 }
 
-
 open class UserInterface: UIViewController, UserInterfaceProtocol {
+    
     public var _presenter: Presenter!
     public var _displayData: DisplayData!
     
