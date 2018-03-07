@@ -20,7 +20,6 @@ public protocol RouterProtocol {
               viewDidLoad: (() -> Void)?)
     func present(from: UIViewController, animated: Bool, embedInNavController: Bool, setupData: Any?,
               viewDidLoad: (() -> Void)?)
-    func setup(setupData: Any?, viewDidLoad: (() -> Void)?)
 }
 
 open class Router: RouterProtocol {
@@ -28,12 +27,6 @@ open class Router: RouterProtocol {
     public weak var _presenter: Presenter!
     public var _view: UserInterface! {
         return _presenter._view
-    }
-    
-    open func setup(setupData: Any? = nil, viewDidLoad: (() -> Void)?) {
-        
-        _presenter.viewDidLoad = viewDidLoad
-        process(setupData: setupData)
     }
     
     open func show(inWindow window: UIWindow?, embedInNavController: Bool = false, setupData: Any? = nil,
