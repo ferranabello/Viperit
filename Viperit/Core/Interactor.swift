@@ -7,7 +7,7 @@
 //
 
 public protocol InteractorProtocol {
-    weak var _presenter: Presenter! { get set }
+    var _presenter: Presenter! { get set }
 }
 
 open class Interactor: InteractorProtocol {

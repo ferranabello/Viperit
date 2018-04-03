@@ -8,7 +8,7 @@
 
 public protocol PresenterProtocol {
     var _interactor: Interactor! { get set }
-    weak var _view: UserInterface! { get set }
+    var _view: UserInterface! { get set }
     var _router: Router! { get set }
         
     func setupView(data: Any)
