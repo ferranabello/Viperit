@@ -1,6 +1,6 @@
 ![Viperit](/Assets/logo_light.jpg)
 
-[![Language](https://img.shields.io/badge/swift-4.0-green.svg)](https://swift.org)
+[![Language](https://img.shields.io/badge/swift-4.1-green.svg)](https://swift.org)
 [![Build Status](https://travis-ci.org/ferranabello/Viperit.svg?branch=master)](https://travis-ci.org/ferranabello/Viperit)
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
 [![License](http://img.shields.io/badge/license-MIT-orange.svg)](http://mit-license.org)
