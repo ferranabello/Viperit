@@ -9,8 +9,7 @@
 import UIKit
 
 public protocol RouterProtocol {
-    
-    weak var _presenter: Presenter! { get set }
+    var _presenter: Presenter! { get set }
     var _view: UserInterface! { get }
     
     func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool,
