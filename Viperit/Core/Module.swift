@@ -40,21 +40,6 @@ public struct Module {
 // MARK: - Custom instantiation
 public extension Module {
     
-    static func viperComponentsClasses<T: RawRepresentable & ViperitModule>
-        (_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil)
-        -> (view: UserInterface.Type, interactor: Interactor.Type,
-        presenter: Presenter.Type, router: Router.Type,
-        displayData: DisplayData.Type) where T.RawValue == String {
-            
-        let viewControllerClass = module.classForViperComponent(.view, bundle: bundle, deviceType: deviceType) as! UserInterface.Type
-        let interactorClass = module.classForViperComponent(.interactor, bundle: bundle) as! Interactor.Type
-        let presenterClass = module.classForViperComponent(.presenter, bundle: bundle) as! Presenter.Type
-        let routerClass = module.classForViperComponent(.router, bundle: bundle) as! Router.Type
-        let displayDataClass = module.classForViperComponent(.displayData, bundle: bundle) as! DisplayData.Type
-        
-        return (viewControllerClass, interactorClass, presenterClass, routerClass, displayDataClass)
-    }
-    
     static func build(view: UserInterface, interactor: Interactor, presenter: Presenter, router: Router,
                       displayData: DisplayData) -> Module {
         
@@ -151,6 +136,21 @@ private extension Module {
         let D = displayDataClass.init()
         
         return (V, I, P, R, D)
+    }
+    
+    static func viperComponentsClasses<T: RawRepresentable & ViperitModule>
+        (_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil)
+        -> (view: UserInterface.Type, interactor: Interactor.Type,
+        presenter: Presenter.Type, router: Router.Type,
+        displayData: DisplayData.Type) where T.RawValue == String {
+            
+            let viewControllerClass = module.classForViperComponent(.view, bundle: bundle, deviceType: deviceType) as! UserInterface.Type
+            let interactorClass = module.classForViperComponent(.interactor, bundle: bundle) as! Interactor.Type
+            let presenterClass = module.classForViperComponent(.presenter, bundle: bundle) as! Presenter.Type
+            let routerClass = module.classForViperComponent(.router, bundle: bundle) as! Router.Type
+            let displayDataClass = module.classForViperComponent(.displayData, bundle: bundle) as! DisplayData.Type
+            
+            return (viewControllerClass, interactorClass, presenterClass, routerClass, displayDataClass)
     }
 }
 
