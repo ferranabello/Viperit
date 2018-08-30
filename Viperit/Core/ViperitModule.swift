@@ -24,7 +24,6 @@ public protocol ViperitModule {
     
     // MARK: - Custom Init
     func loadView(bundle: Bundle, viewClass: UIViewController.Type) -> UserInterface
-    func viperComponentsClasses(bundle: Bundle, deviceType: UIUserInterfaceIdiom?) -> (view: UserInterface.Type, interactor: Interactor.Type, presenter: Presenter.Type, router: Router.Type, displayData: DisplayData.Type)
     func build(view: UserInterface, interactor: Interactor, presenter: Presenter, router: Router, displayData: DisplayData) -> Module
 }
 
@@ -44,10 +43,6 @@ public extension ViperitModule where Self: RawRepresentable, Self.RawValue == St
     
     func loadView(bundle: Bundle = Bundle.main, viewClass: UIViewController.Type) -> UserInterface {
         return Module.loadView(forModule: self, bundle: bundle, viewClass: viewClass)
-    }
-    
-    func viperComponentsClasses(bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil) -> (view: UserInterface.Type, interactor: Interactor.Type, presenter: Presenter.Type, router: Router.Type, displayData: DisplayData.Type) {
-        return Module.viperComponentsClasses(self, bundle: bundle, deviceType: deviceType)
     }
     
     func build(view: UserInterface, interactor: Interactor, presenter: Presenter, router: Router, displayData: DisplayData) -> Module {
