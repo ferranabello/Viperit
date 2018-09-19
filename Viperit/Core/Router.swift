@@ -76,15 +76,15 @@ public extension Router {
 //MARK: - Embed view in a container view
 public extension Router {
     func addAsChildView(ofView parentView: UIViewController, insideContainer containerView: UIView) {
-        parentView.addChildViewController(_view)
+        parentView.addChild(_view)
         containerView.addSubview(_view.view)
         stretchToBounds(containerView, view: _view.view)
-        _view.didMove(toParentViewController: parentView)
+        _view.didMove(toParent: parentView)
     }
     
     private func stretchToBounds(_ holderView: UIView, view: UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
-        let pinDirections: [NSLayoutAttribute] = [.top, .bottom, .left, .right]
+        let pinDirections: [NSLayoutConstraint.Attribute] = [.top, .bottom, .left, .right]
         let pinConstraints = pinDirections.map { direction -> NSLayoutConstraint in
             return NSLayoutConstraint(item: view, attribute: direction, relatedBy: .equal,
                                       toItem: holderView, attribute: direction, multiplier: 1.0, constant: 0)
