@@ -491,7 +491,7 @@
 					5367C0CE1DD7C68D005B6676 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = P4KYD82MF4;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					53D3AF251E0710E90099A464 = {
@@ -859,8 +859,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Viperit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -883,8 +882,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Viperit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
