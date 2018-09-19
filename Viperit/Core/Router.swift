@@ -34,7 +34,7 @@ open class Router: RouterProtocol {
     
     open func show(from: UIViewController, embedInNavController: Bool = false, setupData: Any? = nil) {
         process(setupData: setupData)
-        let view = embedInNavController ? embedInNavigationController() : _view
+        let view: UIViewController = embedInNavController ? embedInNavigationController() : _view
         from.show(view, sender: nil)
     }
     
