@@ -12,18 +12,26 @@ public protocol RouterProtocol {
     var _presenter: Presenter! { get set }
     var _view: UserInterface! { get }
     
-    func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool)
-    func show(from: UIViewController, embedInNavController: Bool, setupData: Any?)
-    func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any?)
+    func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool,
+              viewDidLoad: (() -> Void)?)
+    func show(from: UIViewController, embedInNavController: Bool, setupData: Any?, viewDidLoad: (() -> Void)?)
+    func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any?,
+              viewDidLoad: (() -> Void)?)
+    func present(from: UIViewController, animated: Bool, embedInNavController: Bool, setupData: Any?,
+              viewDidLoad: (() -> Void)?)
 }
 
 open class Router: RouterProtocol {
+    
     public weak var _presenter: Presenter!
     public var _view: UserInterface! {
         return _presenter._view
     }
     
-    open func show(inWindow window: UIWindow?, embedInNavController: Bool = false, setupData: Any? = nil, makeKeyAndVisible: Bool = true) {
+    open func show(inWindow window: UIWindow?, embedInNavController: Bool = false, setupData: Any? = nil,
+                   makeKeyAndVisible: Bool = true, viewDidLoad: (() -> Void)?) {
+        
+        _presenter.viewDidLoad = viewDidLoad
         process(setupData: setupData)
         let view = embedInNavController ? embedInNavigationController() : _view
         window?.rootViewController = view
@@ -32,22 +40,38 @@ open class Router: RouterProtocol {
         }
     }
     
-    open func show(from: UIViewController, embedInNavController: Bool = false, setupData: Any? = nil) {
+    open func show(from: UIViewController, embedInNavController: Bool = false, setupData: Any? = nil,
+                   viewDidLoad: (() -> Void)?) {
+        
+        _presenter.viewDidLoad = viewDidLoad
         process(setupData: setupData)
         let view: UIViewController = embedInNavController ? embedInNavigationController() : _view
         from.show(view, sender: nil)
     }
     
-    public func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any? = nil) {
+    public func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any? = nil,
+                     viewDidLoad: (() -> Void)?) {
+        
+        _presenter.viewDidLoad = viewDidLoad
         process(setupData: setupData)
         addAsChildView(ofView: containerView, insideContainer: targetView)
+    }
+    
+    open func present(from: UIViewController, animated: Bool = true, embedInNavController: Bool = true,
+                      setupData: Any? = nil, viewDidLoad: (() -> Void)?) {
+        
+        _presenter.viewDidLoad = viewDidLoad
+        process(setupData: setupData)
+        let view: UIViewController = embedInNavController ? embedInNavigationController() : _view
+        from.present(view, animated: animated, completion: nil)
     }
     
     required public init() { }
 }
 
-//MARK: - Process possible setup data
+// MARK: - Process possible setup data
 private extension Router {
+    
     func process(setupData: Any?) {
         if let data = setupData {
             _presenter.setupView(data: data)
@@ -55,9 +79,11 @@ private extension Router {
     }
 }
 
-//MARK: - Embed view in navigation controller
+// MARK: - Embed view in navigation controller
 public extension Router {
+    
     private func getNavigationController() -> UINavigationController? {
+        
         if let nav = _view.navigationController {
             return nav
         } else if let parent = _view.parent {
@@ -73,8 +99,9 @@ public extension Router {
     }
 }
 
-//MARK: - Embed view in a container view
+// MARK: - Embed view in a container view
 public extension Router {
+    
     func addAsChildView(ofView parentView: UIViewController, insideContainer containerView: UIView) {
         parentView.addChild(_view)
         containerView.addSubview(_view.view)
@@ -83,6 +110,7 @@ public extension Router {
     }
     
     private func stretchToBounds(_ holderView: UIView, view: UIView) {
+        
         view.translatesAutoresizingMaskIntoConstraints = false
         let pinDirections: [NSLayoutConstraint.Attribute] = [.top, .bottom, .left, .right]
         let pinConstraints = pinDirections.map { direction -> NSLayoutConstraint in

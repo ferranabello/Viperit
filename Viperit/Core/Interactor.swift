@@ -11,7 +11,7 @@ public protocol InteractorProtocol {
 }
 
 open class Interactor: InteractorProtocol {
-    public weak var _presenter: Presenter!
     
+    public weak var _presenter: Presenter!
     required public init() { }
 }
