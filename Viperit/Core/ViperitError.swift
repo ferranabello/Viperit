@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum ViperitError : Error {
+enum ViperitError: Error {
+    
     case methodNotImplemented
     
     var description: String {

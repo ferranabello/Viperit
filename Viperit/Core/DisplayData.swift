@@ -9,5 +9,6 @@
 import Foundation
 
 open class DisplayData {
+    
     required public init() { }
 }
