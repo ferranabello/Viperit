@@ -24,7 +24,7 @@ public protocol ViperitModule {
     
     // MARK: - Custom Init
     func loadView(bundle: Bundle, viewClass: UIViewController.Type) -> UserInterface
-    func build(view: UserInterface, interactor: Interactor, presenter: Presenter, router: Router, displayData: DisplayData) -> Module
+    func build(view: UserInterface, interactor: Interactor?, presenter: Presenter, router: Router, displayData: DisplayData?) -> Module
 }
 
 public extension ViperitModule where Self: RawRepresentable, Self.RawValue == String {
