@@ -8,7 +8,7 @@
 
 public protocol PresenterProtocol {
     
-    var _interactor: Interactor! { get set }
+    var _interactor: Interactor? { get set }
     var _view: UserInterface! { get set }
     var _router: Router! { get set }
         
@@ -23,7 +23,7 @@ public protocol PresenterProtocol {
 open class Presenter: PresenterProtocol {
     
     var viewDidLoad: (() -> Void)?
-    public var _interactor: Interactor!
+    public var _interactor: Interactor?
     public weak var _view: UserInterface!
     public var _router: Router!
     

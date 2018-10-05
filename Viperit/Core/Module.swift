@@ -15,10 +15,10 @@ private let kTabletSuffix = "Pad"
 public struct Module {
     
     public fileprivate(set) var view: UserInterface
-    public fileprivate(set) var interactor: Interactor
+    public fileprivate(set) var interactor: Interactor?
     public fileprivate(set) var presenter: Presenter
     public fileprivate(set) var router: Router
-    public fileprivate(set) var displayData: DisplayData
+    public fileprivate(set) var displayData: DisplayData?
 
     public static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main,
                                                                   deviceType: UIUserInterfaceIdiom? = nil)
@@ -40,15 +40,15 @@ public struct Module {
 // MARK: - Custom instantiation
 public extension Module {
     
-    static func build(view: UserInterface, interactor: Interactor, presenter: Presenter, router: Router,
-                      displayData: DisplayData) -> Module {
+    static func build(view: UserInterface, interactor: Interactor? = nil, presenter: Presenter, router: Router,
+                      displayData: DisplayData? = nil) -> Module {
         
         //View connections
         view._presenter = presenter
         view._displayData = displayData
         
         //Interactor connections
-        interactor._presenter = presenter
+        interactor?._presenter = presenter
         
         //Presenter connections
         presenter._router = router
@@ -95,7 +95,7 @@ public extension Module {
     public mutating func injectMock(interactor mockInteractor: Interactor) {
         
         interactor = mockInteractor
-        interactor._presenter = presenter
+        interactor?._presenter = presenter
         presenter._interactor = interactor
     }
     
@@ -106,7 +106,7 @@ public extension Module {
         presenter._interactor = interactor
         presenter._router = router
         view._presenter = presenter
-        interactor._presenter = presenter
+        interactor?._presenter = presenter
         router._presenter = presenter
     }
     
