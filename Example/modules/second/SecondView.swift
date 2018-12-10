@@ -16,6 +16,11 @@ protocol SecondViewInterface {
 //MARK: Second View
 final class SecondView: UserInterface {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.title = "Second Module"
+    }
+    
     @IBAction func closeButtonPressed() {
         presenter.close()
     }

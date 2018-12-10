@@ -87,4 +87,73 @@ class RouterTests: XCTestCase {
         let extractedView = targetView.subviews[0]
         XCTAssert(extractedView.tag == 150)
     }
+    
+    func testPresentDefault() {
+        let window = UIWindow()
+        let mockRootModule = createTestModule()
+        let presentedModule = createTestModule()
+        
+        //Setup window
+        mockRootModule.router.show(inWindow: window, embedInNavController: true, setupData: nil, makeKeyAndVisible: false)
+        
+        //Setup presented view to check values afterwards
+        let presentedTitle: String? = "MODALLY PRESENTED MODULE"
+        presentedModule.view.title = presentedTitle
+        presentedModule.view.view?.backgroundColor = .red
+        
+        presentedModule.router.present(from: mockRootModule.view, setupData: nil) {
+            guard let topController = self.getTopViewController(window: window) else {
+                XCTAssert(false, "No top ViewController found")
+                return
+            }
+            
+            XCTAssert(topController.view?.backgroundColor == .red)
+            XCTAssertEqual(topController.title, presentedTitle)
+            XCTAssertEqual(topController, presentedModule.view)
+        }
+    }
+    
+    func testPresentEmbeddedInNavController() {
+        let window = UIWindow()
+        let mockRootModule = createTestModule()
+        let presentedModule = createTestModule()
+        
+        //Setup window
+        mockRootModule.router.show(inWindow: window, embedInNavController: true, setupData: nil, makeKeyAndVisible: false)
+        
+        presentedModule.router.present(from: mockRootModule.view, setupData: nil) {
+            //Setup presented module view to check values afterwards
+            let presentedTitle: String? = "MODALLY PRESENTED MODULE EMBEDDED IN NAVIGATION CONTROLLER"
+            presentedModule.view.title = presentedTitle
+            presentedModule.view.view?.backgroundColor = .blue
+            presentedModule.view.navigationItem.title = presentedTitle
+            
+            guard let topNavController = self.getTopViewController(window: window) as? UINavigationController else {
+                XCTAssert(false, "No top navigation controller found")
+                return
+            }
+            
+            let presentedRootController = topNavController.topViewController
+            XCTAssertNotNil(presentedRootController, "No root view controller found")
+            XCTAssert(presentedRootController?.view?.backgroundColor == .blue)
+            XCTAssertEqual(presentedRootController?.title, presentedTitle)
+            XCTAssertEqual(presentedRootController?.navigationItem.title, presentedTitle)
+            XCTAssertEqual(topNavController.viewControllers.count, 1)
+            XCTAssertEqual(presentedRootController, presentedModule.view)
+        }
+    }
+}
+
+//MARK: - Helpers
+private extension RouterTests {
+    func getTopViewController(window: UIWindow) -> UIViewController? {
+        if var topController = window.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            
+            return topController
+        }
+        return nil
+    }
 }
