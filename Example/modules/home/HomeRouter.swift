@@ -12,7 +12,7 @@ import Viperit
 final class HomeRouter: Router {
     func showSecondModule() {
         let module = AppModules.second.build()
-        module.router.present(from: _view, embedInNavController: true, setupData: nil)
+        module.router.present(from: _view, embedInNavController: true)
     }
 }
 

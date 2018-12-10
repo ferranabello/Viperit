@@ -94,14 +94,14 @@ class RouterTests: XCTestCase {
         let presentedModule = createTestModule()
         
         //Setup window
-        mockRootModule.router.show(inWindow: window, embedInNavController: true, setupData: nil, makeKeyAndVisible: false)
+        mockRootModule.router.show(inWindow: window, embedInNavController: true, makeKeyAndVisible: false)
         
         //Setup presented view to check values afterwards
         let presentedTitle: String? = "MODALLY PRESENTED MODULE"
         presentedModule.view.title = presentedTitle
         presentedModule.view.view?.backgroundColor = .red
         
-        presentedModule.router.present(from: mockRootModule.view, setupData: nil) {
+        presentedModule.router.present(from: mockRootModule.view) {
             guard let topController = self.getTopViewController(window: window) else {
                 XCTAssert(false, "No top ViewController found")
                 return
@@ -119,9 +119,9 @@ class RouterTests: XCTestCase {
         let presentedModule = createTestModule()
         
         //Setup window
-        mockRootModule.router.show(inWindow: window, embedInNavController: true, setupData: nil, makeKeyAndVisible: false)
+        mockRootModule.router.show(inWindow: window, embedInNavController: true, makeKeyAndVisible: false)
         
-        presentedModule.router.present(from: mockRootModule.view, setupData: nil) {
+        presentedModule.router.present(from: mockRootModule.view) {
             //Setup presented module view to check values afterwards
             let presentedTitle: String? = "MODALLY PRESENTED MODULE EMBEDDED IN NAVIGATION CONTROLLER"
             presentedModule.view.title = presentedTitle

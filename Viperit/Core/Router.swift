@@ -44,7 +44,7 @@ open class Router: RouterProtocol {
         addAsChildView(ofView: containerView, insideContainer: targetView)
     }
     
-    public func present(from: UIViewController, embedInNavController: Bool = false, presentationStyle: UIModalPresentationStyle = .fullScreen, transitionStyle: UIModalTransitionStyle = .coverVertical, setupData: Any?, completion: (() -> Void)? = nil) {
+    public func present(from: UIViewController, embedInNavController: Bool = false, presentationStyle: UIModalPresentationStyle = .fullScreen, transitionStyle: UIModalTransitionStyle = .coverVertical, setupData: Any? = nil, completion: (() -> Void)? = nil) {
         let view: UIViewController = embedInNavController ? embedInNavigationController() : _view
         view.modalTransitionStyle = transitionStyle
         view.modalPresentationStyle = presentationStyle
