@@ -87,4 +87,14 @@ class RouterTests: XCTestCase {
         let extractedView = targetView.subviews[0]
         XCTAssert(extractedView.tag == 150)
     }
+    
+    func testShowModally() {
+        let parentViewController = UIViewController()
+        _ = UINavigationController(rootViewController: parentViewController)
+        
+        let calledModule = createTestModule()
+        calledModule.router.showModally(from: parentViewController)
+        
+        assert(calledModule.view.navigationController == nil)
+    }
 }

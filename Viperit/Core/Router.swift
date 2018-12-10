@@ -15,6 +15,8 @@ public protocol RouterProtocol {
     func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool)
     func show(from: UIViewController, embedInNavController: Bool, setupData: Any?)
     func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any?)
+    func showModally(from: UIViewController, presentationStyle: UIModalPresentationStyle, transitionStyle: UIModalTransitionStyle, setupData: Any?)
+
 }
 
 open class Router: RouterProtocol {
@@ -41,6 +43,14 @@ open class Router: RouterProtocol {
     public func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any? = nil) {
         process(setupData: setupData)
         addAsChildView(ofView: containerView, insideContainer: targetView)
+    }
+    
+    open func showModally(from: UIViewController, presentationStyle: UIModalPresentationStyle = .fullScreen,
+                          transitionStyle: UIModalTransitionStyle = .coverVertical, setupData: Any? = nil) {
+        process(setupData: setupData)
+        _view.modalPresentationStyle = presentationStyle
+        _view.modalTransitionStyle = transitionStyle
+        from.present(_view, animated: true, completion: nil)
     }
     
     required public init() { }
