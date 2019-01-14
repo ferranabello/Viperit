@@ -160,10 +160,6 @@ Clone the repo and run the 'Example' target to see it in action! Or just try it 
 pod try Viperit
 ```
 
-TODO
--------------
-Extended documentation will be added **soon**
-
 ## Author
 
 [Ferran Abelló](https://www.github.com/ferranabello "Ferran Abelló Github")
