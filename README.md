@@ -50,10 +50,9 @@ github "ferranabello/Viperit"
 
 Run `carthage update` to build the framework and drag the built `Viperit.framework` into your Xcode project.
 
-## Usage
+## Features
 
-### 0. Install the templates
-
+### Create modules easily using Xcode templates
 Viperit Xcode templates can be found in the repository's `/Templates/Viperit` folder. To install them, open your terminal and run:
 
 ```bash
@@ -62,28 +61,12 @@ mkdir -p ~/Library/Developer/Xcode/Templates/
 cp -R Templates/Viperit ~/Library/Developer/Xcode/Templates/
 ```
 
-Now, let's create our first Viperit module called "myFirstModule"!
-
-### 1. Create a modules enum
-You need at least one (you can use as many as you like, maybe to group modules by functionality) enum that implements the ViperitModule protocol to enumerate your application modules.
-```swift
-import Viperit
-
-//MARK: - Application modules
-enum AppModules: String, ViperitModule {
-    case myFirstModule
-}
-```
-
-### 2. Create the module
-Let's use the provided Xcode template to easily create all the needed classes for the module. Just click <i class="icon-file"></i> **New file** in the document panel and select **Protocol-oriented module** or **Object-oriented module** under the "Viperit" section.
-
 ![Module Creation](/Assets/Instructions/module_creation.gif)
 
 You can check "Also create a Storyboard file for module" if you want the storyboard file to be automatically created for you.
 Choose between "Universal" to use just one view for phones and tablets, and "Dedicated Tablet View" if you want to have a separated view for tablet devices.
 
-### 3. Use storyboard, xib or programmatic views
+### Use storyboard, xib or programmatic views
 Any Viperit module will assume its view is loaded from a Storyboard by default. But you can easily change this by overriding the variable *viewType* in your modules enum:
 
 ```swift
@@ -102,7 +85,50 @@ enum MySuperCoolModules: String, ViperitModule {
 }
 ```
 
-### 4. Build the module and perform navigation
+### Built-in router functions
+This framework is very flexible, it's meant to be used in any way you want, but it has some useful built-in functionalities in the router that you could use:
+```swift
+    //Show your module as the root view controller of the given window
+    func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool)
+    
+    //Show your module from any given view controller
+    func show(from: UIViewController, embedInNavController: Bool, setupData: Any?)
+    
+    //Show your module inside another view
+    func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any?)
+    
+    //Present your module modally
+    func present(from: UIViewController, embedInNavController: Bool, presentationStyle: UIModalPresentationStyle, transitionStyle: UIModalTransitionStyle, setupData: Any?, completion: (() -> Void)?)
+```
+
+### Easy to test
+You can test your module injecting mock layers like so:
+```swift
+    var module = AppModules.home.build()
+    view = HomeMockView()
+    view.expectation = expectation(description: "Test expectation")
+    module.injectMock(view: view)
+    ...
+```
+
+## Usage
+Now, let's create our first Viperit module called "myFirstModule"!
+
+### 0. Create your module files
+Let's use the provided Xcode template to easily create all the needed classes for the module. Just click <i class="icon-file"></i> **New file** in the document panel and select **Protocol-oriented module** or **Object-oriented module** under the "Viperit" section.
+
+### 1. Create a modules enum
+You need at least one (you can use as many as you like, maybe to group modules by functionality) enum that implements the ViperitModule protocol to enumerate your application modules.
+```swift
+import Viperit
+
+//MARK: - Application modules
+enum AppModules: String, ViperitModule {
+    case myFirstModule
+}
+```
+
+### 3. Build the module and perform navigation
 Imagine this is a new app and we want to load our "myFirstModule" module as the app's startup module
 ```swift
 import Viperit
@@ -127,16 +153,12 @@ This is just an example, you could of course use your own router functions inste
     router.mySuperCoolShowFunction(inWindow: window)
 ```
 
-### 5. Follow the Viper flow
+### 4. Follow the Viper flow
 Everything is ready for you to make great things the Viper way!
 Clone the repo and run the 'Example' target to see it in action! Or just try it with Cocoapods:
 ```ruby
 pod try Viperit
 ```
-
-TODO
--------------
-Extended documentation will be added **soon**
 
 ## Author
 
