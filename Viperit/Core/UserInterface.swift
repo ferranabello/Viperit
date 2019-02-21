@@ -10,13 +10,10 @@ import UIKit
 
 public protocol UserInterfaceProtocol {
     var _presenter: Presenter! { get set }
-    var _displayData: DisplayData! { get set }
 }
-
 
 open class UserInterface: UIViewController, UserInterfaceProtocol {
     public var _presenter: Presenter!
-    public var _displayData: DisplayData!
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +23,54 @@ open class UserInterface: UIViewController, UserInterfaceProtocol {
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         _presenter.viewIsAboutToAppear()
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        _presenter.viewHasAppeared()
+    }
+    
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        _presenter.viewIsAboutToDisappear()
+    }
+    
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        _presenter.viewHasDisappeared()
+    }
+}
+
+open class TabUserInterface: UITabBarController, UserInterfaceProtocol {
+    
+    public var _presenter: Presenter!
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        _presenter.viewIsAboutToAppear()
+    }
+    
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        _presenter.viewHasAppeared()
+    }
+    
+}
+
+open class TableUserInterface: UITableViewController, UserInterfaceProtocol {
+    
+    public var _presenter: Presenter!
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        _presenter.viewHasLoaded()
+    }
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        _presenter.viewIsAboutToAppear()
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     open override func viewDidAppear(_ animated: Bool) {

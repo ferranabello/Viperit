@@ -63,6 +63,9 @@
 		53D3AF211E07109D0099A464 /* SecondViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF101E07109D0099A464 /* SecondViewPad.swift */; };
 		53D3AF321E0711000099A464 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AF311E0711000099A464 /* HomeTests.swift */; };
 		53F14AA41E7BF3D400E61452 /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; };
+		9C7819FA221EE7E100D47E45 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7819F9221EE7E100D47E45 /* UINavigationController+.swift */; };
+		9C7819FE221EEB3D00D47E45 /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7819FD221EEB3D00D47E45 /* AppModules.swift */; };
+		9C781A00221EECAD00D47E45 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7819FF221EECAD00D47E45 /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +161,9 @@
 		53D3AF261E0710E90099A464 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D3AF311E0711000099A464 /* HomeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
 		53D3AF331E0711AE0099A464 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C7819F9221EE7E100D47E45 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		9C7819FD221EEB3D00D47E45 /* AppModules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModules.swift; sourceTree = "<group>"; };
+		9C7819FF221EECAD00D47E45 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,15 +258,16 @@
 		53532C5C1DD50DDF00088AAC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5372505D1EF13500007F3A10 /* ViperitModule.swift */,
 				53532C641DD50DDF00088AAC /* ViperitError.swift */,
 				53532C631DD50DDF00088AAC /* ViperComponent.swift */,
-				5372505D1EF13500007F3A10 /* ViperitModule.swift */,
-				53532C5F1DD50DDF00088AAC /* Module.swift */,
 				53532C621DD50DDF00088AAC /* UserInterface.swift */,
+				53532C5F1DD50DDF00088AAC /* Module.swift */,
 				53532C5D1DD50DDF00088AAC /* DisplayData.swift */,
 				53532C5E1DD50DDF00088AAC /* Interactor.swift */,
 				53532C601DD50DDF00088AAC /* Presenter.swift */,
 				53532C611DD50DDF00088AAC /* Router.swift */,
+				9C7819FD221EEB3D00D47E45 /* AppModules.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -320,6 +327,8 @@
 			isa = PBXGroup;
 			children = (
 				53D3AEF51E0709A80099A464 /* String+.swift */,
+				9C7819F9221EE7E100D47E45 /* UINavigationController+.swift */,
+				9C7819FF221EECAD00D47E45 /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -614,13 +623,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7819FA221EE7E100D47E45 /* UINavigationController+.swift in Sources */,
 				5367C0DC1DD7C69E005B6676 /* ViperitError.swift in Sources */,
 				53D3AEF61E0709A80099A464 /* String+.swift in Sources */,
 				5367C0DD1DD7C69E005B6676 /* ViperComponent.swift in Sources */,
 				5367C0DE1DD7C69E005B6676 /* Module.swift in Sources */,
+				9C7819FE221EEB3D00D47E45 /* AppModules.swift in Sources */,
 				5367C0DF1DD7C69E005B6676 /* UserInterface.swift in Sources */,
 				5367C0E01DD7C69E005B6676 /* DisplayData.swift in Sources */,
 				5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */,
+				9C781A00221EECAD00D47E45 /* UIViewController+.swift in Sources */,
 				5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */,
 				5367C0E31DD7C69E005B6676 /* Router.swift in Sources */,
 				5372505E1EF13500007F3A10 /* ViperitModule.swift in Sources */,

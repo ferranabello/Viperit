@@ -13,27 +13,24 @@ private let kTabletSuffix = "Pad"
 
 //MARK: - Module
 public struct Module {
-    public private(set) var view: UserInterface
+    public private(set) var view: Any
     public private(set) var interactor: Interactor
     public private(set) var presenter: Presenter
     public private(set) var router: Router
-    public private(set) var displayData: DisplayData
     
-    static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil) -> Module where T.RawValue == String {
+    static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil, storyboardModule: AppModules? = nil) -> Module where T.RawValue == String {
         //Get class types
         let interactorClass = module.classForViperComponent(.interactor, bundle: bundle) as! Interactor.Type
         let presenterClass = module.classForViperComponent(.presenter, bundle: bundle) as! Presenter.Type
         let routerClass = module.classForViperComponent(.router, bundle: bundle) as! Router.Type
-        let displayDataClass = module.classForViperComponent(.displayData, bundle: bundle) as! DisplayData.Type
 
         //Allocate VIPER components
-        let V = loadView(forModule: module, bundle: bundle, deviceType: deviceType)
+        let V = loadView(forModule: module, bundle: bundle, deviceType: deviceType, storyboardModule: storyboardModule)
         let I = interactorClass.init()
         let P = presenterClass.init()
         let R = routerClass.init()
-        let D = displayDataClass.init()
         
-        return build(view: V, interactor: I, presenter: P, router: R, displayData: D)
+        return build(view: V, interactor: I, presenter: P, router: R)
     }
 }
 
@@ -42,8 +39,9 @@ public extension Module {
 
     public mutating func injectMock(view mockView: UserInterface) {
         view = mockView
-        view._presenter = presenter
-        view._displayData = displayData
+        if view is UserInterface { (view as! UserInterface)._presenter = presenter }
+        if view is TableUserInterface { (view as! TableUserInterface)._presenter = presenter }
+        if view is TabUserInterface { (view as! TabUserInterface)._presenter = presenter }
         presenter._view = view
     }
     
@@ -58,7 +56,11 @@ public extension Module {
         presenter._view = view
         presenter._interactor = interactor
         presenter._router = router
-        view._presenter = presenter
+        
+        if view is UserInterface { (view as! UserInterface)._presenter = presenter }
+        if view is TableUserInterface { (view as! TableUserInterface)._presenter = presenter }
+        if view is TabUserInterface { (view as! TabUserInterface)._presenter = presenter }
+        
         interactor._presenter = presenter
         router._presenter = presenter
     }
@@ -74,26 +76,33 @@ public extension Module {
 //MARK: - Helper Methods
 private extension Module {
     
-    static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> UserInterface where T.RawValue == String {
+    static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil, storyboardModule: AppModules? = nil) -> Any where T.RawValue == String {
         let viewClass = module.classForViperComponent(.view, bundle: bundle, deviceType: deviceType) as! UIViewController.Type
         let viewIdentifier = safeString(NSStringFromClass(viewClass).components(separatedBy: ".").last)
         let viewName = module.viewName.uppercasedFirst
+        let sbName = storyboardModule?.viewName.uppercasedFirst ?? viewName
+        
+        func instanceFromSb() -> UIViewController {
+            let sb = UIStoryboard(name: sbName, bundle: bundle)
+            return sb.instantiateViewController(withIdentifier: viewIdentifier)
+        }
+        if storyboardModule != nil { return instanceFromSb() }
         
         switch module.viewType {
         case .storyboard:
-            let sb = UIStoryboard(name: viewName, bundle: bundle)
-            return sb.instantiateViewController(withIdentifier: viewIdentifier) as! UserInterface
+            return instanceFromSb()
         case .nib:
-            return viewClass.init(nibName: viewName, bundle: bundle) as! UserInterface
+            return viewClass.init(nibName: viewName, bundle: bundle)
         case .code:
-            return viewClass.init() as! UserInterface
+            return viewClass.init()
         }
     }
     
-    static func build(view: UserInterface, interactor: Interactor, presenter: Presenter, router: Router, displayData: DisplayData) -> Module {
+    static func build(view: Any, interactor: Interactor, presenter: Presenter, router: Router) -> Module {
         //View connections
-        view._presenter = presenter
-        view._displayData = displayData
+        if view is UserInterface { (view as! UserInterface)._presenter = presenter }
+        if view is TableUserInterface { (view as! TableUserInterface)._presenter = presenter }
+        if view is TabUserInterface { (view as! TabUserInterface)._presenter = presenter }
         
         //Interactor connections
         interactor._presenter = presenter
@@ -101,12 +110,14 @@ private extension Module {
         //Presenter connections
         presenter._router = router
         presenter._interactor = interactor
-        presenter._view = view
+        if view is UserInterface { presenter._view = view as! UserInterface }
+        if view is TableUserInterface { presenter._view = view as! TableUserInterface }
+        if view is TabUserInterface { presenter._view = view as! TabUserInterface }
         
         //Router connections
         router._presenter = presenter
         
-        return Module(view: view, interactor: interactor, presenter: presenter, router: router, displayData: displayData)
+        return Module(view: view, interactor: interactor, presenter: presenter, router: router)
     }
 }
 

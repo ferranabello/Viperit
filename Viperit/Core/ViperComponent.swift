@@ -13,5 +13,4 @@ internal enum ViperComponent: String {
     case interactor
     case presenter
     case router
-    case displayData
 }

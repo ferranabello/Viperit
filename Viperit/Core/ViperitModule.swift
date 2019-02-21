@@ -19,19 +19,25 @@ public enum ViperitViewType {
 public protocol ViperitModule {
     var viewType: ViperitViewType { get }
     var viewName: String { get }
-    func build(bundle: Bundle, deviceType: UIUserInterfaceIdiom?) -> Module
+    func build(bundle: Bundle, deviceType: UIUserInterfaceIdiom?, sbModule: AppModules?) -> Module
 }
 
 public extension ViperitModule where Self: RawRepresentable, Self.RawValue == String {
     var viewType: ViperitViewType {
-        return .storyboard
+        if let _ = Bundle.main.path(forResource: viewName.uppercasedFirst, ofType: "storyboardc") {
+            return .storyboard
+        }
+        if Bundle.main.path(forResource: viewName.uppercasedFirst, ofType: "nib") != nil  {
+            return .nib
+        }
+        return .code
     }
     
     var viewName: String {
         return rawValue
     }
     
-    func build(bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil) -> Module {
-        return Module.build(self, bundle: bundle, deviceType: deviceType)
+    func build(bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil, sbModule: AppModules? = nil) -> Module {
+        return Module.build(self, bundle: bundle, deviceType: deviceType, storyboardModule: sbModule)
     }
 }

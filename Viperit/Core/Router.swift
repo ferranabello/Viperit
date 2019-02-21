@@ -10,19 +10,24 @@ import UIKit
 
 public protocol RouterProtocol {
     var _presenter: Presenter! { get set }
-    var _view: UserInterface! { get }
+    var _view: UIViewController! { get }
     
     func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool)
-    func show(from: UIViewController, embedInNavController: Bool, setupData: Any?)
+    func show(from: Router, embedInNavController: Bool, setupData: Any?, parentRouter: Router?)
     func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any?)
     func present(from: UIViewController, embedInNavController: Bool, presentationStyle: UIModalPresentationStyle, transitionStyle: UIModalTransitionStyle, setupData: Any?, completion: (() -> Void)?)
+    func needsUpdate()
+    func dismiss(parentNeedsUpdate: Bool)
+    func pop(parentNeedsUpdate: Bool)
 }
 
 open class Router: RouterProtocol {
+    public weak var _parentRouter: Router?
     public weak var _presenter: Presenter!
-    public var _view: UserInterface! {
-        return _presenter._view
+    public var _view: UIViewController! {
+        return _presenter._view as? UIViewController
     }
+    var _routers = [AppModules: Router]()
     
     open func show(inWindow window: UIWindow?, embedInNavController: Bool = false, setupData: Any? = nil, makeKeyAndVisible: Bool = true) {
         process(setupData: setupData)
@@ -33,10 +38,17 @@ open class Router: RouterProtocol {
         }
     }
     
-    open func show(from: UIViewController, embedInNavController: Bool = false, setupData: Any? = nil) {
+    open func push(from: Router, setupData: Any? = nil, parentRouter: Router? = nil) {
+        _parentRouter = parentRouter ?? from
         process(setupData: setupData)
-        let view: UIViewController = embedInNavController ? embedInNavigationController() : _view
-        from.show(view, sender: nil)
+        from._view.navigationController?.pushViewController(_view, animated: true)
+    }
+    
+    open func show(from: Router, embedInNavController: Bool = false, setupData: Any? = nil, parentRouter: Router? = nil) {
+        _parentRouter = parentRouter ?? from
+        process(setupData: setupData)
+        let view = embedInNavController ? embedInNavigationController() : _view
+        from._view.show(view!, sender: nil)
     }
     
     public func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any? = nil) {
@@ -51,6 +63,36 @@ open class Router: RouterProtocol {
         
         process(setupData: setupData)
         from.present(view, animated: true, completion: completion)
+    }
+    
+    public func addTabs(modules: [AppModules]) {
+        modules.forEach { (module) in
+            addModuleTab(module: module)
+        }
+    }
+    
+    public func addModuleTab(module: AppModules) {
+        let router = module.build().router
+        router._parentRouter = self
+        _routers[module] = router
+        
+        if let tabBar = _view as? UITabBarController {
+            var tabs = tabBar.viewControllers ?? []
+            let title = module.viewName.localized().capitalized
+            let image = UIImage(named: title.capitalized)
+            let tabItem = UITabBarItem(title: title, image: image, tag: tabs.count)
+            
+            if let vc = router._view {
+                vc.title = title
+                vc.tabBarItem = tabItem
+                tabs.append(vc.embedInNavigationController())
+                tabBar.setViewControllers(tabs, animated: false)
+            }
+        }
+    }
+    
+    public func needsUpdate() {
+        // TODO: Update
     }
     
     required public init() { }
@@ -80,6 +122,31 @@ public extension Router {
     
     func embedInNavigationController() -> UINavigationController {
         return getNavigationController() ?? UINavigationController(rootViewController: _view)
+    }
+}
+
+//MARK: - Dismiss Current View
+public extension Router {
+    func pop(parentNeedsUpdate: Bool = false) {
+        if let navController = _view.navigationController {
+            navController.popViewController(animated: true) {
+                if parentNeedsUpdate {
+                    self._parentRouter?.needsUpdate()
+                }
+            }
+        }
+    }
+    func dismiss(parentNeedsUpdate: Bool = false) {
+        func notify() {
+            if parentNeedsUpdate {
+                self._parentRouter?.needsUpdate()
+            }
+        }
+        guard let navController = _view.navigationController else {
+            _view.dismiss(animated: true) { notify() }
+            return
+        }
+        navController.dismiss(animated: true) { notify() }
     }
 }
 

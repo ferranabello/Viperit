@@ -12,8 +12,13 @@ extension String {
     var first: String {
         return String(prefix(1))
     }
+    
     var uppercasedFirst: String {
         return first.uppercased() + String(dropFirst())
+    }
+    
+    func localized() -> String {
+        return NSLocalizedString(self, comment: "")
     }
 }
 
