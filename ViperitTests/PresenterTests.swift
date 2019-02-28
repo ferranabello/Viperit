@@ -80,7 +80,7 @@ class PresenterTests: XCTestCase {
         let module = createTestModuleWithMockPresenter(methodToTest: method)
         
         //Simulate view lifecycle
-        _ = module.view.viewController
+        _ = module.view.viewController.view
         module.view.viewWillAppear(false)
         module.view.viewDidAppear(false)
         module.view.viewWillDisappear(false)
