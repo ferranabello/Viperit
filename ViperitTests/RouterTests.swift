@@ -149,6 +149,24 @@ class RouterTests: XCTestCase {
             XCTAssertEqual(presentedRootController, presentedModule.view.viewController)
         }
     }
+    
+    func testDismissModal() {
+        let window = UIWindow()
+        let mockRootModule = createTestModule()
+        let rootRouter = mockRootModule.router as! SampleRouter
+        let presentedModule = createTestModule()
+        let presentedRouter = presentedModule.router as! SampleRouter
+        
+        //Setup window
+        rootRouter.show(inWindow: window, embedInNavController: false, setupData: nil, makeKeyAndVisible: false)
+        
+        presentedRouter.present(from: mockRootModule.view.viewController) {
+            XCTAssertEqual(mockRootModule.view.viewController.presentedViewController, presentedModule.view.viewController)
+            presentedRouter.dismiss(animated: false, completion: {
+                XCTAssertNil(mockRootModule.view.viewController.presentedViewController)
+            })
+        }
+    }
 }
 
 //MARK: - Helpers
