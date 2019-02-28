@@ -6,10 +6,10 @@
 //  Copyright © 2016 Ferran Abelló. All rights reserved.
 //
 
-public protocol PresenterProtocol {
-    var _interactor: Interactor! { get set }
-    var _view: UserInterface! { get set }
-    var _router: Router! { get set }
+public protocol PresenterProtocol: class, Initializable {
+    var _interactor: InteractorProtocol! { get set }
+    var _view: UserInterfaceProtocol! { get set }
+    var _router: RouterProtocol! { get set }
         
     func setupView(data: Any)
     func viewHasLoaded()
@@ -20,9 +20,9 @@ public protocol PresenterProtocol {
 }
 
 open class Presenter: PresenterProtocol {
-    public var _interactor: Interactor!
-    public weak var _view: UserInterface!
-    public var _router: Router!
+    public var _interactor: InteractorProtocol!
+    public weak var _view: UserInterfaceProtocol!
+    public var _router: RouterProtocol!
     
     required public init() { }
     

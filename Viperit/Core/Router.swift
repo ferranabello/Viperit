@@ -8,25 +8,32 @@
 
 import UIKit
 
-public protocol RouterProtocol {
-    var _presenter: Presenter! { get set }
-    var _view: UserInterface! { get }
+public protocol RouterProtocol: Initializable {
+    var _presenter: PresenterProtocol! { get set }
+    var _view: UserInterfaceProtocol! { get }
     
     func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool)
     func show(from: UIViewController, embedInNavController: Bool, setupData: Any?)
     func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any?)
     func present(from: UIViewController, embedInNavController: Bool, presentationStyle: UIModalPresentationStyle, transitionStyle: UIModalTransitionStyle, setupData: Any?, completion: (() -> Void)?)
+    func dismiss(animated flag: Bool, completion: (() -> Void)?)
+}
+
+public extension RouterProtocol {
+    var viewController: UIViewController {
+        return _view as! UIViewController
+    }
 }
 
 open class Router: RouterProtocol {
-    public weak var _presenter: Presenter!
-    public var _view: UserInterface! {
+    public weak var _presenter: PresenterProtocol!
+    public var _view: UserInterfaceProtocol! {
         return _presenter._view
     }
     
     open func show(inWindow window: UIWindow?, embedInNavController: Bool = false, setupData: Any? = nil, makeKeyAndVisible: Bool = true) {
         process(setupData: setupData)
-        let view = embedInNavController ? embedInNavigationController() : _view
+        let view = embedInNavController ? embedInNavigationController() : _view as? UIViewController
         window?.rootViewController = view
         if makeKeyAndVisible {
             window?.makeKeyAndVisible()
@@ -35,7 +42,7 @@ open class Router: RouterProtocol {
     
     open func show(from: UIViewController, embedInNavController: Bool = false, setupData: Any? = nil) {
         process(setupData: setupData)
-        let view: UIViewController = embedInNavController ? embedInNavigationController() : _view
+        let view: UIViewController = embedInNavController ? embedInNavigationController() : _view as! UIViewController
         from.show(view, sender: nil)
     }
     
@@ -45,12 +52,17 @@ open class Router: RouterProtocol {
     }
     
     public func present(from: UIViewController, embedInNavController: Bool = false, presentationStyle: UIModalPresentationStyle = .fullScreen, transitionStyle: UIModalTransitionStyle = .coverVertical, setupData: Any? = nil, completion: (() -> Void)? = nil) {
-        let view: UIViewController = embedInNavController ? embedInNavigationController() : _view
+        let view: UIViewController = embedInNavController ? embedInNavigationController() : _view as! UIViewController
         view.modalTransitionStyle = transitionStyle
         view.modalPresentationStyle = presentationStyle
         
         process(setupData: setupData)
         from.present(view, animated: true, completion: completion)
+    }
+    
+    public func dismiss(animated flag: Bool = true, completion: (() -> Void)? = nil) {
+        guard let view = _view as? UIViewController else { return }
+        view.dismiss(animated: flag, completion: completion)
     }
     
     required public init() { }
@@ -68,9 +80,10 @@ private extension Router {
 //MARK: - Embed view in navigation controller
 public extension Router {
     private func getNavigationController() -> UINavigationController? {
-        if let nav = _view.navigationController {
+        guard let view = _view as? UIViewController else { return nil }
+        if let nav = view.navigationController {
             return nav
-        } else if let parent = _view.parent {
+        } else if let parent = view.parent {
             if let parentNav = parent.navigationController {
                 return parentNav
             }
@@ -79,17 +92,18 @@ public extension Router {
     }
     
     func embedInNavigationController() -> UINavigationController {
-        return getNavigationController() ?? UINavigationController(rootViewController: _view)
+        return getNavigationController() ?? UINavigationController(rootViewController: _view as! UIViewController)
     }
 }
 
 //MARK: - Embed view in a container view
 public extension Router {
     func addAsChildView(ofView parentView: UIViewController, insideContainer containerView: UIView) {
-        parentView.addChild(_view)
-        containerView.addSubview(_view.view)
-        stretchToBounds(containerView, view: _view.view)
-        _view.didMove(toParent: parentView)
+        guard let view = _view as? UIViewController else { return }
+        parentView.addChild(view)
+        containerView.addSubview(view.view)
+        stretchToBounds(containerView, view: view.view)
+        view.didMove(toParent: parentView)
     }
     
     private func stretchToBounds(_ holderView: UIView, view: UIView) {

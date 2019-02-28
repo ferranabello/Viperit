@@ -8,14 +8,25 @@
 
 import UIKit
 
-public protocol UserInterfaceProtocol {
-    var _presenter: Presenter! { get set }
+public protocol UserInterfaceProtocol: class, Initializable {
+    var _presenter: PresenterProtocol! { get set }
     var _displayData: DisplayData! { get set }
+    var viewController: UIViewController { get }
+    func viewDidLoad()
+    func viewWillAppear(_ animated: Bool)
+    func viewDidAppear(_ animated: Bool)
+    func viewWillDisappear(_ animated: Bool)
+    func viewDidDisappear(_ animated: Bool)
 }
 
+public extension UserInterfaceProtocol {
+    var viewController: UIViewController {
+        return self as! UIViewController
+    }
+}
 
 open class UserInterface: UIViewController, UserInterfaceProtocol {
-    public var _presenter: Presenter!
+    public var _presenter: PresenterProtocol!
     public var _displayData: DisplayData!
     
     open override func viewDidLoad() {

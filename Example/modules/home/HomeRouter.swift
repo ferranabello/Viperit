@@ -12,7 +12,8 @@ import Viperit
 final class HomeRouter: Router {
     func showSecondModule() {
         let module = AppModules.second.build()
-        module.router.present(from: _view, embedInNavController: true)
+        let router = module.router as! SecondRouter
+        router.present(from: viewController, embedInNavController: true)
     }
 }
 
