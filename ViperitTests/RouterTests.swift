@@ -29,7 +29,7 @@ class RouterTests: XCTestCase {
         let module = createTestModule()
         let router = module.router as! SampleRouter
         let navController = UINavigationController(rootViewController: UIViewController())
-        navController.pushViewController(module.view, animated: false)
+        navController.pushViewController(module.view.viewController, animated: false)
         let navigationController = router.embedInNavigationController()
         
         //Check that there is two views in the stack and that the second one is a SampleView
@@ -60,9 +60,10 @@ class RouterTests: XCTestCase {
     func testShowEmbeddedInNavigationController() {
         let mockView = UIViewController()
         let module = createTestModule()
+        let router = module.router as! SampleRouter
         
-        module.router.show(from: mockView, embedInNavController: true)
-        let navigationController = module.view.navigationController
+        router.show(from: mockView, embedInNavController: true)
+        let navigationController = module.view.viewController.navigationController
         
         //Check that there is one view in the stack and that is a SampleView
         assert(navigationController != nil)
@@ -76,8 +77,9 @@ class RouterTests: XCTestCase {
         mockView.view.addSubview(targetView)
         
         let module = createTestModule()
-        module.view.view.tag = 150
-        module.router.show(from: mockView, insideView: targetView)
+        let router = module.router as! SampleRouter
+        module.view.viewController.view.tag = 150
+        router.show(from: mockView, insideView: targetView)
         
         guard targetView.subviews.count == 1 else {
             XCTAssert(false)
@@ -91,17 +93,20 @@ class RouterTests: XCTestCase {
     func testPresentDefault() {
         let window = UIWindow()
         let mockRootModule = createTestModule()
+        let rootRouter = mockRootModule.router as! SampleRouter
         let presentedModule = createTestModule()
+        let presentedRouter = presentedModule.router as! SampleRouter
+        
         
         //Setup window
-        mockRootModule.router.show(inWindow: window, embedInNavController: true, makeKeyAndVisible: false)
+        rootRouter.show(inWindow: window, embedInNavController: true, makeKeyAndVisible: false)
         
         //Setup presented view to check values afterwards
         let presentedTitle: String? = "MODALLY PRESENTED MODULE"
-        presentedModule.view.title = presentedTitle
-        presentedModule.view.view?.backgroundColor = .red
+        presentedModule.view.viewController.title = presentedTitle
+        presentedModule.view.viewController.view?.backgroundColor = .red
         
-        presentedModule.router.present(from: mockRootModule.view) {
+        presentedRouter.present(from: mockRootModule.view.viewController) {
             guard let topController = self.getTopViewController(window: window) else {
                 XCTAssert(false, "No top ViewController found")
                 return
@@ -109,24 +114,26 @@ class RouterTests: XCTestCase {
             
             XCTAssert(topController.view?.backgroundColor == .red)
             XCTAssertEqual(topController.title, presentedTitle)
-            XCTAssertEqual(topController, presentedModule.view)
+            XCTAssertEqual(topController, presentedModule.view.viewController)
         }
     }
     
     func testPresentEmbeddedInNavController() {
         let window = UIWindow()
         let mockRootModule = createTestModule()
+        let rootRouter = mockRootModule.router as! SampleRouter
         let presentedModule = createTestModule()
+        let presentedRouter = presentedModule.router as! SampleRouter
         
         //Setup window
-        mockRootModule.router.show(inWindow: window, embedInNavController: true, makeKeyAndVisible: false)
+        rootRouter.show(inWindow: window, embedInNavController: true, setupData: nil, makeKeyAndVisible: false)
         
-        presentedModule.router.present(from: mockRootModule.view) {
+        presentedRouter.present(from: mockRootModule.view.viewController) {
             //Setup presented module view to check values afterwards
             let presentedTitle: String? = "MODALLY PRESENTED MODULE EMBEDDED IN NAVIGATION CONTROLLER"
-            presentedModule.view.title = presentedTitle
-            presentedModule.view.view?.backgroundColor = .blue
-            presentedModule.view.navigationItem.title = presentedTitle
+            presentedModule.view.viewController.title = presentedTitle
+            presentedModule.view.viewController.view?.backgroundColor = .blue
+            presentedModule.view.viewController.navigationItem.title = presentedTitle
             
             guard let topNavController = self.getTopViewController(window: window) as? UINavigationController else {
                 XCTAssert(false, "No top navigation controller found")
@@ -139,7 +146,7 @@ class RouterTests: XCTestCase {
             XCTAssertEqual(presentedRootController?.title, presentedTitle)
             XCTAssertEqual(presentedRootController?.navigationItem.title, presentedTitle)
             XCTAssertEqual(topNavController.viewControllers.count, 1)
-            XCTAssertEqual(presentedRootController, presentedModule.view)
+            XCTAssertEqual(presentedRootController, presentedModule.view.viewController)
         }
     }
 }

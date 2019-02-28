@@ -80,7 +80,7 @@ class PresenterTests: XCTestCase {
         let module = createTestModuleWithMockPresenter(methodToTest: method)
         
         //Simulate view lifecycle
-        _ = module.view.view
+        _ = module.view.viewController
         module.view.viewWillAppear(false)
         module.view.viewDidAppear(false)
         module.view.viewWillDisappear(false)
@@ -106,9 +106,10 @@ class PresenterTests: XCTestCase {
         let mockView = UIViewController()
         _ = mockView.view
         let module = createTestModuleWithMockPresenter(methodToTest: kSetupView)
+        let router = module.router as! SampleRouter
         
         //Simulate show module with router function using setup data
-        module.router.show(from: mockView, setupData: "randomData")
+        router.show(from: mockView, setupData: "randomData")
         expect(timeout: kTimeout, errorMessage: "\(kSetupView) timed out (> \(kTimeout)s")
     }
     
