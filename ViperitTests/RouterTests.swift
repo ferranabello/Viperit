@@ -167,6 +167,15 @@ class RouterTests: XCTestCase {
             })
         }
     }
+    
+    func testRouterViewControllerProperty() {
+        let module = createTestModule()
+        let viewControllerFromView = module.view.viewController
+        let viewControllerFromRouter = module.router.viewController
+        XCTAssert(viewControllerFromView is SampleView)
+        XCTAssert(viewControllerFromRouter is SampleView)
+        XCTAssertEqual(viewControllerFromView, viewControllerFromRouter)
+    }
 }
 
 //MARK: - Helpers
