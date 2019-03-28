@@ -44,20 +44,20 @@ public struct Module {
 //MARK: - Inject Mock Components for Testing
 public extension Module {
 
-    public mutating func injectMock(view mockView: UserInterfaceProtocol) {
+    mutating func injectMock(view mockView: UserInterfaceProtocol) {
         view = mockView
         view._presenter = presenter
         view._displayData = displayData
         presenter._view = view
     }
     
-    public mutating func injectMock(interactor mockInteractor: InteractorProtocol) {
+    mutating func injectMock(interactor mockInteractor: InteractorProtocol) {
         interactor = mockInteractor
         interactor._presenter = presenter
         presenter._interactor = interactor
     }
     
-    public mutating func injectMock(presenter mockPresenter: PresenterProtocol) {
+    mutating func injectMock(presenter mockPresenter: PresenterProtocol) {
         presenter = mockPresenter
         presenter._view = view
         presenter._interactor = interactor
@@ -67,7 +67,7 @@ public extension Module {
         router._presenter = presenter
     }
     
-    public mutating func injectMock(router mockRouter: RouterProtocol) {
+    mutating func injectMock(router mockRouter: RouterProtocol) {
         router = mockRouter
         router._presenter = presenter
         presenter._router = router
