@@ -162,10 +162,11 @@ class RouterTests: XCTestCase {
         
         presentedRouter.present(from: mockRootModule.view.viewController) {
             XCTAssertEqual(mockRootModule.view.viewController.presentedViewController, presentedModule.view.viewController)
-            presentedRouter.dismiss(animated: false, completion: {
-                XCTAssertNil(mockRootModule.view.viewController.presentedViewController)
-            })
         }
+        
+        presentedRouter.dismiss(animated: false, completion: {
+            XCTAssertNil(mockRootModule.view.viewController.presentedViewController)
+        })
     }
     
     func testRouterViewControllerProperty() {
