@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol RouterProtocol: Initializable {
+public protocol RouterProtocol: ViperitComponent {
     var _presenter: PresenterProtocol! { get set }
     var _view: UserInterfaceProtocol! { get }
     

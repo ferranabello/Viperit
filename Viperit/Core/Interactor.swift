@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ferran Abelló. All rights reserved.
 //
 
-public protocol InteractorProtocol: Initializable {
+public protocol InteractorProtocol: ViperitComponent {
     var _presenter: PresenterProtocol! { get set }
 }
 

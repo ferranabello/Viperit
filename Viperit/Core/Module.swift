@@ -11,7 +11,7 @@ import UIKit
 
 private let kTabletSuffix = "Pad"
 
-public protocol Initializable {
+public protocol ViperitComponent {
     init()
 }
 
