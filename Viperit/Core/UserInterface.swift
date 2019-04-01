@@ -25,7 +25,101 @@ public extension UserInterfaceProtocol {
     }
 }
 
+//MARK: - Default implementation for UIViewController
 open class UserInterface: UIViewController, UserInterfaceProtocol {
+    public var _presenter: PresenterProtocol!
+    public var _displayData: DisplayData!
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        _presenter.viewHasLoaded()
+    }
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        _presenter.viewIsAboutToAppear()
+    }
+    
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        _presenter.viewHasAppeared()
+    }
+    
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        _presenter.viewIsAboutToDisappear()
+    }
+    
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        _presenter.viewHasDisappeared()
+    }
+}
+
+//MARK: - Default implementation for UITableViewController
+open class TableUserInterface: UITableViewController, UserInterfaceProtocol {
+    public var _presenter: PresenterProtocol!
+    public var _displayData: DisplayData!
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        _presenter.viewHasLoaded()
+    }
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        _presenter.viewIsAboutToAppear()
+    }
+    
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        _presenter.viewHasAppeared()
+    }
+    
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        _presenter.viewIsAboutToDisappear()
+    }
+    
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        _presenter.viewHasDisappeared()
+    }
+}
+
+//MARK: - Default implementation for UICollectionViewController
+open class CollectionUserInterface: UICollectionViewController, UserInterfaceProtocol {
+    public var _presenter: PresenterProtocol!
+    public var _displayData: DisplayData!
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        _presenter.viewHasLoaded()
+    }
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        _presenter.viewIsAboutToAppear()
+    }
+    
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        _presenter.viewHasAppeared()
+    }
+    
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        _presenter.viewIsAboutToDisappear()
+    }
+    
+    open override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        _presenter.viewHasDisappeared()
+    }
+}
+
+//MARK: - Default implementation for UISplitViewController
+open class SplitUserInterface: UISplitViewController, UserInterfaceProtocol {
     public var _presenter: PresenterProtocol!
     public var _displayData: DisplayData!
     
