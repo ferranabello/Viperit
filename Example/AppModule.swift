@@ -13,4 +13,12 @@ import Viperit
 enum AppModules: String, ViperitModule {
     case home
     case second
+    case tableOfContents
+    
+    var viewType: ViperitViewType {
+        switch self {
+        case .tableOfContents: return .code
+        default: return .storyboard
+        }
+    }
 }

@@ -10,6 +10,12 @@
 		53023EDC225257E8004ACC5C /* UserInterface+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53023EDB225257E8004ACC5C /* UserInterface+Table.swift */; };
 		53023EDE22525814004ACC5C /* UserInterface+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53023EDD22525814004ACC5C /* UserInterface+Collection.swift */; };
 		53023EE02252582C004ACC5C /* UserInterface+Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53023EDF2252582C004ACC5C /* UserInterface+Split.swift */; };
+		5327EAD922526175006D5FCC /* TableOfContentsDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327EAD322526175006D5FCC /* TableOfContentsDisplayData.swift */; };
+		5327EADA22526175006D5FCC /* TableOfContentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327EAD422526175006D5FCC /* TableOfContentsPresenter.swift */; };
+		5327EADB22526175006D5FCC /* TableOfContentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327EAD522526175006D5FCC /* TableOfContentsRouter.swift */; };
+		5327EADC22526175006D5FCC /* TableOfContentsModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327EAD622526175006D5FCC /* TableOfContentsModuleApi.swift */; };
+		5327EADD22526175006D5FCC /* TableOfContentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327EAD722526175006D5FCC /* TableOfContentsInteractor.swift */; };
+		5327EADE22526175006D5FCC /* TableOfContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327EAD822526175006D5FCC /* TableOfContentsView.swift */; };
 		53388C291DD9FFDF00EA4CEC /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; };
 		53388C2A1DD9FFDF00EA4CEC /* Viperit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5360ADF31E81280100C1AACB /* PresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5360ADF21E81280100C1AACB /* PresenterTests.swift */; };
@@ -103,6 +109,12 @@
 		53023EDB225257E8004ACC5C /* UserInterface+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+Table.swift"; sourceTree = "<group>"; };
 		53023EDD22525814004ACC5C /* UserInterface+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+Collection.swift"; sourceTree = "<group>"; };
 		53023EDF2252582C004ACC5C /* UserInterface+Split.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+Split.swift"; sourceTree = "<group>"; };
+		5327EAD322526175006D5FCC /* TableOfContentsDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentsDisplayData.swift; sourceTree = "<group>"; };
+		5327EAD422526175006D5FCC /* TableOfContentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentsPresenter.swift; sourceTree = "<group>"; };
+		5327EAD522526175006D5FCC /* TableOfContentsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentsRouter.swift; sourceTree = "<group>"; };
+		5327EAD622526175006D5FCC /* TableOfContentsModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentsModuleApi.swift; sourceTree = "<group>"; };
+		5327EAD722526175006D5FCC /* TableOfContentsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentsInteractor.swift; sourceTree = "<group>"; };
+		5327EAD822526175006D5FCC /* TableOfContentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentsView.swift; sourceTree = "<group>"; };
 		53532C381DD50BD200088AAC /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53532C4C1DD50BD200088AAC /* ViperitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53532C521DD50BD200088AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -200,6 +212,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5327EAD222526155006D5FCC /* TableOfContents */ = {
+			isa = PBXGroup;
+			children = (
+				5327EAD322526175006D5FCC /* TableOfContentsDisplayData.swift */,
+				5327EAD422526175006D5FCC /* TableOfContentsPresenter.swift */,
+				5327EAD522526175006D5FCC /* TableOfContentsRouter.swift */,
+				5327EAD622526175006D5FCC /* TableOfContentsModuleApi.swift */,
+				5327EAD722526175006D5FCC /* TableOfContentsInteractor.swift */,
+				5327EAD822526175006D5FCC /* TableOfContentsView.swift */,
+			);
+			path = TableOfContents;
+			sourceTree = "<group>";
+		};
 		534AF1EF1E7BED06009D2D61 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +373,7 @@
 		53D3AF011E07109D0099A464 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				5327EAD222526155006D5FCC /* TableOfContents */,
 				53D3AF021E07109D0099A464 /* home */,
 				53D3AF091E07109D0099A464 /* second */,
 			);
@@ -570,10 +596,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5327EADD22526175006D5FCC /* TableOfContentsInteractor.swift in Sources */,
 				53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */,
 				53D3AF211E07109D0099A464 /* SecondViewPad.swift in Sources */,
+				5327EADB22526175006D5FCC /* TableOfContentsRouter.swift in Sources */,
+				5327EADE22526175006D5FCC /* TableOfContentsView.swift in Sources */,
+				5327EADA22526175006D5FCC /* TableOfContentsPresenter.swift in Sources */,
 				53D3AF1A1E07109D0099A464 /* HomeView.swift in Sources */,
 				53D3AF1F1E07109D0099A464 /* SecondRouter.swift in Sources */,
+				5327EAD922526175006D5FCC /* TableOfContentsDisplayData.swift in Sources */,
 				53D3AF191E07109D0099A464 /* HomeRouter.swift in Sources */,
 				53D3AF121E07109D0099A464 /* AppModule.swift in Sources */,
 				53D3AF161E07109D0099A464 /* HomeDisplayData.swift in Sources */,
@@ -582,6 +613,7 @@
 				53D3AF1C1E07109D0099A464 /* SecondDisplayData.swift in Sources */,
 				53D3AF171E07109D0099A464 /* HomeInteractor.swift in Sources */,
 				53D3AF1E1E07109D0099A464 /* SecondPresenter.swift in Sources */,
+				5327EADC22526175006D5FCC /* TableOfContentsModuleApi.swift in Sources */,
 				53D3AF1D1E07109D0099A464 /* SecondInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
