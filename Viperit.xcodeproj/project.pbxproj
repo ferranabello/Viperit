@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53023EDC225257E8004ACC5C /* UserInterface+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53023EDB225257E8004ACC5C /* UserInterface+Table.swift */; };
+		53023EDE22525814004ACC5C /* UserInterface+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53023EDD22525814004ACC5C /* UserInterface+Collection.swift */; };
+		53023EE02252582C004ACC5C /* UserInterface+Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53023EDF2252582C004ACC5C /* UserInterface+Split.swift */; };
 		53388C291DD9FFDF00EA4CEC /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; };
 		53388C2A1DD9FFDF00EA4CEC /* Viperit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5360ADF31E81280100C1AACB /* PresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5360ADF21E81280100C1AACB /* PresenterTests.swift */; };
@@ -97,6 +100,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		53023EDB225257E8004ACC5C /* UserInterface+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+Table.swift"; sourceTree = "<group>"; };
+		53023EDD22525814004ACC5C /* UserInterface+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+Collection.swift"; sourceTree = "<group>"; };
+		53023EDF2252582C004ACC5C /* UserInterface+Split.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+Split.swift"; sourceTree = "<group>"; };
 		53532C381DD50BD200088AAC /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53532C4C1DD50BD200088AAC /* ViperitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53532C521DD50BD200088AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -320,6 +326,9 @@
 			isa = PBXGroup;
 			children = (
 				53D3AEF51E0709A80099A464 /* String+.swift */,
+				53023EDF2252582C004ACC5C /* UserInterface+Split.swift */,
+				53023EDB225257E8004ACC5C /* UserInterface+Table.swift */,
+				53023EDD22525814004ACC5C /* UserInterface+Collection.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -617,10 +626,13 @@
 				5367C0DD1DD7C69E005B6676 /* ViperComponent.swift in Sources */,
 				5367C0DE1DD7C69E005B6676 /* Module.swift in Sources */,
 				5367C0DF1DD7C69E005B6676 /* UserInterface.swift in Sources */,
+				53023EDC225257E8004ACC5C /* UserInterface+Table.swift in Sources */,
 				5367C0E01DD7C69E005B6676 /* DisplayData.swift in Sources */,
 				5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */,
+				53023EDE22525814004ACC5C /* UserInterface+Collection.swift in Sources */,
 				5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */,
 				5367C0E31DD7C69E005B6676 /* Router.swift in Sources */,
+				53023EE02252582C004ACC5C /* UserInterface+Split.swift in Sources */,
 				5372505E1EF13500007F3A10 /* ViperitModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
