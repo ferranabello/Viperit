@@ -1,4 +1,4 @@
-![Viperit](/Assets/logo_light.jpg)
+![Viperit](/Assets/logo_light.png)
 
 [![Language](https://img.shields.io/badge/swift-5.0-green.svg)](https://swift.org)
 [![Build Status](https://travis-ci.org/ferranabello/Viperit.svg?branch=master)](https://travis-ci.org/ferranabello/Viperit)
