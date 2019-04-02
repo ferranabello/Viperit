@@ -10,9 +10,8 @@ import UIKit
 import Viperit
 
 final class SecondRouter: Router {
-    
     func close() {
-        _view.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
 

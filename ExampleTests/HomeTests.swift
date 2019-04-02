@@ -37,7 +37,7 @@ class HomeTests: XCTestCase {
         var mod = AppModules.home.build()
         view = HomeMockView()
         view.expectation = expectation(description: "Test expectation description")
-        presenter = mod.presenter as! HomePresenter
+        presenter = mod.presenter as? HomePresenter
         mod.injectMock(view: view)
     }
     

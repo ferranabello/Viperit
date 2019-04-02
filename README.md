@@ -1,6 +1,6 @@
-![Viperit](/Assets/logo_light.jpg)
+![Viperit](/Assets/logo_light.png)
 
-[![Language](https://img.shields.io/badge/swift-4.2-green.svg)](https://swift.org)
+[![Language](https://img.shields.io/badge/swift-5.0-green.svg)](https://swift.org)
 [![Build Status](https://travis-ci.org/ferranabello/Viperit.svg?branch=master)](https://travis-ci.org/ferranabello/Viperit)
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg)](https://developer.apple.com/iphone/index.action)
 [![License](http://img.shields.io/badge/license-MIT-orange.svg)](http://mit-license.org)
@@ -21,7 +21,7 @@ We all know Viper is cool. But we also know that it's hard to setup. This librar
 ### Requirements
 
 - iOS 8.0+
-- Swift 4.2 (for Swift 4.1 compatibility download v1.1.0, for Swift 4 download v1.0.0, for Swift 3 download the v0.8.0)
+- Swift 5.0 (for Swift 4.2 download v1.2.1, for Swift 4.1 download v1.1.0, for Swift 4 download v1.0.0, for Swift 3 download v0.8.0)
 - Xcode 10 (for Xcode 9 download v1.1.0)
 
 ### CocoaPods
@@ -74,7 +74,7 @@ enum MySuperCoolModules: String, ViperitModule {
     case theStoryboardThing  
     case oldSchool
     case xibModule
-    
+
     var viewType: ViperitViewType {
         switch self {
         case .theStoryboardThing: return .storyboard
@@ -90,13 +90,13 @@ This framework is very flexible, it's meant to be used in any way you want, but 
 ```swift
     //Show your module as the root view controller of the given window
     func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool)
-    
+
     //Show your module from any given view controller
     func show(from: UIViewController, embedInNavController: Bool, setupData: Any?)
-    
+
     //Show your module inside another view
     func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any?)
-    
+
     //Present your module modally
     func present(from: UIViewController, embedInNavController: Bool, presentationStyle: UIModalPresentationStyle, transitionStyle: UIModalTransitionStyle, setupData: Any?, completion: (() -> Void)?)
 ```
@@ -140,7 +140,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         let module = AppModules.myFirstModule.build()
-        module.router.show(inWindow: window)
+        let router = module.router as! MyFirstModuleRouter
+        router.show(inWindow: window)
         return true
     }
 }

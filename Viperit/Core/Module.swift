@@ -11,19 +11,23 @@ import UIKit
 
 private let kTabletSuffix = "Pad"
 
+public protocol ViperitComponent {
+    init()
+}
+
 //MARK: - Module
 public struct Module {
-    public private(set) var view: UserInterface
-    public private(set) var interactor: Interactor
-    public private(set) var presenter: Presenter
-    public private(set) var router: Router
+    public private(set) var view: UserInterfaceProtocol
+    public private(set) var interactor: InteractorProtocol
+    public private(set) var presenter: PresenterProtocol
+    public private(set) var router: RouterProtocol
     public private(set) var displayData: DisplayData
     
     static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil) -> Module where T.RawValue == String {
         //Get class types
-        let interactorClass = module.classForViperComponent(.interactor, bundle: bundle) as! Interactor.Type
-        let presenterClass = module.classForViperComponent(.presenter, bundle: bundle) as! Presenter.Type
-        let routerClass = module.classForViperComponent(.router, bundle: bundle) as! Router.Type
+        let interactorClass = module.classForViperComponent(.interactor, bundle: bundle) as! InteractorProtocol.Type
+        let presenterClass = module.classForViperComponent(.presenter, bundle: bundle) as! PresenterProtocol.Type
+        let routerClass = module.classForViperComponent(.router, bundle: bundle) as! RouterProtocol.Type
         let displayDataClass = module.classForViperComponent(.displayData, bundle: bundle) as! DisplayData.Type
 
         //Allocate VIPER components
@@ -40,20 +44,20 @@ public struct Module {
 //MARK: - Inject Mock Components for Testing
 public extension Module {
 
-    public mutating func injectMock(view mockView: UserInterface) {
+    mutating func injectMock(view mockView: UserInterfaceProtocol) {
         view = mockView
         view._presenter = presenter
         view._displayData = displayData
         presenter._view = view
     }
     
-    public mutating func injectMock(interactor mockInteractor: Interactor) {
+    mutating func injectMock(interactor mockInteractor: InteractorProtocol) {
         interactor = mockInteractor
         interactor._presenter = presenter
         presenter._interactor = interactor
     }
     
-    public mutating func injectMock(presenter mockPresenter: Presenter) {
+    mutating func injectMock(presenter mockPresenter: PresenterProtocol) {
         presenter = mockPresenter
         presenter._view = view
         presenter._interactor = interactor
@@ -63,7 +67,7 @@ public extension Module {
         router._presenter = presenter
     }
     
-    public mutating func injectMock(router mockRouter: Router) {
+    mutating func injectMock(router mockRouter: RouterProtocol) {
         router = mockRouter
         router._presenter = presenter
         presenter._router = router
@@ -74,7 +78,7 @@ public extension Module {
 //MARK: - Helper Methods
 private extension Module {
     
-    static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> UserInterface where T.RawValue == String {
+    static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> UserInterfaceProtocol where T.RawValue == String {
         let viewClass = module.classForViperComponent(.view, bundle: bundle, deviceType: deviceType) as! UIViewController.Type
         let viewIdentifier = safeString(NSStringFromClass(viewClass).components(separatedBy: ".").last)
         let viewName = module.viewName.uppercasedFirst
@@ -82,20 +86,21 @@ private extension Module {
         switch module.viewType {
         case .storyboard:
             let sb = UIStoryboard(name: viewName, bundle: bundle)
-            return sb.instantiateViewController(withIdentifier: viewIdentifier) as! UserInterface
+            return sb.instantiateViewController(withIdentifier: viewIdentifier) as! UserInterfaceProtocol
         case .nib:
-            return viewClass.init(nibName: viewName, bundle: bundle) as! UserInterface
+            return viewClass.init(nibName: viewName, bundle: bundle) as! UserInterfaceProtocol
         case .code:
-            return viewClass.init() as! UserInterface
+            return viewClass.init() as! UserInterfaceProtocol
         }
     }
     
-    static func build(view: UserInterface, interactor: Interactor, presenter: Presenter, router: Router, displayData: DisplayData) -> Module {
+    static func build(view: UserInterfaceProtocol, interactor: InteractorProtocol, presenter: PresenterProtocol, router: RouterProtocol, displayData: DisplayData) -> Module {
         //View connections
         view._presenter = presenter
         view._displayData = displayData
         
         //Interactor connections
+        var interactor = interactor
         interactor._presenter = presenter
         
         //Presenter connections
@@ -104,6 +109,7 @@ private extension Module {
         presenter._view = view
         
         //Router connections
+        var router = router
         router._presenter = presenter
         
         return Module(view: view, interactor: interactor, presenter: presenter, router: router, displayData: displayData)
