@@ -31,6 +31,10 @@ open class Router: RouterProtocol {
         return _presenter._view
     }
     
+    open func embedInNavigationController() -> UINavigationController {
+        return getNavigationController() ?? UINavigationController(rootViewController: _view as! UIViewController)
+    }
+    
     open func show(inWindow window: UIWindow?, embedInNavController: Bool = false, setupData: Any? = nil, makeKeyAndVisible: Bool = true) {
         process(setupData: setupData)
         let view = embedInNavController ? embedInNavigationController() : _view as? UIViewController
@@ -77,9 +81,9 @@ private extension Router {
     }
 }
 
-//MARK: - Embed view in navigation controller
-public extension Router {
-    private func getNavigationController() -> UINavigationController? {
+//MARK: - Get navigation controller helper
+private extension Router {
+    func getNavigationController() -> UINavigationController? {
         guard let view = _view as? UIViewController else { return nil }
         if let nav = view.navigationController {
             return nav
@@ -89,10 +93,6 @@ public extension Router {
             }
         }
         return nil
-    }
-    
-    func embedInNavigationController() -> UINavigationController {
-        return getNavigationController() ?? UINavigationController(rootViewController: _view as! UIViewController)
     }
 }
 
