@@ -11,8 +11,8 @@ import Viperit
 
 final class HomeInteractor: Interactor {
     func someInteractorOperation() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            self.presenter.reactToSomeInteractorOperation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) { [weak self] in
+            self?.presenter.reactToSomeInteractorOperation()
         }
     }
 }
