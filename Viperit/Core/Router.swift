@@ -12,6 +12,7 @@ public protocol RouterProtocol: ViperitComponent {
     var _presenter: PresenterProtocol! { get set }
     var _view: UserInterfaceProtocol! { get }
     
+    func embedInNavigationController() -> UINavigationController
     func show(inWindow window: UIWindow?, embedInNavController: Bool, setupData: Any?, makeKeyAndVisible: Bool)
     func show(from: UIViewController, embedInNavController: Bool, setupData: Any?)
     func show(from containerView: UIViewController, insideView targetView: UIView, setupData: Any?)
@@ -32,12 +33,12 @@ open class Router: RouterProtocol {
     }
     
     open func embedInNavigationController() -> UINavigationController {
-        return getNavigationController() ?? UINavigationController(rootViewController: _view as! UIViewController)
+        return getNavigationController() ?? UINavigationController(rootViewController: viewController)
     }
     
     open func show(inWindow window: UIWindow?, embedInNavController: Bool = false, setupData: Any? = nil, makeKeyAndVisible: Bool = true) {
         process(setupData: setupData)
-        let view = embedInNavController ? embedInNavigationController() : _view as? UIViewController
+        let view = embedInNavController ? embedInNavigationController() : viewController
         window?.rootViewController = view
         if makeKeyAndVisible {
             window?.makeKeyAndVisible()
@@ -46,7 +47,7 @@ open class Router: RouterProtocol {
     
     open func show(from: UIViewController, embedInNavController: Bool = false, setupData: Any? = nil) {
         process(setupData: setupData)
-        let view: UIViewController = embedInNavController ? embedInNavigationController() : _view as! UIViewController
+        let view: UIViewController = embedInNavController ? embedInNavigationController() : viewController
         from.show(view, sender: nil)
     }
     
@@ -56,7 +57,7 @@ open class Router: RouterProtocol {
     }
     
     public func present(from: UIViewController, embedInNavController: Bool = false, presentationStyle: UIModalPresentationStyle = .fullScreen, transitionStyle: UIModalTransitionStyle = .coverVertical, setupData: Any? = nil, completion: (() -> Void)? = nil) {
-        let view: UIViewController = embedInNavController ? embedInNavigationController() : _view as! UIViewController
+        let view: UIViewController = embedInNavController ? embedInNavigationController() : viewController
         view.modalTransitionStyle = transitionStyle
         view.modalPresentationStyle = presentationStyle
         
@@ -65,8 +66,7 @@ open class Router: RouterProtocol {
     }
     
     public func dismiss(animated flag: Bool = true, completion: (() -> Void)? = nil) {
-        guard let view = _view as? UIViewController else { return }
-        view.dismiss(animated: flag, completion: completion)
+        viewController.dismiss(animated: flag, completion: completion)
     }
     
     required public init() { }
@@ -82,7 +82,7 @@ private extension Router {
 }
 
 //MARK: - Get navigation controller helper
-private extension Router {
+public extension RouterProtocol {
     func getNavigationController() -> UINavigationController? {
         guard let view = _view as? UIViewController else { return nil }
         if let nav = view.navigationController {
@@ -97,7 +97,7 @@ private extension Router {
 }
 
 //MARK: - Embed view in a container view
-public extension Router {
+public extension RouterProtocol {
     func addAsChildView(ofView parentView: UIViewController, insideContainer containerView: UIView) {
         guard let view = _view as? UIViewController else { return }
         parentView.addChild(view)
