@@ -51,6 +51,12 @@
 		5372507A1EF13988007F3A10 /* XibModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250741EF13988007F3A10 /* XibModuleView.swift */; };
 		5372507C1EF1399E007F3A10 /* XibModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5372507B1EF1399E007F3A10 /* XibModule.xib */; };
 		5372507E1EF1503A007F3A10 /* TestCleanModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372507D1EF1503A007F3A10 /* TestCleanModules.swift */; };
+		5379FBA622B817B600B20B1C /* CoolDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA022B817B600B20B1C /* CoolDisplayData.swift */; };
+		5379FBA722B817B600B20B1C /* CoolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA122B817B600B20B1C /* CoolPresenter.swift */; };
+		5379FBA822B817B600B20B1C /* CoolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA222B817B600B20B1C /* CoolRouter.swift */; };
+		5379FBA922B817B600B20B1C /* CoolModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA322B817B600B20B1C /* CoolModuleApi.swift */; };
+		5379FBAA22B817B600B20B1C /* CoolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA422B817B600B20B1C /* CoolInteractor.swift */; };
+		5379FBAD22B817F000B20B1C /* CoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBAC22B817F000B20B1C /* CoolView.swift */; };
 		537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D19E31E7BE9B100A758FF /* ModuleTests.swift */; };
 		539580A6207378C3009A66BC /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539580A5207378C3009A66BC /* ExtensionsTests.swift */; };
 		53D3AEF61E0709A80099A464 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEF51E0709A80099A464 /* String+.swift */; };
@@ -152,6 +158,12 @@
 		537250741EF13988007F3A10 /* XibModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleView.swift; sourceTree = "<group>"; };
 		5372507B1EF1399E007F3A10 /* XibModule.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibModule.xib; sourceTree = "<group>"; };
 		5372507D1EF1503A007F3A10 /* TestCleanModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCleanModules.swift; sourceTree = "<group>"; };
+		5379FBA022B817B600B20B1C /* CoolDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolDisplayData.swift; sourceTree = "<group>"; };
+		5379FBA122B817B600B20B1C /* CoolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolPresenter.swift; sourceTree = "<group>"; };
+		5379FBA222B817B600B20B1C /* CoolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolRouter.swift; sourceTree = "<group>"; };
+		5379FBA322B817B600B20B1C /* CoolModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolModuleApi.swift; sourceTree = "<group>"; };
+		5379FBA422B817B600B20B1C /* CoolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolInteractor.swift; sourceTree = "<group>"; };
+		5379FBAC22B817F000B20B1C /* CoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolView.swift; sourceTree = "<group>"; };
 		537D19E31E7BE9B100A758FF /* ModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		539580A5207378C3009A66BC /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
 		53D3AEF51E0709A80099A464 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
@@ -347,6 +359,19 @@
 			path = CodeModule;
 			sourceTree = "<group>";
 		};
+		5379FB9F22B8179600B20B1C /* Cool */ = {
+			isa = PBXGroup;
+			children = (
+				5379FBA022B817B600B20B1C /* CoolDisplayData.swift */,
+				5379FBA122B817B600B20B1C /* CoolPresenter.swift */,
+				5379FBA222B817B600B20B1C /* CoolRouter.swift */,
+				5379FBA322B817B600B20B1C /* CoolModuleApi.swift */,
+				5379FBA422B817B600B20B1C /* CoolInteractor.swift */,
+				5379FBAC22B817F000B20B1C /* CoolView.swift */,
+			);
+			path = Cool;
+			sourceTree = "<group>";
+		};
 		53D3AEF41E0709A80099A464 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,14 +398,15 @@
 		53D3AF011E07109D0099A464 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				5379FB9F22B8179600B20B1C /* Cool */,
 				5327EAD222526155006D5FCC /* TableOfContents */,
-				53D3AF021E07109D0099A464 /* home */,
-				53D3AF091E07109D0099A464 /* second */,
+				53D3AF021E07109D0099A464 /* Home */,
+				53D3AF091E07109D0099A464 /* Second */,
 			);
 			path = modules;
 			sourceTree = "<group>";
 		};
-		53D3AF021E07109D0099A464 /* home */ = {
+		53D3AF021E07109D0099A464 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				53D3AF031E07109D0099A464 /* Home.storyboard */,
@@ -390,10 +416,10 @@
 				53D3AF071E07109D0099A464 /* HomeRouter.swift */,
 				53D3AF081E07109D0099A464 /* HomeView.swift */,
 			);
-			path = home;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		53D3AF091E07109D0099A464 /* second */ = {
+		53D3AF091E07109D0099A464 /* Second */ = {
 			isa = PBXGroup;
 			children = (
 				53D3AF0A1E07109D0099A464 /* Second.storyboard */,
@@ -404,7 +430,7 @@
 				53D3AF0F1E07109D0099A464 /* SecondView.swift */,
 				53D3AF101E07109D0099A464 /* SecondViewPad.swift */,
 			);
-			path = second;
+			path = Second;
 			sourceTree = "<group>";
 		};
 		53D3AF301E0711000099A464 /* ExampleTests */ = {
@@ -599,22 +625,28 @@
 				5327EADD22526175006D5FCC /* TableOfContentsInteractor.swift in Sources */,
 				53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */,
 				53D3AF211E07109D0099A464 /* SecondViewPad.swift in Sources */,
+				5379FBA722B817B600B20B1C /* CoolPresenter.swift in Sources */,
 				5327EADB22526175006D5FCC /* TableOfContentsRouter.swift in Sources */,
 				5327EADE22526175006D5FCC /* TableOfContentsView.swift in Sources */,
 				5327EADA22526175006D5FCC /* TableOfContentsPresenter.swift in Sources */,
 				53D3AF1A1E07109D0099A464 /* HomeView.swift in Sources */,
 				53D3AF1F1E07109D0099A464 /* SecondRouter.swift in Sources */,
+				5379FBA822B817B600B20B1C /* CoolRouter.swift in Sources */,
 				5327EAD922526175006D5FCC /* TableOfContentsDisplayData.swift in Sources */,
+				5379FBA622B817B600B20B1C /* CoolDisplayData.swift in Sources */,
 				53D3AF191E07109D0099A464 /* HomeRouter.swift in Sources */,
 				53D3AF121E07109D0099A464 /* AppModule.swift in Sources */,
 				53D3AF161E07109D0099A464 /* HomeDisplayData.swift in Sources */,
 				53D3AF201E07109D0099A464 /* SecondView.swift in Sources */,
 				53D3AF181E07109D0099A464 /* HomePresenter.swift in Sources */,
+				5379FBA922B817B600B20B1C /* CoolModuleApi.swift in Sources */,
+				5379FBAD22B817F000B20B1C /* CoolView.swift in Sources */,
 				53D3AF1C1E07109D0099A464 /* SecondDisplayData.swift in Sources */,
 				53D3AF171E07109D0099A464 /* HomeInteractor.swift in Sources */,
 				53D3AF1E1E07109D0099A464 /* SecondPresenter.swift in Sources */,
 				5327EADC22526175006D5FCC /* TableOfContentsModuleApi.swift in Sources */,
 				53D3AF1D1E07109D0099A464 /* SecondInteractor.swift in Sources */,
+				5379FBAA22B817B600B20B1C /* CoolInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,6 +857,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -841,6 +874,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let module = AppModules.tableOfContents.build()
-        let router = module.router as! TableOfContentsRouter
-        router.show(inWindow: window, embedInNavController: true)
+        let module = AppModules.cool.build { return CoolView() }
+        let router = module.router as! CoolRouter
+        router.show(inWindow: window)
         
         return true
     }

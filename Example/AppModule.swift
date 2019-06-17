@@ -14,9 +14,11 @@ enum AppModules: String, ViperitModule {
     case home
     case second
     case tableOfContents
+    case cool
     
     var viewType: ViperitViewType {
         switch self {
+        case .cool: return .swiftUI
         case .tableOfContents: return .code
         default: return .storyboard
         }
