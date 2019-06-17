@@ -75,24 +75,28 @@ public class ViperitHostingController<Content: View>: UIHostingController<Conten
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
+        _presenter.viewHasLoaded()
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        _presenter.viewIsAboutToAppear()
     }
     
-    public override func viewDidAppear(_ animated: Bool) {
+    open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        _presenter.viewHasAppeared()
     }
     
-    public override func viewWillDisappear(_ animated: Bool) {
+    open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        _presenter.viewIsAboutToDisappear()
     }
     
-    public override func viewDidDisappear(_ animated: Bool) {
+    open override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        _presenter.viewHasDisappeared()
     }
 }
