@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let module = AppModules.cool.build { return CoolView() }
+       
+        let module = AppModules.cool.build {
+            return CoolView(presenter: $0 as! CoolPresenterApi)
+        }
+        
         let router = module.router as! CoolRouter
         router.show(inWindow: window)
         

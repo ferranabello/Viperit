@@ -51,7 +51,6 @@
 		5372507A1EF13988007F3A10 /* XibModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250741EF13988007F3A10 /* XibModuleView.swift */; };
 		5372507C1EF1399E007F3A10 /* XibModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5372507B1EF1399E007F3A10 /* XibModule.xib */; };
 		5372507E1EF1503A007F3A10 /* TestCleanModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372507D1EF1503A007F3A10 /* TestCleanModules.swift */; };
-		5379FBA622B817B600B20B1C /* CoolDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA022B817B600B20B1C /* CoolDisplayData.swift */; };
 		5379FBA722B817B600B20B1C /* CoolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA122B817B600B20B1C /* CoolPresenter.swift */; };
 		5379FBA822B817B600B20B1C /* CoolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA222B817B600B20B1C /* CoolRouter.swift */; };
 		5379FBA922B817B600B20B1C /* CoolModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA322B817B600B20B1C /* CoolModuleApi.swift */; };
@@ -59,6 +58,7 @@
 		5379FBAD22B817F000B20B1C /* CoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBAC22B817F000B20B1C /* CoolView.swift */; };
 		537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D19E31E7BE9B100A758FF /* ModuleTests.swift */; };
 		539580A6207378C3009A66BC /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539580A5207378C3009A66BC /* ExtensionsTests.swift */; };
+		53A2851722C22EDF005CC4C8 /* UserInterface+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A2851622C22EDF005CC4C8 /* UserInterface+SwiftUI.swift */; };
 		53D3AEF61E0709A80099A464 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEF51E0709A80099A464 /* String+.swift */; };
 		53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEFC1E07109D0099A464 /* AppDelegate.swift */; };
 		53D3AF121E07109D0099A464 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D3AEFD1E07109D0099A464 /* AppModule.swift */; };
@@ -158,7 +158,6 @@
 		537250741EF13988007F3A10 /* XibModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleView.swift; sourceTree = "<group>"; };
 		5372507B1EF1399E007F3A10 /* XibModule.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibModule.xib; sourceTree = "<group>"; };
 		5372507D1EF1503A007F3A10 /* TestCleanModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCleanModules.swift; sourceTree = "<group>"; };
-		5379FBA022B817B600B20B1C /* CoolDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolDisplayData.swift; sourceTree = "<group>"; };
 		5379FBA122B817B600B20B1C /* CoolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolPresenter.swift; sourceTree = "<group>"; };
 		5379FBA222B817B600B20B1C /* CoolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolRouter.swift; sourceTree = "<group>"; };
 		5379FBA322B817B600B20B1C /* CoolModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolModuleApi.swift; sourceTree = "<group>"; };
@@ -166,6 +165,7 @@
 		5379FBAC22B817F000B20B1C /* CoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolView.swift; sourceTree = "<group>"; };
 		537D19E31E7BE9B100A758FF /* ModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		539580A5207378C3009A66BC /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
+		53A2851622C22EDF005CC4C8 /* UserInterface+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+SwiftUI.swift"; sourceTree = "<group>"; };
 		53D3AEF51E0709A80099A464 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		53D3AEFA1E070AC60099A464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53D3AEFC1E07109D0099A464 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -362,7 +362,6 @@
 		5379FB9F22B8179600B20B1C /* Cool */ = {
 			isa = PBXGroup;
 			children = (
-				5379FBA022B817B600B20B1C /* CoolDisplayData.swift */,
 				5379FBA122B817B600B20B1C /* CoolPresenter.swift */,
 				5379FBA222B817B600B20B1C /* CoolRouter.swift */,
 				5379FBA322B817B600B20B1C /* CoolModuleApi.swift */,
@@ -379,6 +378,7 @@
 				53023EDF2252582C004ACC5C /* UserInterface+Split.swift */,
 				53023EDB225257E8004ACC5C /* UserInterface+Table.swift */,
 				53023EDD22525814004ACC5C /* UserInterface+Collection.swift */,
+				53A2851622C22EDF005CC4C8 /* UserInterface+SwiftUI.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -633,7 +633,6 @@
 				53D3AF1F1E07109D0099A464 /* SecondRouter.swift in Sources */,
 				5379FBA822B817B600B20B1C /* CoolRouter.swift in Sources */,
 				5327EAD922526175006D5FCC /* TableOfContentsDisplayData.swift in Sources */,
-				5379FBA622B817B600B20B1C /* CoolDisplayData.swift in Sources */,
 				53D3AF191E07109D0099A464 /* HomeRouter.swift in Sources */,
 				53D3AF121E07109D0099A464 /* AppModule.swift in Sources */,
 				53D3AF161E07109D0099A464 /* HomeDisplayData.swift in Sources */,
@@ -695,6 +694,7 @@
 				5367C0E11DD7C69E005B6676 /* Interactor.swift in Sources */,
 				53023EDE22525814004ACC5C /* UserInterface+Collection.swift in Sources */,
 				5367C0E21DD7C69E005B6676 /* Presenter.swift in Sources */,
+				53A2851722C22EDF005CC4C8 /* UserInterface+SwiftUI.swift in Sources */,
 				5367C0E31DD7C69E005B6676 /* Router.swift in Sources */,
 				53023EE02252582C004ACC5C /* UserInterface+Split.swift in Sources */,
 				5372505E1EF13500007F3A10 /* ViperitModule.swift in Sources */,

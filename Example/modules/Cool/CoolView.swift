@@ -9,15 +9,21 @@
 import SwiftUI
 
 struct CoolView : View {
+    let presenter: CoolPresenterApi
+    @State var showAlert = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 10) {
+            Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+            Text("SwiftUI is really amazing")
+            Button(action: {
+                self.showAlert = true
+            }) {
+                Text("What's my name?")
+            }
+            .presentation($showAlert) {
+                Alert(title: Text("Hi there"), message: Text("Your name is \(presenter.whatsMyName())"))
+            }
+        }
     }
 }
-
-#if DEBUG
-struct CoolView_Previews : PreviewProvider {
-    static var previews: some View {
-        CoolView()
-    }
-}
-#endif

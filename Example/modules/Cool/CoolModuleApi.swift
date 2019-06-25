@@ -18,6 +18,7 @@ protocol CoolViewApi: UserInterfaceProtocol {
 
 //MARK: - CoolPresenter API
 protocol CoolPresenterApi: PresenterProtocol {
+    func whatsMyName() -> String
 }
 
 //MARK: - CoolInteractor API
