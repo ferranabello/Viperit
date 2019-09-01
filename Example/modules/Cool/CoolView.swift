@@ -8,21 +8,26 @@
 
 import SwiftUI
 
+struct CoolViewModel {
+    var name = ""
+}
+
 struct CoolView : View {
-    let presenter: CoolPresenterApi
-    @State var showAlert = false
+    weak var presenter: CoolPresenterApi?
+    @EnvironmentObject var settings: UserSettings
     
     var body: some View {
         VStack(spacing: 10) {
             Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
             Text("SwiftUI is really amazing")
-            Button(action: {
-                self.showAlert = true
-            }) {
-                Text("What's my name?")
+            Text("Random name: \(settings.randomName)")
+            Text("Score: \(settings.score)")
+            
+            Button(action: { self.presenter?.changeScore() }) {
+                Text("Add score +1")
             }
-            .presentation($showAlert) {
-                Alert(title: Text("Hi there"), message: Text("Your name is \(presenter.whatsMyName())"))
+            Button(action: { self.presenter?.changeRandomName() }) {
+                Text("Fetch new random name")
             }
         }
     }

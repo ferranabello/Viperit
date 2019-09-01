@@ -8,19 +8,39 @@
 
 import Foundation
 import Viperit
+import SwiftUI
 
 // MARK: - CoolPresenter Class
-final class CoolPresenter: Presenter {    
+final class CoolPresenter: Presenter {
+    var _viewModel: UserSettings!
+    
     override func viewHasAppeared() {
-        print("can we say hello to the swift ui?")
-        
+        print("The swiftUI host has appeared!")
     }
 }
 
 // MARK: - CoolPresenter API
 extension CoolPresenter: CoolPresenterApi {
-    func whatsMyName() -> String {
-        return "Ferran"
+    func settings() -> UserSettings {
+        _viewModel = UserSettings()
+        return _viewModel
+    }
+    
+    func changeRandomName() {
+        _viewModel.randomName = "Loading..."
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            let url = URL(string: "https://www.random.org/strings/?num=1&len=10&upperalpha=on&loweralpha=on&unique=off&format=plain")!
+            
+            let name = try! String(contentsOf: url)
+            DispatchQueue.main.async { [weak self] in
+                self?._viewModel.randomName = name
+            }
+        }
+    }
+
+    
+    func changeScore () {
+        _viewModel.score += 1
     }
 }
 

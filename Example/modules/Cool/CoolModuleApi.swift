@@ -7,6 +7,7 @@
 //
 
 import Viperit
+import SwiftUI
 
 //MARK: - CoolRouter API
 protocol CoolRouterApi: RouterProtocol {
@@ -18,7 +19,9 @@ protocol CoolViewApi: UserInterfaceProtocol {
 
 //MARK: - CoolPresenter API
 protocol CoolPresenterApi: PresenterProtocol {
-    func whatsMyName() -> String
+    func settings() -> UserSettings
+    func changeScore()
+    func changeRandomName()
 }
 
 //MARK: - CoolInteractor API
