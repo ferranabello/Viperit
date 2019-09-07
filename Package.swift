@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "Viperit", targets: ["Viperit"])
     ],
     targets: [
-        .target(name: "Viperit", path: "Viperit")
-        .testTarget(name: "ViperitTests", dependencies: ["Viperit"])
+        .target(name: "Viperit", path: "Viperit"),
+        .testTarget(name: "ViperitTests", dependencies: ["Viperit"], path: "ViperitTests")
     ]
 )
