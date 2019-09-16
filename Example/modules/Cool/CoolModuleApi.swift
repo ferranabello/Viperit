@@ -7,7 +7,6 @@
 //
 
 import Viperit
-import SwiftUI
 
 //MARK: - CoolRouter API
 protocol CoolRouterApi: RouterProtocol {

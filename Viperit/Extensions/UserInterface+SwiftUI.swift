@@ -6,7 +6,9 @@
 //  Copyright © 2019 Ferran Abelló. All rights reserved.
 //
 
+#if canImport(SwiftUI)
 import SwiftUI
+#endif
 
 @available(iOS 13.0, *)
 public class HostingUserInterface<Content: View>: UIHostingController<Content>, UserInterfaceProtocol {
