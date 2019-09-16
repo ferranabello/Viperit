@@ -53,26 +53,16 @@ public extension ViperitModule where Self: RawRepresentable, Self.RawValue == St
             return Module.build(self, bundle: bundle, deviceType: deviceType)
         }
         
-        //Get class types
-        let interactorClass = classForViperComponent(.interactor, bundle: bundle) as! InteractorProtocol.Type
-        let presenterClass = classForViperComponent(.presenter, bundle: bundle) as! PresenterProtocol.Type
-        let routerClass = classForViperComponent(.router, bundle: bundle) as! RouterProtocol.Type
-        let displayDataClass = classForViperComponent(.displayData, bundle: bundle) as? DisplayData.Type
-        
-        //Allocate VIPER components
-        let interactor = interactorClass.init()
-        let presenter = presenterClass.init()
-        let router = routerClass.init()
-        let displayData = displayDataClass?.init()
-        
-        let set = setup(presenter)
+        let components = allocateViperComponents(bundle: bundle)
+        let set = setup(components.presenter)
         let viewUI = set.0
         
         let viewHost: UserInterfaceProtocol
         let envObject = set.1
         viewHost = HostingUserInterface(rootView: viewUI.environmentObject(envObject))
 
-        return Module.build(view: viewHost, interactor: interactor, presenter: presenter, router: router, displayData: displayData)
+        return Module.build(view: viewHost, interactor: components.interactor,
+                            presenter: components.presenter, router: components.router, displayData: components.displayData)
     }
     
     
@@ -82,6 +72,18 @@ public extension ViperitModule where Self: RawRepresentable, Self.RawValue == St
             return Module.build(self, bundle: bundle, deviceType: deviceType)
         }
         
+        let components = allocateViperComponents(bundle: bundle)
+        let viewUI = setup(components.presenter)
+        let viewHost: UserInterfaceProtocol
+        viewHost = HostingUserInterface(rootView: viewUI)
+        
+        return Module.build(view: viewHost, interactor: components.interactor,
+                            presenter: components.presenter, router: components.router, displayData: components.displayData)
+    }
+}
+
+private extension ViperitModule where Self: RawRepresentable, Self.RawValue == String {
+    func allocateViperComponents(bundle: Bundle) -> (interactor: InteractorProtocol, presenter: PresenterProtocol, router: RouterProtocol, displayData: DisplayData?) {
         //Get class types
         let interactorClass = classForViperComponent(.interactor, bundle: bundle) as! InteractorProtocol.Type
         let presenterClass = classForViperComponent(.presenter, bundle: bundle) as! PresenterProtocol.Type
@@ -94,10 +96,6 @@ public extension ViperitModule where Self: RawRepresentable, Self.RawValue == St
         let router = routerClass.init()
         let displayData = displayDataClass?.init()
         
-        let viewUI = setup(presenter)
-        let viewHost: UserInterfaceProtocol
-        viewHost = HostingUserInterface(rootView: viewUI)
-        
-        return Module.build(view: viewHost, interactor: interactor, presenter: presenter, router: router, displayData: displayData)
+        return (interactor, presenter, router, displayData)
     }
 }
