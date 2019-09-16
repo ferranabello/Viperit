@@ -27,6 +27,9 @@ struct CoolView : View {
             Button(action: { self.presenter?.changeRandomName() }) {
                 Text("Fetch new random name")
             }
+            Button(action: { self.presenter?.showAnotherModule() }) {
+                Text("Show another SwiftUI module")
+            }
         }
     }
 }

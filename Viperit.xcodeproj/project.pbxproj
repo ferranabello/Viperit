@@ -29,6 +29,11 @@
 		5355BECD232FC65600BC7CF9 /* CoolModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BEC8232FC65600BC7CF9 /* CoolModuleApi.swift */; };
 		5355BECE232FC65600BC7CF9 /* CoolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BEC9232FC65600BC7CF9 /* CoolInteractor.swift */; };
 		5355BECF232FC65600BC7CF9 /* CoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BECA232FC65600BC7CF9 /* CoolView.swift */; };
+		5355BED6232FC76900BC7CF9 /* PerfectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BED1232FC76900BC7CF9 /* PerfectPresenter.swift */; };
+		5355BED7232FC76900BC7CF9 /* PerfectRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BED2232FC76900BC7CF9 /* PerfectRouter.swift */; };
+		5355BED8232FC76900BC7CF9 /* PerfectModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BED3232FC76900BC7CF9 /* PerfectModuleApi.swift */; };
+		5355BED9232FC76900BC7CF9 /* PerfectInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BED4232FC76900BC7CF9 /* PerfectInteractor.swift */; };
+		5355BEDA232FC76900BC7CF9 /* PerfectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BED5232FC76900BC7CF9 /* PerfectView.swift */; };
 		5360ADF31E81280100C1AACB /* PresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5360ADF21E81280100C1AACB /* PresenterTests.swift */; };
 		5367C0DC1DD7C69E005B6676 /* ViperitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C641DD50DDF00088AAC /* ViperitError.swift */; };
 		5367C0DD1DD7C69E005B6676 /* ViperComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C631DD50DDF00088AAC /* ViperComponent.swift */; };
@@ -150,6 +155,11 @@
 		5355BEC8232FC65600BC7CF9 /* CoolModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolModuleApi.swift; sourceTree = "<group>"; };
 		5355BEC9232FC65600BC7CF9 /* CoolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolInteractor.swift; sourceTree = "<group>"; };
 		5355BECA232FC65600BC7CF9 /* CoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolView.swift; sourceTree = "<group>"; };
+		5355BED1232FC76900BC7CF9 /* PerfectPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectPresenter.swift; sourceTree = "<group>"; };
+		5355BED2232FC76900BC7CF9 /* PerfectRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectRouter.swift; sourceTree = "<group>"; };
+		5355BED3232FC76900BC7CF9 /* PerfectModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectModuleApi.swift; sourceTree = "<group>"; };
+		5355BED4232FC76900BC7CF9 /* PerfectInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectInteractor.swift; sourceTree = "<group>"; };
+		5355BED5232FC76900BC7CF9 /* PerfectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectView.swift; sourceTree = "<group>"; };
 		5360ADF21E81280100C1AACB /* PresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterTests.swift; sourceTree = "<group>"; };
 		5367C0CF1DD7C68D005B6676 /* Viperit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Viperit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5368EDC61E7FF91F0028D8CA /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
@@ -348,6 +358,18 @@
 			path = Cool;
 			sourceTree = "<group>";
 		};
+		5355BED0232FC75C00BC7CF9 /* Perfect */ = {
+			isa = PBXGroup;
+			children = (
+				5355BED3232FC76900BC7CF9 /* PerfectModuleApi.swift */,
+				5355BED1232FC76900BC7CF9 /* PerfectPresenter.swift */,
+				5355BED2232FC76900BC7CF9 /* PerfectRouter.swift */,
+				5355BED4232FC76900BC7CF9 /* PerfectInteractor.swift */,
+				5355BED5232FC76900BC7CF9 /* PerfectView.swift */,
+			);
+			path = Perfect;
+			sourceTree = "<group>";
+		};
 		5372505F1EF137A1007F3A10 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +456,7 @@
 		53D3AF011E07109D0099A464 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				5355BED0232FC75C00BC7CF9 /* Perfect */,
 				5355BEC5232FC64A00BC7CF9 /* Cool */,
 				53077FDF232F8C6D0078D855 /* Simple */,
 				5327EAD222526155006D5FCC /* TableOfContents */,
@@ -675,11 +698,15 @@
 				53077FEA232F8CAB0078D855 /* SimpleInteractor.swift in Sources */,
 				53D3AF191E07109D0099A464 /* HomeRouter.swift in Sources */,
 				53D3AF121E07109D0099A464 /* AppModule.swift in Sources */,
+				5355BED8232FC76900BC7CF9 /* PerfectModuleApi.swift in Sources */,
 				53D3AF161E07109D0099A464 /* HomeDisplayData.swift in Sources */,
+				5355BED7232FC76900BC7CF9 /* PerfectRouter.swift in Sources */,
 				53D3AF201E07109D0099A464 /* SecondView.swift in Sources */,
+				5355BED6232FC76900BC7CF9 /* PerfectPresenter.swift in Sources */,
 				53D3AF181E07109D0099A464 /* HomePresenter.swift in Sources */,
 				5355BECB232FC65600BC7CF9 /* CoolPresenter.swift in Sources */,
 				5355BECC232FC65600BC7CF9 /* CoolRouter.swift in Sources */,
+				5355BED9232FC76900BC7CF9 /* PerfectInteractor.swift in Sources */,
 				53D3AF1C1E07109D0099A464 /* SecondDisplayData.swift in Sources */,
 				53077FE8232F8CAB0078D855 /* SimpleRouter.swift in Sources */,
 				53D3AF171E07109D0099A464 /* HomeInteractor.swift in Sources */,
@@ -687,6 +714,7 @@
 				5355BECD232FC65600BC7CF9 /* CoolModuleApi.swift in Sources */,
 				53D3AF1E1E07109D0099A464 /* SecondPresenter.swift in Sources */,
 				5327EADC22526175006D5FCC /* TableOfContentsModuleApi.swift in Sources */,
+				5355BEDA232FC76900BC7CF9 /* PerfectView.swift in Sources */,
 				53D3AF1D1E07109D0099A464 /* SecondInteractor.swift in Sources */,
 				53A86CBF2315D2EE00E6B88C /* UserSettings.swift in Sources */,
 				53077FE9232F8CAB0078D855 /* SimpleModuleApi.swift in Sources */,

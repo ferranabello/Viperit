@@ -10,6 +10,7 @@ import Viperit
 
 //MARK: - CoolRouter API
 protocol CoolRouterApi: RouterProtocol {
+    func goToPerfect()
 }
 
 //MARK: - CoolPresenter API
@@ -17,6 +18,7 @@ protocol CoolPresenterApi: PresenterProtocol {
     func settings() -> UserSettings
     func changeScore()
     func changeRandomName()
+    func showAnotherModule()
 }
 
 //MARK: - CoolInteractor API

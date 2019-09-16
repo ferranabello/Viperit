@@ -37,9 +37,13 @@ extension CoolPresenter: CoolPresenterApi {
         }
     }
 
-    
     func changeScore () {
         _viewModel.score += 1
+    }
+    
+    func showAnotherModule() {
+        print("Show another module")
+        router.goToPerfect()
     }
 }
 
