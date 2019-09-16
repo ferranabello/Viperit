@@ -67,6 +67,11 @@
 		5372507A1EF13988007F3A10 /* XibModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250741EF13988007F3A10 /* XibModuleView.swift */; };
 		5372507C1EF1399E007F3A10 /* XibModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5372507B1EF1399E007F3A10 /* XibModule.xib */; };
 		5372507E1EF1503A007F3A10 /* TestCleanModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372507D1EF1503A007F3A10 /* TestCleanModules.swift */; };
+		537B7E9B232FDB25002681C6 /* SwiftUIPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7E96232FDB25002681C6 /* SwiftUIPresenter.swift */; };
+		537B7E9C232FDB25002681C6 /* SwiftUIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7E97232FDB25002681C6 /* SwiftUIRouter.swift */; };
+		537B7E9D232FDB25002681C6 /* SwiftUIModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7E98232FDB25002681C6 /* SwiftUIModuleApi.swift */; };
+		537B7E9E232FDB25002681C6 /* SwiftUIInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7E99232FDB25002681C6 /* SwiftUIInteractor.swift */; };
+		537B7E9F232FDB25002681C6 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7E9A232FDB25002681C6 /* SwiftUIView.swift */; };
 		537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D19E31E7BE9B100A758FF /* ModuleTests.swift */; };
 		539580A6207378C3009A66BC /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539580A5207378C3009A66BC /* ExtensionsTests.swift */; };
 		53A2851722C22EDF005CC4C8 /* UserInterface+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A2851622C22EDF005CC4C8 /* UserInterface+SwiftUI.swift */; };
@@ -186,6 +191,11 @@
 		537250741EF13988007F3A10 /* XibModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleView.swift; sourceTree = "<group>"; };
 		5372507B1EF1399E007F3A10 /* XibModule.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibModule.xib; sourceTree = "<group>"; };
 		5372507D1EF1503A007F3A10 /* TestCleanModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCleanModules.swift; sourceTree = "<group>"; };
+		537B7E96232FDB25002681C6 /* SwiftUIPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPresenter.swift; sourceTree = "<group>"; };
+		537B7E97232FDB25002681C6 /* SwiftUIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIRouter.swift; sourceTree = "<group>"; };
+		537B7E98232FDB25002681C6 /* SwiftUIModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIModuleApi.swift; sourceTree = "<group>"; };
+		537B7E99232FDB25002681C6 /* SwiftUIInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIInteractor.swift; sourceTree = "<group>"; };
+		537B7E9A232FDB25002681C6 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		537D19E31E7BE9B100A758FF /* ModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		539580A5207378C3009A66BC /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
 		53A2851622C22EDF005CC4C8 /* UserInterface+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+SwiftUI.swift"; sourceTree = "<group>"; };
@@ -373,6 +383,7 @@
 		5372505F1EF137A1007F3A10 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				537B7E95232FDAE9002681C6 /* SwiftUI */,
 				537250601EF137B4007F3A10 /* Sample */,
 				537250611EF137BD007F3A10 /* XibModule */,
 				537250621EF137C7007F3A10 /* CodeModule */,
@@ -419,6 +430,18 @@
 				537250681EF13835007F3A10 /* CodeModuleView.swift */,
 			);
 			path = CodeModule;
+			sourceTree = "<group>";
+		};
+		537B7E95232FDAE9002681C6 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				537B7E96232FDB25002681C6 /* SwiftUIPresenter.swift */,
+				537B7E97232FDB25002681C6 /* SwiftUIRouter.swift */,
+				537B7E98232FDB25002681C6 /* SwiftUIModuleApi.swift */,
+				537B7E99232FDB25002681C6 /* SwiftUIInteractor.swift */,
+				537B7E9A232FDB25002681C6 /* SwiftUIView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		53A86CBD2315D2DD00E6B88C /* viewModels */ = {
@@ -742,13 +765,18 @@
 				537250781EF13988007F3A10 /* XibModulePresenter.swift in Sources */,
 				5368EDD31E801EDB0028D8CA /* SampleInteractor.swift in Sources */,
 				537250761EF13988007F3A10 /* XibModuleInteractor.swift in Sources */,
+				537B7E9B232FDB25002681C6 /* SwiftUIPresenter.swift in Sources */,
 				5372507E1EF1503A007F3A10 /* TestCleanModules.swift in Sources */,
 				5372506E1EF13835007F3A10 /* CodeModuleView.swift in Sources */,
+				537B7E9E232FDB25002681C6 /* SwiftUIInteractor.swift in Sources */,
 				539580A6207378C3009A66BC /* ExtensionsTests.swift in Sources */,
 				5368EDC71E7FF91F0028D8CA /* RouterTests.swift in Sources */,
+				537B7E9C232FDB25002681C6 /* SwiftUIRouter.swift in Sources */,
 				537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */,
 				5372506D1EF13835007F3A10 /* CodeModuleRouter.swift in Sources */,
+				537B7E9F232FDB25002681C6 /* SwiftUIView.swift in Sources */,
 				5372506C1EF13835007F3A10 /* CodeModulePresenter.swift in Sources */,
+				537B7E9D232FDB25002681C6 /* SwiftUIModuleApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,6 +990,7 @@
 				DEVELOPMENT_TEAM = "";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = ViperitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -978,6 +1007,7 @@
 				DEVELOPMENT_TEAM = "";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = ViperitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.acferran.ViperitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

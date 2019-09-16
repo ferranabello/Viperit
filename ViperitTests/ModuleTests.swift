@@ -146,3 +146,29 @@ class ModuleTests: XCTestCase {
         XCTAssert(module.view is SampleView)
     }
 }
+
+//MARK: - SwiftUI tests
+@available(iOS 13.0, *)
+extension ModuleTests {
+    private func createSwiftUIModule() -> Module {
+        return TestModules.swiftUI.build(bundle: testBundle, deviceType: nil) { presenter in
+            SwiftUIView(presenter: presenter as? SwiftUIPresenterApi)
+        }
+    }
+    
+    func testSwiftUIModuleBuilderPerformance() {
+        self.measure {
+            _ = self.createSwiftUIModule()
+        }
+    }
+    
+    func testSwiftUIModuleBuildCorrectComponents() {
+        let module = createSwiftUIModule()
+        
+        XCTAssert(module.view is HostingUserInterface<SwiftUIView>)
+        XCTAssert(module.interactor is SwiftUIInteractor)
+        XCTAssert(module.presenter is SwiftUIPresenter)
+        XCTAssert(module.router is SwiftUIRouter)
+        XCTAssertNil(module.displayData)
+    }
+}
