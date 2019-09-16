@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode10.2
+osx_image: xcode11
 
 branches:
   only:
@@ -13,6 +13,6 @@ before_install:
 script:
   - set -o pipefail
   - xcodebuild -scheme Viperit -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
-  - xcodebuild test -scheme ViperitTests -destination 'platform=iOS Simulator,name=iPhone XS,OS=12.2' | xcpretty -c
+  - xcodebuild test -scheme ViperitTests -destination 'platform=iOS Simulator,name=iPhone XS,OS=13.0' | xcpretty -c
 after_success:
   - bash <(curl -s https://codecov.io/bash)
