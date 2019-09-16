@@ -18,6 +18,14 @@ extension TableOfContentsPresenter: TableOfContentsPresenterApi {
     func showHome() {
         router.goHome()
     }
+    
+    func showCool() {
+        router.goToCool()
+    }
+    
+    func showSimple() {
+        router.goToSimple()
+    }
 }
 
 // MARK: - TableOfContents Viper Components

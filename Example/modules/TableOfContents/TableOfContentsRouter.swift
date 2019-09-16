@@ -19,6 +19,22 @@ extension TableOfContentsRouter: TableOfContentsRouterApi {
         let home = AppModules.home.build()
         home.router.show(from: viewController, embedInNavController: false, setupData: nil)
     }
+    
+    func goToCool() {
+        let module = AppModules.cool.build { presenter -> (CoolView, UserSettings) in
+            let p = presenter as! CoolPresenterApi
+            let settings = p.settings()
+            return (CoolView(presenter: p), settings)
+        }
+
+        let router = module.router as! CoolRouter
+        router.show(from: viewController)
+    }
+    
+    func goToSimple() {
+        let simple = AppModules.simple.build()
+        simple.router.show(from: viewController, embedInNavController: true, setupData: nil)
+    }
 }
 
 // MARK: - TableOfContents Viper Components

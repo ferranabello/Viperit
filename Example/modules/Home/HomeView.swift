@@ -37,12 +37,8 @@ extension HomeView: HomeViewInterface {
 
 // MARK: - VIPER COMPONENTS API (Auto-generated code)
 private extension HomeView {
-    var presenter: HomePresenter {
-        return _presenter as! HomePresenter
-    }
-    var displayData: HomeDisplayData {
-        return _displayData as! HomeDisplayData
-    }
+    var presenter: HomePresenter { return _presenter as! HomePresenter }
+    var displayData: HomeDisplayData { return _displayData as! HomeDisplayData }
 }
 
 

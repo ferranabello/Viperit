@@ -10,6 +10,12 @@
 		53023EDC225257E8004ACC5C /* UserInterface+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53023EDB225257E8004ACC5C /* UserInterface+Table.swift */; };
 		53023EDE22525814004ACC5C /* UserInterface+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53023EDD22525814004ACC5C /* UserInterface+Collection.swift */; };
 		53023EE02252582C004ACC5C /* UserInterface+Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53023EDF2252582C004ACC5C /* UserInterface+Split.swift */; };
+		53077FE6232F8CAB0078D855 /* SimpleDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53077FE0232F8CAB0078D855 /* SimpleDisplayData.swift */; };
+		53077FE7232F8CAB0078D855 /* SimplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53077FE1232F8CAB0078D855 /* SimplePresenter.swift */; };
+		53077FE8232F8CAB0078D855 /* SimpleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53077FE2232F8CAB0078D855 /* SimpleRouter.swift */; };
+		53077FE9232F8CAB0078D855 /* SimpleModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53077FE3232F8CAB0078D855 /* SimpleModuleApi.swift */; };
+		53077FEA232F8CAB0078D855 /* SimpleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53077FE4232F8CAB0078D855 /* SimpleInteractor.swift */; };
+		53077FEB232F8CAB0078D855 /* SimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53077FE5232F8CAB0078D855 /* SimpleView.swift */; };
 		5327EAD922526175006D5FCC /* TableOfContentsDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327EAD322526175006D5FCC /* TableOfContentsDisplayData.swift */; };
 		5327EADA22526175006D5FCC /* TableOfContentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327EAD422526175006D5FCC /* TableOfContentsPresenter.swift */; };
 		5327EADB22526175006D5FCC /* TableOfContentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327EAD522526175006D5FCC /* TableOfContentsRouter.swift */; };
@@ -116,6 +122,12 @@
 		53023EDB225257E8004ACC5C /* UserInterface+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+Table.swift"; sourceTree = "<group>"; };
 		53023EDD22525814004ACC5C /* UserInterface+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+Collection.swift"; sourceTree = "<group>"; };
 		53023EDF2252582C004ACC5C /* UserInterface+Split.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+Split.swift"; sourceTree = "<group>"; };
+		53077FE0232F8CAB0078D855 /* SimpleDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDisplayData.swift; sourceTree = "<group>"; };
+		53077FE1232F8CAB0078D855 /* SimplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePresenter.swift; sourceTree = "<group>"; };
+		53077FE2232F8CAB0078D855 /* SimpleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRouter.swift; sourceTree = "<group>"; };
+		53077FE3232F8CAB0078D855 /* SimpleModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleModuleApi.swift; sourceTree = "<group>"; };
+		53077FE4232F8CAB0078D855 /* SimpleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleInteractor.swift; sourceTree = "<group>"; };
+		53077FE5232F8CAB0078D855 /* SimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleView.swift; sourceTree = "<group>"; };
 		5327EAD322526175006D5FCC /* TableOfContentsDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentsDisplayData.swift; sourceTree = "<group>"; };
 		5327EAD422526175006D5FCC /* TableOfContentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentsPresenter.swift; sourceTree = "<group>"; };
 		5327EAD522526175006D5FCC /* TableOfContentsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableOfContentsRouter.swift; sourceTree = "<group>"; };
@@ -226,6 +238,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53077FDF232F8C6D0078D855 /* Simple */ = {
+			isa = PBXGroup;
+			children = (
+				53077FE0232F8CAB0078D855 /* SimpleDisplayData.swift */,
+				53077FE1232F8CAB0078D855 /* SimplePresenter.swift */,
+				53077FE2232F8CAB0078D855 /* SimpleRouter.swift */,
+				53077FE3232F8CAB0078D855 /* SimpleModuleApi.swift */,
+				53077FE4232F8CAB0078D855 /* SimpleInteractor.swift */,
+				53077FE5232F8CAB0078D855 /* SimpleView.swift */,
+			);
+			path = Simple;
+			sourceTree = "<group>";
+		};
 		5327EAD222526155006D5FCC /* TableOfContents */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +434,7 @@
 		53D3AF011E07109D0099A464 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				53077FDF232F8C6D0078D855 /* Simple */,
 				5379FB9F22B8179600B20B1C /* Cool */,
 				5327EAD222526155006D5FCC /* TableOfContents */,
 				53D3AF021E07109D0099A464 /* Home */,
@@ -633,6 +659,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53077FEB232F8CAB0078D855 /* SimpleView.swift in Sources */,
 				5327EADD22526175006D5FCC /* TableOfContentsInteractor.swift in Sources */,
 				53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */,
 				53D3AF211E07109D0099A464 /* SecondViewPad.swift in Sources */,
@@ -643,7 +670,9 @@
 				53D3AF1A1E07109D0099A464 /* HomeView.swift in Sources */,
 				53D3AF1F1E07109D0099A464 /* SecondRouter.swift in Sources */,
 				5379FBA822B817B600B20B1C /* CoolRouter.swift in Sources */,
+				53077FE7232F8CAB0078D855 /* SimplePresenter.swift in Sources */,
 				5327EAD922526175006D5FCC /* TableOfContentsDisplayData.swift in Sources */,
+				53077FEA232F8CAB0078D855 /* SimpleInteractor.swift in Sources */,
 				53D3AF191E07109D0099A464 /* HomeRouter.swift in Sources */,
 				53D3AF121E07109D0099A464 /* AppModule.swift in Sources */,
 				53D3AF161E07109D0099A464 /* HomeDisplayData.swift in Sources */,
@@ -652,12 +681,15 @@
 				5379FBA922B817B600B20B1C /* CoolModuleApi.swift in Sources */,
 				5379FBAD22B817F000B20B1C /* CoolView.swift in Sources */,
 				53D3AF1C1E07109D0099A464 /* SecondDisplayData.swift in Sources */,
+				53077FE8232F8CAB0078D855 /* SimpleRouter.swift in Sources */,
 				53D3AF171E07109D0099A464 /* HomeInteractor.swift in Sources */,
+				53077FE6232F8CAB0078D855 /* SimpleDisplayData.swift in Sources */,
 				53D3AF1E1E07109D0099A464 /* SecondPresenter.swift in Sources */,
 				5327EADC22526175006D5FCC /* TableOfContentsModuleApi.swift in Sources */,
 				53D3AF1D1E07109D0099A464 /* SecondInteractor.swift in Sources */,
 				53A86CBF2315D2EE00E6B88C /* UserSettings.swift in Sources */,
 				5379FBAA22B817B600B20B1C /* CoolInteractor.swift in Sources */,
+				53077FE9232F8CAB0078D855 /* SimpleModuleApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

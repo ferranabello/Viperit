@@ -16,16 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-       
-        let module = AppModules.cool.build { presenter -> (CoolView, UserSettings) in
-            let p = presenter as! CoolPresenterApi
-            let settings = p.settings()
-            return (CoolView(presenter: p), settings)
-        }
-        
-        let router = module.router as! CoolRouter
-        router.show(inWindow: window)
-        
+        let module = AppModules.tableOfContents.build()
+        module.router.show(inWindow: window, embedInNavController: true, setupData: nil, makeKeyAndVisible: true)
         return true
     }
 
