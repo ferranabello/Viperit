@@ -24,6 +24,11 @@
 		5327EADE22526175006D5FCC /* TableOfContentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5327EAD822526175006D5FCC /* TableOfContentsView.swift */; };
 		53388C291DD9FFDF00EA4CEC /* Viperit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; };
 		53388C2A1DD9FFDF00EA4CEC /* Viperit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5367C0CF1DD7C68D005B6676 /* Viperit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5355BECB232FC65600BC7CF9 /* CoolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BEC6232FC65600BC7CF9 /* CoolPresenter.swift */; };
+		5355BECC232FC65600BC7CF9 /* CoolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BEC7232FC65600BC7CF9 /* CoolRouter.swift */; };
+		5355BECD232FC65600BC7CF9 /* CoolModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BEC8232FC65600BC7CF9 /* CoolModuleApi.swift */; };
+		5355BECE232FC65600BC7CF9 /* CoolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BEC9232FC65600BC7CF9 /* CoolInteractor.swift */; };
+		5355BECF232FC65600BC7CF9 /* CoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355BECA232FC65600BC7CF9 /* CoolView.swift */; };
 		5360ADF31E81280100C1AACB /* PresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5360ADF21E81280100C1AACB /* PresenterTests.swift */; };
 		5367C0DC1DD7C69E005B6676 /* ViperitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C641DD50DDF00088AAC /* ViperitError.swift */; };
 		5367C0DD1DD7C69E005B6676 /* ViperComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53532C631DD50DDF00088AAC /* ViperComponent.swift */; };
@@ -57,11 +62,6 @@
 		5372507A1EF13988007F3A10 /* XibModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537250741EF13988007F3A10 /* XibModuleView.swift */; };
 		5372507C1EF1399E007F3A10 /* XibModule.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5372507B1EF1399E007F3A10 /* XibModule.xib */; };
 		5372507E1EF1503A007F3A10 /* TestCleanModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372507D1EF1503A007F3A10 /* TestCleanModules.swift */; };
-		5379FBA722B817B600B20B1C /* CoolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA122B817B600B20B1C /* CoolPresenter.swift */; };
-		5379FBA822B817B600B20B1C /* CoolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA222B817B600B20B1C /* CoolRouter.swift */; };
-		5379FBA922B817B600B20B1C /* CoolModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA322B817B600B20B1C /* CoolModuleApi.swift */; };
-		5379FBAA22B817B600B20B1C /* CoolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBA422B817B600B20B1C /* CoolInteractor.swift */; };
-		5379FBAD22B817F000B20B1C /* CoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379FBAC22B817F000B20B1C /* CoolView.swift */; };
 		537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D19E31E7BE9B100A758FF /* ModuleTests.swift */; };
 		539580A6207378C3009A66BC /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539580A5207378C3009A66BC /* ExtensionsTests.swift */; };
 		53A2851722C22EDF005CC4C8 /* UserInterface+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A2851622C22EDF005CC4C8 /* UserInterface+SwiftUI.swift */; };
@@ -145,6 +145,11 @@
 		53532C621DD50DDF00088AAC /* UserInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
 		53532C631DD50DDF00088AAC /* ViperComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperComponent.swift; sourceTree = "<group>"; };
 		53532C641DD50DDF00088AAC /* ViperitError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperitError.swift; sourceTree = "<group>"; };
+		5355BEC6232FC65600BC7CF9 /* CoolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolPresenter.swift; sourceTree = "<group>"; };
+		5355BEC7232FC65600BC7CF9 /* CoolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolRouter.swift; sourceTree = "<group>"; };
+		5355BEC8232FC65600BC7CF9 /* CoolModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolModuleApi.swift; sourceTree = "<group>"; };
+		5355BEC9232FC65600BC7CF9 /* CoolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolInteractor.swift; sourceTree = "<group>"; };
+		5355BECA232FC65600BC7CF9 /* CoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolView.swift; sourceTree = "<group>"; };
 		5360ADF21E81280100C1AACB /* PresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterTests.swift; sourceTree = "<group>"; };
 		5367C0CF1DD7C68D005B6676 /* Viperit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Viperit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5368EDC61E7FF91F0028D8CA /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
@@ -171,11 +176,6 @@
 		537250741EF13988007F3A10 /* XibModuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibModuleView.swift; sourceTree = "<group>"; };
 		5372507B1EF1399E007F3A10 /* XibModule.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibModule.xib; sourceTree = "<group>"; };
 		5372507D1EF1503A007F3A10 /* TestCleanModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCleanModules.swift; sourceTree = "<group>"; };
-		5379FBA122B817B600B20B1C /* CoolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolPresenter.swift; sourceTree = "<group>"; };
-		5379FBA222B817B600B20B1C /* CoolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolRouter.swift; sourceTree = "<group>"; };
-		5379FBA322B817B600B20B1C /* CoolModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolModuleApi.swift; sourceTree = "<group>"; };
-		5379FBA422B817B600B20B1C /* CoolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolInteractor.swift; sourceTree = "<group>"; };
-		5379FBAC22B817F000B20B1C /* CoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolView.swift; sourceTree = "<group>"; };
 		537D19E31E7BE9B100A758FF /* ModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		539580A5207378C3009A66BC /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
 		53A2851622C22EDF005CC4C8 /* UserInterface+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+SwiftUI.swift"; sourceTree = "<group>"; };
@@ -335,6 +335,19 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		5355BEC5232FC64A00BC7CF9 /* Cool */ = {
+			isa = PBXGroup;
+			children = (
+				53A86CBD2315D2DD00E6B88C /* viewModels */,
+				5355BEC6232FC65600BC7CF9 /* CoolPresenter.swift */,
+				5355BEC7232FC65600BC7CF9 /* CoolRouter.swift */,
+				5355BEC8232FC65600BC7CF9 /* CoolModuleApi.swift */,
+				5355BEC9232FC65600BC7CF9 /* CoolInteractor.swift */,
+				5355BECA232FC65600BC7CF9 /* CoolView.swift */,
+			);
+			path = Cool;
+			sourceTree = "<group>";
+		};
 		5372505F1EF137A1007F3A10 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,19 +399,6 @@
 			path = CodeModule;
 			sourceTree = "<group>";
 		};
-		5379FB9F22B8179600B20B1C /* Cool */ = {
-			isa = PBXGroup;
-			children = (
-				53A86CBD2315D2DD00E6B88C /* viewModels */,
-				5379FBA122B817B600B20B1C /* CoolPresenter.swift */,
-				5379FBA222B817B600B20B1C /* CoolRouter.swift */,
-				5379FBA322B817B600B20B1C /* CoolModuleApi.swift */,
-				5379FBA422B817B600B20B1C /* CoolInteractor.swift */,
-				5379FBAC22B817F000B20B1C /* CoolView.swift */,
-			);
-			path = Cool;
-			sourceTree = "<group>";
-		};
 		53A86CBD2315D2DD00E6B88C /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,8 +434,8 @@
 		53D3AF011E07109D0099A464 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				5355BEC5232FC64A00BC7CF9 /* Cool */,
 				53077FDF232F8C6D0078D855 /* Simple */,
-				5379FB9F22B8179600B20B1C /* Cool */,
 				5327EAD222526155006D5FCC /* TableOfContents */,
 				53D3AF021E07109D0099A464 /* Home */,
 				53D3AF091E07109D0099A464 /* Second */,
@@ -659,17 +659,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5355BECE232FC65600BC7CF9 /* CoolInteractor.swift in Sources */,
+				5355BECF232FC65600BC7CF9 /* CoolView.swift in Sources */,
 				53077FEB232F8CAB0078D855 /* SimpleView.swift in Sources */,
 				5327EADD22526175006D5FCC /* TableOfContentsInteractor.swift in Sources */,
 				53D3AF111E07109D0099A464 /* AppDelegate.swift in Sources */,
 				53D3AF211E07109D0099A464 /* SecondViewPad.swift in Sources */,
-				5379FBA722B817B600B20B1C /* CoolPresenter.swift in Sources */,
 				5327EADB22526175006D5FCC /* TableOfContentsRouter.swift in Sources */,
 				5327EADE22526175006D5FCC /* TableOfContentsView.swift in Sources */,
 				5327EADA22526175006D5FCC /* TableOfContentsPresenter.swift in Sources */,
 				53D3AF1A1E07109D0099A464 /* HomeView.swift in Sources */,
 				53D3AF1F1E07109D0099A464 /* SecondRouter.swift in Sources */,
-				5379FBA822B817B600B20B1C /* CoolRouter.swift in Sources */,
 				53077FE7232F8CAB0078D855 /* SimplePresenter.swift in Sources */,
 				5327EAD922526175006D5FCC /* TableOfContentsDisplayData.swift in Sources */,
 				53077FEA232F8CAB0078D855 /* SimpleInteractor.swift in Sources */,
@@ -678,17 +678,17 @@
 				53D3AF161E07109D0099A464 /* HomeDisplayData.swift in Sources */,
 				53D3AF201E07109D0099A464 /* SecondView.swift in Sources */,
 				53D3AF181E07109D0099A464 /* HomePresenter.swift in Sources */,
-				5379FBA922B817B600B20B1C /* CoolModuleApi.swift in Sources */,
-				5379FBAD22B817F000B20B1C /* CoolView.swift in Sources */,
+				5355BECB232FC65600BC7CF9 /* CoolPresenter.swift in Sources */,
+				5355BECC232FC65600BC7CF9 /* CoolRouter.swift in Sources */,
 				53D3AF1C1E07109D0099A464 /* SecondDisplayData.swift in Sources */,
 				53077FE8232F8CAB0078D855 /* SimpleRouter.swift in Sources */,
 				53D3AF171E07109D0099A464 /* HomeInteractor.swift in Sources */,
 				53077FE6232F8CAB0078D855 /* SimpleDisplayData.swift in Sources */,
+				5355BECD232FC65600BC7CF9 /* CoolModuleApi.swift in Sources */,
 				53D3AF1E1E07109D0099A464 /* SecondPresenter.swift in Sources */,
 				5327EADC22526175006D5FCC /* TableOfContentsModuleApi.swift in Sources */,
 				53D3AF1D1E07109D0099A464 /* SecondInteractor.swift in Sources */,
 				53A86CBF2315D2EE00E6B88C /* UserSettings.swift in Sources */,
-				5379FBAA22B817B600B20B1C /* CoolInteractor.swift in Sources */,
 				53077FE9232F8CAB0078D855 /* SimpleModuleApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,17 +1,15 @@
 //
 //  CoolView.swift
-//  Example
+//  Viperit
 //
-//  Created by Ferran on 17/06/2019.
+//  Created by Ferran on 16/09/2019.
 //  Copyright © 2019 Ferran Abelló. All rights reserved.
 //
 
 import SwiftUI
+import Viperit
 
-struct CoolViewModel {
-    var name = ""
-}
-
+//MARK: CoolView SwiftUI
 struct CoolView : View {
     weak var presenter: CoolPresenterApi?
     @EnvironmentObject var settings: UserSettings
