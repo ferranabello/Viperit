@@ -28,10 +28,10 @@ public protocol ViperitModule {
     func build(bundle: Bundle, deviceType: UIUserInterfaceIdiom?) -> Module
     
     @available(iOS 13.0, *)
-    func build<T: View, E: ObservableObject>(bundle: Bundle, deviceType: UIUserInterfaceIdiom?, setupUI: ((PresenterProtocol) -> (T, E))?) -> Module
+    func build<T: View, E: ObservableObject>(bundle: Bundle, deviceType: UIUserInterfaceIdiom?, setupUI: ((PresenterProtocol) -> (T, E))) -> Module
     
     @available(iOS 13.0, *)
-    func build<T: View>(bundle: Bundle, deviceType: UIUserInterfaceIdiom?, setupUI: ((PresenterProtocol) -> T)?) -> Module
+    func build<T: View>(bundle: Bundle, deviceType: UIUserInterfaceIdiom?, setupUI: ((PresenterProtocol) -> T)) -> Module
 }
 
 public extension ViperitModule where Self: RawRepresentable, Self.RawValue == String {
@@ -48,13 +48,9 @@ public extension ViperitModule where Self: RawRepresentable, Self.RawValue == St
     }
     
     @available(iOS 13.0, *)
-    func build<T: View, E: ObservableObject>(bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil, setupUI: ((PresenterProtocol) -> (T, E))? = nil) -> Module {
-        guard let setup = setupUI else {
-            return Module.build(self, bundle: bundle, deviceType: deviceType)
-        }
-        
+    func build<T: View, E: ObservableObject>(bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil, setupUI: ((PresenterProtocol) -> (T, E))) -> Module {
         let components = allocateViperComponents(bundle: bundle)
-        let set = setup(components.presenter)
+        let set = setupUI(components.presenter)
         let viewUI = set.0
         
         let viewHost: UserInterfaceProtocol
@@ -67,13 +63,9 @@ public extension ViperitModule where Self: RawRepresentable, Self.RawValue == St
     
     
     @available(iOS 13.0, *)
-    func build<T: View>(bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil, setupUI: ((PresenterProtocol) -> T)? = nil) -> Module {
-        guard let setup = setupUI else {
-            return Module.build(self, bundle: bundle, deviceType: deviceType)
-        }
-        
+    func build<T: View>(bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil, setupUI: ((PresenterProtocol) -> T)) -> Module {
         let components = allocateViperComponents(bundle: bundle)
-        let viewUI = setup(components.presenter)
+        let viewUI = setupUI(components.presenter)
         let viewHost: UserInterfaceProtocol
         viewHost = HostingUserInterface(rootView: viewUI)
         
