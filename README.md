@@ -56,12 +56,14 @@ Run `carthage update` to build the framework and drag the built `Viperit.framewo
 ## Features
 
 ### Create modules easily using Xcode templates
-Viperit Xcode templates can be found in the repository's `/Templates/Viperit` folder. To install them, open your terminal and run:
+Viperit Xcode templates can be downloaded from the [latest release](https://github.com/ferranabello/Viperit/releases) page. Download the **Templates.zip** file.
+
+To install them, unzip the file, open your terminal and run:
 
 ```bash
-cd PATH/TO/REPO
+cd PATH/TO/UNZIPPED/FOLDER
 mkdir -p ~/Library/Developer/Xcode/Templates/
-cp -R Templates/Viperit ~/Library/Developer/Xcode/Templates/
+cp -R Viperit ~/Library/Developer/Xcode/Templates/
 ```
 
 ![Module Creation](/Assets/Instructions/module_creation.gif)
@@ -120,7 +122,7 @@ You can test your module injecting mock layers like so:
 Now, let's create our first Viperit module called "myFirstModule"!
 
 ### 0. Create your module files
-Let's use the provided Xcode template to easily create all the needed classes for the module. Just click <i class="icon-file"></i> **New file** in the document panel and select **Protocol-oriented module** or **Object-oriented module** under the "Viperit" section.
+Let's use the provided Xcode template to easily create all the needed classes for the module. Just click <i class="icon-file"></i> **New file** in the document panel and choose between **Protocol-oriented module**,  **Object-oriented module** or **SwiftUI module** under the "Viperit" section.
 
 ### 1. Create a modules enum
 You need at least one (you can use as many as you like, maybe to group modules by functionality) enum that implements the ViperitModule protocol to enumerate your application modules.
