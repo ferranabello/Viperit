@@ -72,6 +72,11 @@
 		537B7E9D232FDB25002681C6 /* SwiftUIModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7E98232FDB25002681C6 /* SwiftUIModuleApi.swift */; };
 		537B7E9E232FDB25002681C6 /* SwiftUIInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7E99232FDB25002681C6 /* SwiftUIInteractor.swift */; };
 		537B7E9F232FDB25002681C6 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7E9A232FDB25002681C6 /* SwiftUIView.swift */; };
+		537B7EA6232FE287002681C6 /* SwiftUIWithEnvPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7EA1232FE287002681C6 /* SwiftUIWithEnvPresenter.swift */; };
+		537B7EA7232FE287002681C6 /* SwiftUIWithEnvRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7EA2232FE287002681C6 /* SwiftUIWithEnvRouter.swift */; };
+		537B7EA8232FE287002681C6 /* SwiftUIWithEnvModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7EA3232FE287002681C6 /* SwiftUIWithEnvModuleApi.swift */; };
+		537B7EA9232FE287002681C6 /* SwiftUIWithEnvInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7EA4232FE287002681C6 /* SwiftUIWithEnvInteractor.swift */; };
+		537B7EAA232FE287002681C6 /* SwiftUIWithEnvView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B7EA5232FE287002681C6 /* SwiftUIWithEnvView.swift */; };
 		537D19E41E7BE9B100A758FF /* ModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537D19E31E7BE9B100A758FF /* ModuleTests.swift */; };
 		539580A6207378C3009A66BC /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539580A5207378C3009A66BC /* ExtensionsTests.swift */; };
 		53A2851722C22EDF005CC4C8 /* UserInterface+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A2851622C22EDF005CC4C8 /* UserInterface+SwiftUI.swift */; };
@@ -196,6 +201,11 @@
 		537B7E98232FDB25002681C6 /* SwiftUIModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIModuleApi.swift; sourceTree = "<group>"; };
 		537B7E99232FDB25002681C6 /* SwiftUIInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIInteractor.swift; sourceTree = "<group>"; };
 		537B7E9A232FDB25002681C6 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		537B7EA1232FE287002681C6 /* SwiftUIWithEnvPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithEnvPresenter.swift; sourceTree = "<group>"; };
+		537B7EA2232FE287002681C6 /* SwiftUIWithEnvRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithEnvRouter.swift; sourceTree = "<group>"; };
+		537B7EA3232FE287002681C6 /* SwiftUIWithEnvModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithEnvModuleApi.swift; sourceTree = "<group>"; };
+		537B7EA4232FE287002681C6 /* SwiftUIWithEnvInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithEnvInteractor.swift; sourceTree = "<group>"; };
+		537B7EA5232FE287002681C6 /* SwiftUIWithEnvView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWithEnvView.swift; sourceTree = "<group>"; };
 		537D19E31E7BE9B100A758FF /* ModuleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTests.swift; sourceTree = "<group>"; };
 		539580A5207378C3009A66BC /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
 		53A2851622C22EDF005CC4C8 /* UserInterface+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserInterface+SwiftUI.swift"; sourceTree = "<group>"; };
@@ -383,6 +393,7 @@
 		5372505F1EF137A1007F3A10 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				537B7EA0232FE277002681C6 /* SwiftUIWithEnv */,
 				537B7E95232FDAE9002681C6 /* SwiftUI */,
 				537250601EF137B4007F3A10 /* Sample */,
 				537250611EF137BD007F3A10 /* XibModule */,
@@ -442,6 +453,18 @@
 				537B7E9A232FDB25002681C6 /* SwiftUIView.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		537B7EA0232FE277002681C6 /* SwiftUIWithEnv */ = {
+			isa = PBXGroup;
+			children = (
+				537B7EA1232FE287002681C6 /* SwiftUIWithEnvPresenter.swift */,
+				537B7EA2232FE287002681C6 /* SwiftUIWithEnvRouter.swift */,
+				537B7EA3232FE287002681C6 /* SwiftUIWithEnvModuleApi.swift */,
+				537B7EA4232FE287002681C6 /* SwiftUIWithEnvInteractor.swift */,
+				537B7EA5232FE287002681C6 /* SwiftUIWithEnvView.swift */,
+			);
+			path = SwiftUIWithEnv;
 			sourceTree = "<group>";
 		};
 		53A86CBD2315D2DD00E6B88C /* viewModels */ = {
@@ -756,14 +779,19 @@
 				5368EDD21E801EDB0028D8CA /* SampleDisplayData.swift in Sources */,
 				5368EDC91E7FF9A40028D8CA /* TestModules.swift in Sources */,
 				5368EDD41E801EDB0028D8CA /* SamplePresenter.swift in Sources */,
+				537B7EA8232FE287002681C6 /* SwiftUIWithEnvModuleApi.swift in Sources */,
 				5368EDD71E801EDB0028D8CA /* SampleViewPad.swift in Sources */,
 				537250691EF13835007F3A10 /* CodeModuleDisplayData.swift in Sources */,
 				5368EDD51E801EDB0028D8CA /* SampleRouter.swift in Sources */,
 				537250791EF13988007F3A10 /* XibModuleRouter.swift in Sources */,
+				537B7EA6232FE287002681C6 /* SwiftUIWithEnvPresenter.swift in Sources */,
 				5372506B1EF13835007F3A10 /* CodeModuleModuleApi.swift in Sources */,
 				537250751EF13988007F3A10 /* XibModuleDisplayData.swift in Sources */,
+				537B7EAA232FE287002681C6 /* SwiftUIWithEnvView.swift in Sources */,
+				537B7EA9232FE287002681C6 /* SwiftUIWithEnvInteractor.swift in Sources */,
 				537250781EF13988007F3A10 /* XibModulePresenter.swift in Sources */,
 				5368EDD31E801EDB0028D8CA /* SampleInteractor.swift in Sources */,
+				537B7EA7232FE287002681C6 /* SwiftUIWithEnvRouter.swift in Sources */,
 				537250761EF13988007F3A10 /* XibModuleInteractor.swift in Sources */,
 				537B7E9B232FDB25002681C6 /* SwiftUIPresenter.swift in Sources */,
 				5372507E1EF1503A007F3A10 /* TestCleanModules.swift in Sources */,

@@ -13,10 +13,11 @@ enum TestModules: String, ViperitModule {
     case codeModule
     case xibModule
     case swiftUI
+    case swiftUIWithEnv
     
     var viewType: ViperitViewType {
         switch self {
-        case .swiftUI: return .swiftUI
+        case .swiftUI, .swiftUIWithEnv: return .swiftUI
         case .codeModule: return .code
         case .xibModule: return .nib
         default: return .storyboard

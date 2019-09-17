@@ -156,9 +156,23 @@ extension ModuleTests {
         }
     }
     
+    private func createSwiftUIModuleWithEnvironmentObject() -> Module {
+        return TestModules.swiftUIWithEnv.build(bundle: testBundle, deviceType: nil) { presenter -> (SwiftUIWithEnvView, Settings) in
+            let view = SwiftUIWithEnvView(presenter: presenter as? SwiftUIWithEnvPresenterApi)
+            let settings = Settings()
+            return (view, settings)
+        }
+    }
+    
     func testSwiftUIModuleBuilderPerformance() {
         self.measure {
             _ = self.createSwiftUIModule()
+        }
+    }
+    
+    func testSwiftUIWithEnvironmentObjectModuleBuilderPerformance() {
+        self.measure {
+            _ = self.createSwiftUIModuleWithEnvironmentObject()
         }
     }
     
@@ -169,6 +183,15 @@ extension ModuleTests {
         XCTAssert(module.interactor is SwiftUIInteractor)
         XCTAssert(module.presenter is SwiftUIPresenter)
         XCTAssert(module.router is SwiftUIRouter)
+        XCTAssertNil(module.displayData)
+    }
+    
+    func testSwiftUIWithEnvironmentObjectModuleBuildCorrectComponents() {
+        let module = createSwiftUIModuleWithEnvironmentObject()
+        
+        XCTAssert(module.interactor is SwiftUIWithEnvInteractor)
+        XCTAssert(module.presenter is SwiftUIWithEnvPresenter)
+        XCTAssert(module.router is SwiftUIWithEnvRouter)
         XCTAssertNil(module.displayData)
     }
 }
