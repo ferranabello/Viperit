@@ -14,20 +14,33 @@ final class TableOfContentsView: TableUserInterface {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Viperit Table Module"
+        navigationItem.title = "Viperit App"
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.showHome()
+        switch indexPath.row {
+        case 0: presenter.showHome()
+        case 1: presenter.showCool()
+        case 2: presenter.showSimple()
+        default: break
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Go to home module"
+        switch indexPath.row {
+        case 0:
+            cell.textLabel?.text = "Storyboard module"
+        case 1:
+            cell.textLabel?.text = "Swift UI module"
+        case 2:
+            cell.textLabel?.text = "Code-generated module"
+        default: break
+        }
         return cell
     }
     

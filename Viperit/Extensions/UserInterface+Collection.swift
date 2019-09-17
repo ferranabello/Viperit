@@ -11,7 +11,7 @@ import UIKit
 //MARK: - Default implementation for UICollectionViewController
 open class CollectionUserInterface: UICollectionViewController, UserInterfaceProtocol {
     public var _presenter: PresenterProtocol!
-    public var _displayData: DisplayData!
+    public var _displayData: DisplayData?
     
     open override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,34 +1,32 @@
 //
-//  UserInterface.swift
+//  UserInterface+SwiftUI.swift
 //  Viperit
 //
-//  Created by Ferran on 11/09/2016.
-//  Copyright © 2016 Ferran Abelló. All rights reserved.
+//  Created by Ferran on 25/06/2019.
+//  Copyright © 2019 Ferran Abelló. All rights reserved.
 //
 
-import UIKit
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
 
-public protocol UserInterfaceProtocol: class, ViperitComponent {
-    var _presenter: PresenterProtocol! { get set }
-    var _displayData: DisplayData? { get set }
-    var viewController: UIViewController { get }
-    func viewDidLoad()
-    func viewWillAppear(_ animated: Bool)
-    func viewDidAppear(_ animated: Bool)
-    func viewWillDisappear(_ animated: Bool)
-    func viewDidDisappear(_ animated: Bool)
-}
-
-public extension UserInterfaceProtocol {
-    var viewController: UIViewController {
-        return self as! UIViewController
+@available(iOS 13.0, *)
+public class HostingUserInterface<Content: View>: UIHostingController<Content>, UserInterfaceProtocol {
+    public required init() {
+        super.init(nibName: nil, bundle: nil)
     }
-}
-
-//MARK: - Default implementation for UIViewController
-open class UserInterface: UIViewController, UserInterfaceProtocol {
+    
     public var _presenter: PresenterProtocol!
     public var _displayData: DisplayData?
+    
+    
+    public override required init(rootView: Content) {
+        super.init(rootView: rootView)
+    }
+    
+    @objc required dynamic init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     open override func viewDidLoad() {
         super.viewDidLoad()

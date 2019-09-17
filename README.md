@@ -9,7 +9,9 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/Viperit.svg)](http://github.com/ferranabello/Viperit)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Accio](https://img.shields.io/badge/Accio-supported-0A7CF5.svg?style=flat)](https://github.com/JamitLabs/Accio)
-[![Twitter](https://img.shields.io/badge/twitter-@acferran-blue.svg?style=flat)](http://twitter.com/acferran)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+[![SwiftUI compatible](https://img.shields.io/badge/SwiftUI-compatible-green.svg)](https://developer.apple.com/xcode/swiftui/)
+
 
 Write an iOS app following VIPER architecture. But in an **easy way**.
 
@@ -22,8 +24,8 @@ We all know Viper is cool. But we also know that it's hard to setup. This librar
 ### Requirements
 
 - iOS 8.0+
-- Swift 5.0 (for Swift 4.2 download v1.2.1, for Swift 4.1 download v1.1.0, for Swift 4 download v1.0.0, for Swift 3 download v0.8.0)
-- Xcode 10 (for Xcode 9 download v1.1.0)
+- Swift 5.1 (for Swift 5 download v1.3.3, Swift 4.2 download v1.2.1, for Swift 4.1 download v1.1.0, for Swift 4 download v1.0.0, for Swift 3 download v0.8.0)
+- Xcode 10+ (for Xcode 9 download v1.1.0)
 
 ### CocoaPods
 
@@ -54,12 +56,14 @@ Run `carthage update` to build the framework and drag the built `Viperit.framewo
 ## Features
 
 ### Create modules easily using Xcode templates
-Viperit Xcode templates can be found in the repository's `/Templates/Viperit` folder. To install them, open your terminal and run:
+Viperit Xcode templates can be downloaded from the [latest release](https://github.com/ferranabello/Viperit/releases) page. Download the **Templates.zip** file.
+
+To install them, unzip the file, open your terminal and run:
 
 ```bash
-cd PATH/TO/REPO
+cd PATH/TO/UNZIPPED/FOLDER
 mkdir -p ~/Library/Developer/Xcode/Templates/
-cp -R Templates/Viperit ~/Library/Developer/Xcode/Templates/
+cp -R Viperit ~/Library/Developer/Xcode/Templates/
 ```
 
 ![Module Creation](/Assets/Instructions/module_creation.gif)
@@ -68,19 +72,21 @@ You can check "Also create a Storyboard file for module" if you want the storybo
 Choose between "Universal" to use just one view for phones and tablets, and "Dedicated Tablet View" if you want to have a separated view for tablet devices.
 
 ### Use storyboard, xib or programmatic views
-Any Viperit module will assume its view is loaded from a Storyboard by default. But you can easily change this by overriding the variable *viewType* in your modules enum:
+Any Viperit module will assume its view is loaded from a Storyboard by default. But you can use **storyboards**, **nibs**, **code** or even **SwiftUI** views! All you need to do is to override the variable *viewType* in your modules enum:
 
 ```swift
 enum MySuperCoolModules: String, ViperitModule {
     case theStoryboardThing  
     case oldSchool
     case xibModule
+    case whatTheSwift
 
     var viewType: ViperitViewType {
         switch self {
         case .theStoryboardThing: return .storyboard
         case .oldSchool: return .code
         case .xibModule: return .nib
+        case .whatTheSwift: return .swiftUI
         }
     }
 }
@@ -116,7 +122,7 @@ You can test your module injecting mock layers like so:
 Now, let's create our first Viperit module called "myFirstModule"!
 
 ### 0. Create your module files
-Let's use the provided Xcode template to easily create all the needed classes for the module. Just click <i class="icon-file"></i> **New file** in the document panel and select **Protocol-oriented module** or **Object-oriented module** under the "Viperit" section.
+Let's use the provided Xcode template to easily create all the needed classes for the module. Just click <i class="icon-file"></i> **New file** in the document panel and choose between **Protocol-oriented module**,  **Object-oriented module** or **SwiftUI module** under the "Viperit" section.
 
 ### 1. Create a modules enum
 You need at least one (you can use as many as you like, maybe to group modules by functionality) enum that implements the ViperitModule protocol to enumerate your application modules.
@@ -154,6 +160,29 @@ This is just an example, you could of course use your own router functions inste
     let router = module.router as! MyFirstModuleRouter
     router.mySuperCoolShowFunction(inWindow: window)
 ```
+
+### 2.1. Are you using SwiftUI?
+Let's say you created a module based on SwiftUI called 'Cool'.
+All you need to do is to use the new Viperit SwiftUI module builder:
+
+```swift
+import SwiftUI
+import Viperit
+
+//A sample function that could be implemented in some Router to show your Cool SwiftUI module
+//You can even inject an @EnvironmentObject view model to your SwiftUI view.
+func showTheCoolModule() {
+  let module = AppModules.cool.build { presenter -> (CoolView, UserSettings) in
+      let p = presenter as! CoolPresenterApi
+      let settings = p.settings()
+      return (CoolView(presenter: p), settings)
+  }
+  let router = module.router as! CoolRouter
+  router.show(from: viewController)
+}
+```
+
+Check the example app to have a better understanding of how it works, and how to manage data flow on SwiftUI with the presenter.
 
 ### 3. Follow the Viper flow
 Everything is ready for you to make great things the Viper way!

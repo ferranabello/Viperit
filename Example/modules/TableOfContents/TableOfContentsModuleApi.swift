@@ -11,6 +11,8 @@ import Viperit
 //MARK: - TableOfContentsRouter API
 protocol TableOfContentsRouterApi: RouterProtocol {
     func goHome()
+    func goToCool()
+    func goToSimple()
 }
 
 //MARK: - TableOfContentsView API
@@ -20,6 +22,8 @@ protocol TableOfContentsViewApi: UserInterfaceProtocol {
 //MARK: - TableOfContentsPresenter API
 protocol TableOfContentsPresenterApi: PresenterProtocol {
     func showHome()
+    func showCool()
+    func showSimple()
 }
 
 //MARK: - TableOfContentsInteractor API
