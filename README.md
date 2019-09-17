@@ -25,7 +25,7 @@ We all know Viper is cool. But we also know that it's hard to setup. This librar
 
 - iOS 8.0+
 - Swift 5.1 (for Swift 5 download v1.3.3, Swift 4.2 download v1.2.1, for Swift 4.1 download v1.1.0, for Swift 4 download v1.0.0, for Swift 3 download v0.8.0)
-- Xcode 10+ (for Xcode 9 download v1.1.0)
+- Xcode 11 (for Xcode 10 download v1.3.3, for Xcode 9 download v1.1.0)
 
 ### CocoaPods
 
