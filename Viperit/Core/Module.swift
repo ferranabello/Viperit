@@ -23,7 +23,7 @@ public struct Module {
     public private(set) var router: RouterProtocol
     public private(set) var displayData: DisplayData?
     
-    static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil, injectedView: UIViewController? = nil) -> Module where T.RawValue == String {
+    static func build<T: RawRepresentable & ViperitModule>(_ module: T, bundle: Bundle = Bundle.main, deviceType: UIUserInterfaceIdiom? = nil) -> Module where T.RawValue == String {
         //Get class types
         let interactorClass = module.classForViperComponent(.interactor, bundle: bundle) as! InteractorProtocol.Type
         let presenterClass = module.classForViperComponent(.presenter, bundle: bundle) as! PresenterProtocol.Type
@@ -31,7 +31,7 @@ public struct Module {
         let displayDataClass = module.classForViperComponent(.displayData, bundle: bundle) as? DisplayData.Type
 
         //Allocate VIPER components
-        let V = loadView(forModule: module, bundle: bundle, deviceType: deviceType, injectedView: injectedView)
+        let V = loadView(forModule: module, bundle: bundle, deviceType: deviceType)
         let I = interactorClass.init()
         let P = presenterClass.init()
         let R = routerClass.init()
@@ -78,27 +78,20 @@ public extension Module {
 //MARK: - Helper Methods
 extension Module {
     
-    static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil, injectedView: UIViewController? = nil) -> UserInterfaceProtocol where T.RawValue == String {
+    static func loadView<T: RawRepresentable & ViperitModule>(forModule module: T, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> UserInterfaceProtocol where T.RawValue == String {
 
-        let viewClass: UIViewController.Type
-        if module.viewType == .swiftUI {
-            viewClass = UIViewController.self
-        } else {
-            viewClass = module.classForViperComponent(.view, bundle: bundle, deviceType: deviceType) as! UIViewController.Type
-        }
+        let viewClass = module.classForViperComponent(.view, bundle: bundle, deviceType: deviceType) as! UIViewController.Type
         let viewIdentifier = safeString(NSStringFromClass(viewClass).components(separatedBy: ".").last)
         let viewName = module.viewName.uppercasedFirst
         
         switch module.viewType {
-        case .swiftUI:
-            return injectedView as! UserInterfaceProtocol
-        case .storyboard:
-            let sb = UIStoryboard(name: viewName, bundle: bundle)
-            return sb.instantiateViewController(withIdentifier: viewIdentifier) as! UserInterfaceProtocol
         case .nib:
             return viewClass.init(nibName: viewName, bundle: bundle) as! UserInterfaceProtocol
         case .code:
             return viewClass.init() as! UserInterfaceProtocol
+        default:
+            let sb = UIStoryboard(name: viewName, bundle: bundle)
+            return sb.instantiateViewController(withIdentifier: viewIdentifier) as! UserInterfaceProtocol
         }
     }
     
