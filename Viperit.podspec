@@ -2,7 +2,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'Viperit'
-  s.version          = '1.3.2'
+  s.version          = '1.4.0'
   s.summary          = 'Viper Framework for iOS written in Swift'
 
   s.description      = <<-DESC
