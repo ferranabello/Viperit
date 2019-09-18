@@ -3,7 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "Viperit",
-    platforms: [.iOS("8.0")],
+    platforms: [.iOS("11.0")],
     products: [
         .library(name: "Viperit", targets: ["Viperit"])
     ],
