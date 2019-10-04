@@ -124,7 +124,7 @@ extension RawRepresentable where RawValue == String {
     func classForViperComponent(_ component: ViperComponent, bundle: Bundle, deviceType: UIUserInterfaceIdiom? = nil) -> Swift.AnyClass? {
         let className = rawValue.uppercasedFirst + component.rawValue.uppercasedFirst
         let bundleName = safeString(bundle.infoDictionary?["CFBundleName"])
-        let classInBundle = (bundleName + "." + className).replacingOccurrences(of: " ", with: "_")
+        let classInBundle = (bundleName + "." + className).replacingOccurrences(of: "[ -]", with: "_", options: .regularExpression)
         
         if component == .view {
             let deviceType = deviceType ?? UIScreen.main.traitCollection.userInterfaceIdiom
