@@ -71,7 +71,7 @@ cp -R Viperit ~/Library/Developer/Xcode/Templates/
 You can check "Also create a Storyboard file for module" if you want the storyboard file to be automatically created for you.
 Choose between "Universal" to use just one view for phones and tablets, and "Dedicated Tablet View" if you want to have a separated view for tablet devices.
 
-### Use storyboard, xib or programmatic views
+### Use storyboard, xib, programmatic views or SwiftUI
 Any Viperit module will assume its view is loaded from a Storyboard by default. But you can use **storyboards**, **nibs**, **code** or even **SwiftUI** views! All you need to do is to override the variable *viewType* in your modules enum:
 
 ```swift
