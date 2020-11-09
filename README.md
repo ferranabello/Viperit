@@ -23,9 +23,12 @@ We all know Viper is cool. But we also know that it's hard to setup. This librar
 
 ### Requirements
 
-- iOS 11.0+ (for iOS 8+ support download v1.3.3)
-- Swift 5.1 (for Swift 5 download v1.3.3, Swift 4.2 download v1.2.1, for Swift 4.1 download v1.1.0, for Swift 4 download v1.0.0, for Swift 3 download v0.8.0)
-- Xcode 11 (for Xcode 10 download v1.3.3, for Xcode 9 download v1.1.0)
+- iOS 11.0+
+- Swift 5.1+
+- Xcode 11.0+
+
+### Swift Package Manager (SPM)
+You can easily install this framework using SPM on Xcode. Go to `File | Swift Packages | Add Package Dependency...` in Xcode and search for "http://github.com/ferranabello/Viperit"
 
 ### CocoaPods
 
