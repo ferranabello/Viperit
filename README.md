@@ -24,7 +24,7 @@ We all know Viper is cool. But we also know that it's hard to setup. This librar
 ### Requirements
 
 - iOS 11.0+
-- Swift 5.0+
+- Swift 5.1+
 - Xcode 11.0+
 
 ### Swift Package Manager (SPM)
