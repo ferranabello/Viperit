@@ -2,7 +2,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'Viperit'
-  s.version          = '1.4.4'
+  s.version          = '1.4.5'
   s.summary          = 'Viper Framework for iOS written in Swift'
 
   s.description      = <<-DESC
@@ -17,7 +17,5 @@ Viper Framework for iOS to implement VIPER architecture in an easy way
   s.social_media_url = 'https://twitter.com/acferran'
 
   s.ios.deployment_target = '11.0'
-  s.swift_version = '5.1'
-
   s.source_files = 'Viperit/**/*.swift'
 end
