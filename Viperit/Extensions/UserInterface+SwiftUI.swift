@@ -13,7 +13,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 public class HostingUserInterface<Content: View>: UIHostingController<Content>, UserInterfaceProtocol {
     public required init() {
-        super.init(nibName: nil, bundle: nil)
+        fatalError("init() has not been implemented")
     }
     
     public var _presenter: PresenterProtocol!
