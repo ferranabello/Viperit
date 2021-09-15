@@ -15,6 +15,7 @@ Viper Framework for iOS to implement VIPER architecture in an easy way
   s.source           = { :git => 'https://github.com/ferranabello/Viperit.git', :tag => s.version.to_s }
   s.weak_framework = 'SwiftUI'
   s.social_media_url = 'https://twitter.com/acferran'
+  s.swift_version = '5'
 
   s.ios.deployment_target = '12.0'
   s.source_files = 'Viperit/**/*.swift'
