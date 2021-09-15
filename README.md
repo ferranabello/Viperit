@@ -23,9 +23,9 @@ We all know Viper is cool. But we also know that it's hard to setup. This librar
 
 ### Requirements
 
-- iOS 11.0+
+- iOS 12.0+
 - Swift 5.1+
-- Xcode 11.0+
+- Xcode 12.0+
 
 ### Swift Package Manager (SPM)
 You can easily install this framework using SPM on Xcode. Go to `File | Swift Packages | Add Package Dependency...` in Xcode and search for "http://github.com/ferranabello/Viperit"
@@ -38,7 +38,7 @@ Specify Viperit into your project's Podfile:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '11.0'
+platform :ios, '12.0'
 use_frameworks!
 
 pod 'Viperit'
