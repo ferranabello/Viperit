@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ferran Abelló. All rights reserved.
 //
 
-public protocol PresenterProtocol: class, ViperitComponent {
+public protocol PresenterProtocol: AnyObject, ViperitComponent {
     var _interactor: InteractorProtocol! { get set }
     var _view: UserInterfaceProtocol! { get set }
     var _router: RouterProtocol! { get set }

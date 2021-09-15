@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol UserInterfaceProtocol: class, ViperitComponent {
+public protocol UserInterfaceProtocol: AnyObject {
     var _presenter: PresenterProtocol! { get set }
     var _displayData: DisplayData? { get set }
     var viewController: UIViewController { get }
